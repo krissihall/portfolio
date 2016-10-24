@@ -16,6 +16,10 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    }, 
+    contentSecurityPolicy: {
+      'img-src': "'self' http://kristinalhall.com",
+      'connect-src': "'self' wss://dazzling-heat-7954.firebaseio.com/ wss://s-dal5-nss-18.firebaseio.com/"
     }
   };
 

@@ -1,0 +1,14 @@
+<h1>{{font-icon set='custom' type='cog'}} {{projectName}}</h1>
+<p>{{details}}</p>
+<div class="work-contributors">
+
+</div>
+<div class="work-images">
+  {{#each workImages}}
+    <div class="work-image">
+      <img {{bind-attr src=url}} {{bind-attr alt="test"}} />
+    </div>
+  {{/each}}
+</div>
+
+{{#link-to 'works'}}{{font-icon type='chevron-left'}} Back{{/link-to}}

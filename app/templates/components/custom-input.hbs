@@ -1,0 +1,68 @@
+{{!--
+templates/components/custome-input.hbs
+
+Template for "custom-input" component, with floating labels and error messages.
+--}}
+
+{{! Label, which will be floated. This comes from the "label" parameter. }}
+<label class="custom-input-label clickable" {{bind-attr for=inputId}}>
+  {{computedLabel}}
+</label>
+
+{{input class="form-control"
+  placeholder=placeholder
+  value=value
+  disabled=isDisabled
+  maxlength=maxlength
+  readonly=readonly
+  size=size
+  name=name
+  pattern=pattern
+  height=height
+  width=width
+  step=step
+  selectionDirection=selectionDirection
+  required=required
+  tabindex=tabindex
+  min=min
+  max=max
+  accept=accept
+  formmethod=formmethod
+  formaction=formaction
+  formnovalidate=formnovalidate
+  formenctype=formentype
+  formtarget=formtarget
+  inputmode=inputmode
+  spellcheck=spellcheck
+  autosave=autosave
+  autofocus=autofocus
+  autocomplete=autocomplete
+  multiple=multiple
+  form=form
+  type=(unbound type)
+}}
+{{!-- NOTE: Removed default 'placeholder' value: placeholder=computedLabel --}}
+{{!-- NOTE: type=(unbound type) outputs the property (e.g. "password") without binding. The property will not change. Docs: http://emberjs.com/api/classes/Ember.Handlebars.helpers.html#method_unbound--}}
+
+{{#if disclaimer}}
+  <small><em>{{disclaimer}}</em></small>
+{{/if}}
+
+{{#if icon}}
+  <div class="absolute-icon">
+    {{#if iconSet}}
+      {{glyph-icon type=icon set=iconSet}}
+    {{else}}
+      {{glyph-icon type=icon}}
+    {{/if}}
+  </div>
+{{/if}}
+
+{{#if error}}
+  {{glyph-icon type="remove" class="form-control-feedback"}}
+
+  {{! Error field. This is driven by 'error' parameter. }}
+  <div class="custom-input-error">
+    {{error.message}}
+  </div>
+{{/if}}

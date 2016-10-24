@@ -1,0 +1,17 @@
+<h1>{{font-icon set='custom' type='cogs'}} Works</h1>
+{{outlet}}
+
+<div class="works-list div-table cell-xs-12 div-table-bordered-rows">
+  {{#each works}}
+    <div class="works-list-item div-table-row">
+      <div class="work-item-thumbnail div-table-cell valign-middle cell-xs-3 padded-sm">
+        {{#link-to 'work' id}}
+          <img {{bind-attr src=thumbnail}} {{bind-attr alt=projectName}} class="img-responsive" />
+        {{/link-to}}
+      </div>
+      <div class="work-item-details div-table-cell valign-middle cell-xs-9 padded-sm">
+        {{#link-to 'work' id}}{{projectName}}{{/link-to}}: {{details}} <small>({{imageCount}} images)</small>
+      </div>
+    </div>
+  {{/each}}
+</div>

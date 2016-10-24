@@ -1,0 +1,19 @@
+/*
+    styles/app.styl
+    Defines the primary structure for styles in AEO's Mobile Web Project.
+    The imported files below get compiled using Stylus, a CSS pre-processor.
+    The imported files are sorted top-to-bottom from general-purpose rules to context-specific rules.
+    The CSS selectors within those files should follow the same principle: from general to contextual.
+        E.g.: styles/variables.styl would define a general-purpose padding variable for the entire site.
+              styles/mdot-common.styl would define the padding for text-input fields
+              styles/modules/search-bar.styl would define a specific padding to accommodate an icon.
+              styles/pages/products.styl would define the placement of the component on the page.
+*/
+
+/* Stylus variables like colors and fonts and default padding. */
+@import "variables.styl";
+
+/* Global design decisions for Mobile Web project. */
+@import "common-styles.styl";
+
+@import "components/*.styl"
