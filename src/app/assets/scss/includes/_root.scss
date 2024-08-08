@@ -1,0 +1,6 @@
+:root {
+    // Tailwind Var Overrides
+    --foreground-rgb: #{hexToRGB($white)};
+    --background-start-rgb: #{hexToRGB(lighten($black, 5%))};
+    --background-end-rgb: #{hexToRGB(lighten($black, 10%))};
+}

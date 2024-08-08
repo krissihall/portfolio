@@ -1,0 +1,14 @@
+// Global Variables
+$base:   16;
+$max-vw: 1920px;
+$max-vh: 1080px;
+
+// Global Colors
+$black:       #000;
+$white:       #fff;
+$primary:     #ff2577;
+$primary-lgt:   lighten($primary, 20%);
+$primary-drk:   darken($primary, 20%);
+$secondary:   #00da88;
+$secondary-lgt: lighten($secondary, 20%);
+$secondary-drk: darken($secondary, 20%);
