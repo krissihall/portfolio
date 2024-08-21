@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Home",
+        "href": "/",
+        "class": "tetrad-primary"
+    }, {
+        "name": "About",
+        "href": "/page/about",
+        "class": "warning"
+    }, {
+        "name": "Works",
+        "href": "/page/works",
+        "class": "tetrad-tertiary"
+    }, {
+        "name": "Contact",
+        "href": "/page/contact",
+        "class": "tetrad-minor"
+    }
+]

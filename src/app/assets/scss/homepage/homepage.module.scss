@@ -1,0 +1,61 @@
+@use "sass:selector";
+@use "sass:math";
+@use "sass:color";
+
+@import "../includes/variables";
+@import "../includes/functions";
+@import "../includes/mixins";
+@import "variables";
+@import "animations";
+
+.container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 100vh;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 100vw;
+
+    .leftSide {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        flex-wrap: nowrap;
+    }
+
+    .content {
+        max-width: rem-calc(1000);
+        padding: rem-calc(24);
+    }
+
+    .navigation {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 100vh;
+        padding: 0 rem-calc(24);
+
+        .link {
+            align-items: center;
+            display: flex;
+            font-family: var(--kh-script-font);
+            font-size: calc(math.div(100vh, $home-link-amount) - 10vh);
+            height: math.div(100vh, $home-link-amount);
+            line-height: 1;
+            margin: 0 auto;
+            overflow: hidden;
+            padding-left: rem-calc(8);
+            padding-right: rem-calc(16);
+            position: relative;
+
+            &:hover,
+            &:focus,
+            &:active {
+                text-decoration: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+@function vh-calc($value, $base-vh: $max-vh) {
+    $value: #{math.div((strip-unit($value) * 100), strip-unit($base-vh))}vh;
+
+    @if ($value == 0vh) {
+        $value: 0;
+    }
+
+    @return $value;
+}

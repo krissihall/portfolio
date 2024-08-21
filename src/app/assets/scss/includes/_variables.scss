@@ -1,14 +1,129 @@
+@import "functions";
+
 // Global Variables
-$base:   16;
-$max-vw: 1920px;
-$max-vh: 1080px;
+$base:                 16 !default;
+$max-vw:               1920px !default;
+$max-vh:               1080px !default;
+$max-page-width:       1400px !default;
+$prefix:               "kh-" !default;
+$container-padding:    32 !default;
 
 // Global Colors
-$black:       #000;
-$white:       #fff;
-$primary:     #ff2577;
-$primary-lgt:   lighten($primary, 20%);
-$primary-drk:   darken($primary, 20%);
-$secondary:   #00da88;
-$secondary-lgt: lighten($secondary, 20%);
-$secondary-drk: darken($secondary, 20%);
+$black:              #000 !default;
+$white:              #fff !default;
+$primary:            #ff2577 !default;
+$primary-lgt:        lighten($primary, 20%) !default;
+$primary-drk:        darken($primary, 20%) !default;
+$secondary:          #25ffad !default;
+$secondary-lgt:      lighten($secondary, 20%) !default;
+$secondary-drk:      darken($secondary, 20%) !default;
+
+$info:               lighten(#0075b5, 20%) !default;
+$success:            lighten(#00854d, 20%) !default;
+$warning:            #ffd925 !default;
+$danger:             #f0513f !default;
+
+// Global Fonts
+$light-font:        300;
+$regular-font:      400;
+$medium-font:       500;
+$bold-font:         700;
+
+// Split Complimentary Colors
+$split-primary:      $primary !default;
+$split-secondary:    #ffd925 !default;
+$split-tertiary:     #25ceff !default;
+
+// Triad Colors
+$triad-primary:      $primary !default;
+$triad-secondary:    #77ff25 !default;
+$triad-tertiary:     #2577ff !default;
+
+// Tetrad Colors
+$tetrad-primary:     $primary !default;
+$tetrad-secondary:   #e4ff25 !default;
+$tetrad-tertiary:    #25ffad !default;
+$tetrad-minor:       #4025ff !default;
+
+// Hue Colors
+$hue-primary-1:       #c0ff25 !default;
+$hue-primary-2:       #ffe325 !default;
+$hue-primary-3:       #ff8925 !default;
+$hue-primary-4:       #ff2e25 !default;
+$hue-primary:         $primary !default;
+$hue-primary-5:       #ff25d2 !default;
+$hue-primary-6:       #d125ff !default;
+$hue-primary-7:       #7625ff !default;
+$hue-primary-8:       #252eff !default;
+
+// Theme Colors
+$theme-colors: (
+    "primary": $primary,
+    "primary-lgt": $primary-lgt,
+    "primary-drk": $primary-drk,
+    "secondary": $secondary,
+    "secondary-lgt": $secondary-lgt,
+    "secondary-drk": $secondary-drk,
+    "black": $black,
+    "white": $white,
+    "info": $info,
+    "success": $success,
+    "warning": $warning,
+    "danger": $danger,
+    "split-primary": $split-primary,
+    "split-secondary": $split-secondary,
+    "split-tertiary": $split-tertiary,
+    "triad-primary": $triad-primary,
+    "triad-secondary": $triad-secondary,
+    "triad-tertiary": $triad-tertiary,
+    "tetrad-primary": $tetrad-primary,
+    "tetrad-secondary": $tetrad-secondary,
+    "tetrad-tertiary": $tetrad-tertiary,
+    "tetrad-minor": $tetrad-minor,
+    "hue-primary-1": $hue-primary-1,
+    "hue-primary-2": $hue-primary-2,
+    "hue-primary-3": $hue-primary-3,
+    "hue-primary-4": $hue-primary-4,
+    "hue-primary": $hue-primary,
+    "hue-primary-5": $hue-primary-5,
+    "hue-primary-6": $hue-primary-6,
+    "hue-primary-7": $hue-primary-7,
+    "hue-primary-8": $hue-primary-8
+) !default;
+
+// Color Settings
+$emphasis:             60%;
+$subtle-bg:            80%;
+$subtle-border:        60%;
+
+@import "variables/colors";
+
+// Body Settings
+$body-color:   $white !default;
+$body-bg:      lighten($black, 5%) !default;
+$bg-opacity:   1 !default;
+
+// Default Border Settings
+$border-width:             #{rem-calc(1)} !default;
+$border-widths: (
+  1: #{rem-calc(1)},
+  2: #{rem-calc(2)},
+  3: #{rem-calc(3)},
+  4: #{rem-calc(4)},
+  5: #{rem-calc(5)}
+) !default;
+$border-style:             solid !default;
+$border-color:             $primary !default;
+$border-color-translucent: rgba($black, .175) !default;
+
+// Border Radius Settings
+$border-radius:               .375rem !default;
+$border-radius-sm:            .25rem !default;
+$border-radius-lg:            .5rem !default;
+$border-radius-xl:            1rem !default;
+$border-radius-xxl:           2rem !default;
+
+// Color Contrast Settings
+$min-contrast-ratio:   4.5 !default;
+$color-contrast-dark:  $black !default;
+$color-contrast-light: $white !default;

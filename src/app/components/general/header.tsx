@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Navigation from "./navigation";
+import Navigation from "@/app/components/general/navigation";
 
 export default function Header() {
     return (
@@ -13,6 +13,7 @@ export default function Header() {
                             width="280"
                             height="114"
                             alt="KH logo"
+                            priority
                         />
                     </Link>
                 </div>

@@ -1,0 +1,85 @@
+.homepage {
+
+    .info {
+        display: none;
+
+        &.show {
+            display: block;
+        }
+    }
+
+    .profile-photo {
+        border-radius: rem-calc(500);
+        display: block;
+        height: 70%;
+        margin: 0 auto;
+        max-height: rem-calc(443);
+        max-width: rem-calc(443);
+        overflow: hidden;
+        width: 70%;
+    }
+
+    .text-tetrad-primary {
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: var(--#{$prefix}tetrad-primary);
+        }
+    }
+
+    .text-bg-warning {
+
+        h1 {
+            color: var(--#{$prefix}warning-emphasis);
+        }
+    }
+
+    .text-tetrad-secondary {
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: var(--#{$prefix}tetrad-secondary);
+        }
+    }
+
+    .text-bg-tetrad-secondary {
+
+        h1 {
+            color: var(--#{$prefix}tetrad-secondary-emphasis);
+        }
+    }
+
+    .text-tetrad-tertiary {
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: var(--#{$prefix}tetrad-tertiary);
+        }
+    }
+
+    .text-bg-tetrad-tertiary {
+
+        h1 {
+            color: var(--#{$prefix}tetrad-tertiary-emphasis);
+        }
+    }
+
+    .text-tetrad-minor {
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: var(--#{$prefix}tetrad-minor);
+        }
+    }
+
+    .text-bg-tetrad-minor {
+
+        h1 {
+            color: var(--#{$prefix}tetrad-minor-emphasis);
+        }
+    }
+}

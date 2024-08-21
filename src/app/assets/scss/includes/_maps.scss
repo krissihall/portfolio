@@ -1,0 +1,238 @@
+$theme-colors-rgb: map-loop($theme-colors, hexToRGB, "$value");
+
+$theme-colors-text: (
+    "primary": $primary-text-emphasis,
+    "primary-lgt": $primary-lgt-text-emphasis,
+    "primary-drk": $primary-drk-text-emphasis,
+    "secondary": $secondary-text-emphasis,
+    "secondary-lgt": $secondary-lgt-text-emphasis,
+    "secondary-drk": $secondary-drk-text-emphasis,
+    "black": $black-text-emphasis,
+    "white": $white-text-emphasis,
+    "info": $info-text-emphasis,
+    "success": $success-text-emphasis,
+    "warning": $warning-text-emphasis,
+    "danger": $danger-text-emphasis,
+    "split-primary": $split-primary-text-emphasis,
+    "split-secondary": $split-secondary-text-emphasis,
+    "split-tertiary": $split-tertiary-text-emphasis,
+    "triad-primary": $triad-primary-text-emphasis,
+    "triad-secondary": $triad-secondary-text-emphasis,
+    "triad-tertiary": $triad-tertiary-text-emphasis,
+    "tetrad-primary": $tetrad-primary-text-emphasis,
+    "tetrad-secondary": $tetrad-secondary-text-emphasis,
+    "tetrad-tertiary": $tetrad-tertiary-text-emphasis,
+    "tetrad-minor": $tetrad-minor-text-emphasis,
+    "hue-primary-1": $hue-primary-1-text-emphasis,
+    "hue-primary-2": $hue-primary-2-text-emphasis,
+    "hue-primary-3": $hue-primary-3-text-emphasis,
+    "hue-primary-4": $hue-primary-4-text-emphasis,
+    "hue-primary": $hue-primary-text-emphasis,
+    "hue-primary-5": $hue-primary-5-text-emphasis,
+    "hue-primary-6": $hue-primary-6-text-emphasis,
+    "hue-primary-7": $hue-primary-7-text-emphasis,
+    "hue-primary-8": $hue-primary-8-text-emphasis
+) !default;
+
+$theme-colors-bg-subtle: (
+    "primary": $primary-bg-subtle,
+    "primary-lgt": $primary-lgt-bg-subtle,
+    "primary-drk": $primary-drk-bg-subtle,
+    "secondary": $secondary-bg-subtle,
+    "secondary-lgt": $secondary-lgt-bg-subtle,
+    "secondary-drk": $secondary-drk-bg-subtle,
+    "black": $black-bg-subtle,
+    "white": $white-bg-subtle,
+    "info": $info-bg-subtle,
+    "success": $success-bg-subtle,
+    "warning": $warning-bg-subtle,
+    "danger": $danger-bg-subtle,
+    "split-primary": $split-primary-bg-subtle,
+    "split-secondary": $split-secondary-bg-subtle,
+    "split-tertiary": $split-tertiary-bg-subtle,
+    "triad-primary": $triad-primary-bg-subtle,
+    "triad-secondary": $triad-secondary-bg-subtle,
+    "triad-tertiary": $triad-tertiary-bg-subtle,
+    "tetrad-primary": $tetrad-primary-bg-subtle,
+    "tetrad-secondary": $tetrad-secondary-bg-subtle,
+    "tetrad-tertiary": $tetrad-tertiary-bg-subtle,
+    "tetrad-minor": $tetrad-minor-bg-subtle,
+    "hue-primary-1": $hue-primary-1-bg-subtle,
+    "hue-primary-2": $hue-primary-2-bg-subtle,
+    "hue-primary-3": $hue-primary-3-bg-subtle,
+    "hue-primary-4": $hue-primary-4-bg-subtle,
+    "hue-primary": $hue-primary-bg-subtle,
+    "hue-primary-5": $hue-primary-5-bg-subtle,
+    "hue-primary-6": $hue-primary-6-bg-subtle,
+    "hue-primary-7": $hue-primary-7-bg-subtle,
+    "hue-primary-8": $hue-primary-8-bg-subtle
+) !default;
+
+$theme-colors-border-subtle: (
+    "primary": $primary-border-subtle,
+    "primary-lgt": $primary-lgt-border-subtle,
+    "primary-drk": $primary-drk-border-subtle,
+    "secondary": $secondary-border-subtle,
+    "secondary-lgt": $secondary-lgt-border-subtle,
+    "secondary-drk": $secondary-drk-border-subtle,
+    "black": $black-border-subtle,
+    "white": $white-border-subtle,
+    "info": $info-border-subtle,
+    "success": $success-border-subtle,
+    "warning": $warning-border-subtle,
+    "danger": $danger-border-subtle,
+    "split-primary": $split-primary-border-subtle,
+    "split-secondary": $split-secondary-border-subtle,
+    "split-tertiary": $split-tertiary-border-subtle,
+    "triad-primary": $triad-primary-border-subtle,
+    "triad-secondary": $triad-secondary-border-subtle,
+    "triad-tertiary": $triad-tertiary-border-subtle,
+    "tetrad-primary": $tetrad-primary-border-subtle,
+    "tetrad-secondary": $tetrad-secondary-border-subtle,
+    "tetrad-tertiary": $tetrad-tertiary-border-subtle,
+    "tetrad-minor": $tetrad-minor-border-subtle,
+    "hue-primary-1": $hue-primary-1-border-subtle,
+    "hue-primary-2": $hue-primary-2-border-subtle,
+    "hue-primary-3": $hue-primary-3-border-subtle,
+    "hue-primary-4": $hue-primary-4-border-subtle,
+    "hue-primary": $hue-primary-border-subtle,
+    "hue-primary-5": $hue-primary-5-border-subtle,
+    "hue-primary-6": $hue-primary-6-border-subtle,
+    "hue-primary-7": $hue-primary-7-border-subtle,
+    "hue-primary-8": $hue-primary-8-border-subtle
+) !default;
+
+$utilities-colors: $theme-colors-rgb !default;
+
+$utilities-text: map-merge(
+  $utilities-colors,
+  (
+    "black": to-rgb($black),
+    "white": to-rgb($white),
+    "body": to-rgb($body-color)
+  )
+) !default;
+$utilities-text-colors: map-loop($utilities-text, rgba-css-var, "$key", "text") !default;
+
+$utilities-text-emphasis-colors: (
+  "primary-emphasis": var(--#{$prefix}primary-text-emphasis),
+  "primary-lgt-emphasis": var(--#{$prefix}primary-lgt-text-emphasis),
+  "primary-drk-emphasis": var(--#{$prefix}primary-drk-text-emphasis),
+  "secondary-emphasis": var(--#{$prefix}secondary-text-emphasis),
+  "secondary-lgt-emphasis": var(--#{$prefix}secondary-lgt-text-emphasis),
+  "secondary-drk-emphasis": var(--#{$prefix}secondary-drk-text-emphasis),
+  "black-emphasis": var(--#{$prefix}black-text-emphasis),
+  "white-emphasis": var(--#{$prefix}white-text-emphasis),
+  "info-emphasis": var(--#{$prefix}info-text-emphasis),
+  "success-emphasis": var(--#{$prefix}success-text-emphasis),
+  "warning-emphasis": var(--#{$prefix}warning-text-emphasis),
+  "danger-emphasis": var(--#{$prefix}danger-text-emphasis),
+  "split-primary-emphasis": var(--#{$prefix}split-primary-text-emphasis),
+  "split-secondary-emphasis": var(--#{$prefix}split-secondary-text-emphasis),
+  "split-tertiary-emphasis": var(--#{$prefix}split-tertiary-text-emphasis),
+  "triad-primary-emphasis": var(--#{$prefix}triad-primary-text-emphasis),
+  "triad-secondary-emphasis": var(--#{$prefix}triad-secondary-text-emphasis),
+  "triad-tertiary-emphasis": var(--#{$prefix}triad-tertiary-text-emphasis), 
+  "tetrad-primary-emphasis": var(--#{$prefix}tetrad-primary-text-emphasis),
+  "tetrad-secondary-emphasis": var(--#{$prefix}tetrad-secondary-text-emphasis),
+  "tetrad-tertiary-emphasis": var(--#{$prefix}tetrad-tertiary-text-emphasis),
+  "tetrad-minor-emphasis": var(--#{$prefix}tetrad-minor-text-emphasis),
+  "hue-primary-1-emphasis": var(--#{$prefix}hue-primary-1-text-emphasis),
+  "hue-primary-2-emphasis": var(--#{$prefix}hue-primary-2-text-emphasis),
+  "hue-primary-3-emphasis": var(--#{$prefix}hue-primary-3-text-emphasis),
+  "hue-primary-4-emphasis": var(--#{$prefix}hue-primary-4-text-emphasis),
+  "hue-primary-emphasis": var(--#{$prefix}hue-primary-text-emphasis),
+  "hue-primary-5-emphasis": var(--#{$prefix}hue-primary-5-text-emphasis),
+  "hue-primary-6-emphasis": var(--#{$prefix}hue-primary-6-text-emphasis),
+  "hue-primary-7-emphasis": var(--#{$prefix}hue-primary-7-text-emphasis),
+  "hue-primary-8-emphasis": var(--#{$prefix}hue-primary-8-text-emphasis)
+) !default;
+
+$utilities-bg: map-merge(
+  $utilities-colors,
+  (
+    "black": to-rgb($black),
+    "white": to-rgb($white),
+    "body": to-rgb($body-bg)
+  )
+) !default;
+$utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, "$key", "bg") !default;
+
+$utilities-bg-subtle: (
+  "primary-subtle": var(--#{$prefix}primary-bg-subtle),
+  "primary-lgt-subtle": var(--#{$prefix}primary-lgt-bg-subtle),
+  "primary-drk-subtle": var(--#{$prefix}primary-drk-bg-subtle),
+  "secondary-subtle": var(--#{$prefix}secondary-bg-subtle),
+  "secondary-lgt-subtle": var(--#{$prefix}secondary-lgt-bg-subtle),
+  "secondary-drk-subtle": var(--#{$prefix}secondary-drk-bg-subtle),
+  "black-subtle": var(--#{$prefix}black-bg-subtle),
+  "white-subtle": var(--#{$prefix}white-bg-subtle),
+  "info-subtle": var(--#{$prefix}info-bg-subtle),
+  "success-subtle": var(--#{$prefix}success-bg-subtle),
+  "warning-subtle": var(--#{$prefix}warning-bg-subtle),
+  "danger-subtle": var(--#{$prefix}danger-bg-subtle),
+  "split-primary-subtle": var(--#{$prefix}split-primary-bg-subtle),
+  "split-secondary-subtle": var(--#{$prefix}split-secondary-bg-subtle),
+  "split-tertiary-subtle": var(--#{$prefix}split-tertiary-bg-subtle),
+  "triad-primary-subtle": var(--#{$prefix}triad-primary-bg-subtle),
+  "triad-secondary-subtle": var(--#{$prefix}triad-secondary-bg-subtle),
+  "triad-tertiary-subtle": var(--#{$prefix}triad-tertiary-bg-subtle),
+  "tetrad-primary-subtle": var(--#{$prefix}tetrad-primary-bg-subtle),
+  "tetrad-secondary-subtle": var(--#{$prefix}tetrad-secondary-bg-subtle),
+  "tetrad-tertiary-subtle": var(--#{$prefix}tetrad-tertiary-bg-subtle),
+  "tetrad-minor-subtle": var(--#{$prefix}tetrad-minor-bg-subtle),
+  "hue-primary-1-subtle": var(--#{$prefix}hue-primary-1-bg-subtle),
+  "hue-primary-2-subtle": var(--#{$prefix}hue-primary-2-bg-subtle),
+  "hue-primary-3-subtle": var(--#{$prefix}hue-primary-3-bg-subtle),
+  "hue-primary-4-subtle": var(--#{$prefix}hue-primary-4-bg-subtle),
+  "hue-primary-subtle": var(--#{$prefix}hue-primary-bg-subtle),
+  "hue-primary-5-subtle": var(--#{$prefix}hue-primary-5-bg-subtle),
+  "hue-primary-6-subtle": var(--#{$prefix}hue-primary-6-bg-subtle),
+  "hue-primary-7-subtle": var(--#{$prefix}hue-primary-7-bg-subtle),
+  "hue-primary-8-subtle": var(--#{$prefix}hue-primary-8-bg-subtle)
+) !default;
+
+$utilities-border: map-merge(
+  $utilities-colors,
+  (
+    "black": to-rgb($black),
+    "white": to-rgb($white)
+  )
+) !default;
+$utilities-border-colors: map-loop($utilities-border, rgba-css-var, "$key", "border") !default;
+
+$utilities-border-subtle: (
+  "primary-subtle": var(--#{$prefix}primary-border-subtle),
+  "primary-lgt-subtle": var(--#{$prefix}primary-lgt-border-subtle),
+  "primary-drk-subtle": var(--#{$prefix}primary-drk-border-subtle),
+  "secondary-subtle": var(--#{$prefix}secondary-borderbg-subtle),
+  "secondary-lgt-subtle": var(--#{$prefix}secondary-lgt-border-subtle),
+  "secondary-drk-subtle": var(--#{$prefix}secondary-drk-border-subtle),
+  "black-subtle": var(--#{$prefix}black-border-subtle),
+  "white-subtle": var(--#{$prefix}white-border-subtle),
+  "info-subtle": var(--#{$prefix}info-border-subtle),
+  "success-subtle": var(--#{$prefix}success-border-subtle),
+  "warning-subtle": var(--#{$prefix}warning-border-subtle),
+  "danger-subtle": var(--#{$prefix}danger-border-subtle),
+  "split-primary-subtle": var(--#{$prefix}split-primary-border-subtle),
+  "split-secondary-subtle": var(--#{$prefix}split-secondary-border-subtle),
+  "split-tertiary-subtle": var(--#{$prefix}split-tertiary-border-subtle),
+  "triad-primary-subtle": var(--#{$prefix}triad-primary-border-subtle),
+  "triad-secondary-subtle": var(--#{$prefix}triad-secondary-border-subtle),
+  "triad-tertiary-subtle": var(--#{$prefix}triad-tertiary-border-subtle),
+  "tetrad-primary-subtle": var(--#{$prefix}tetrad-primary-border-subtle),
+  "tetrad-secondary-subtle": var(--#{$prefix}tetrad-secondary-border-subtle),
+  "tetrad-tertiary-subtle": var(--#{$prefix}tetrad-tertiary-border-subtle),
+  "tetrad-minor-subtle": var(--#{$prefix}tetrad-minor-border-subtle),
+  "hue-primary-1-subtle": var(--#{$prefix}hue-primary-1-border-subtle),
+  "hue-primary-2-subtle": var(--#{$prefix}hue-primary-2-border-subtle),
+  "hue-primary-3-subtle": var(--#{$prefix}hue-primary-3-border-subtle),
+  "hue-primary-4-subtle": var(--#{$prefix}hue-primary-4-border-subtle),
+  "hue-primary-subtle": var(--#{$prefix}hue-primary-border-subtle),
+  "hue-primary-5-subtle": var(--#{$prefix}hue-primary-5-border-subtle),
+  "hue-primary-6-subtle": var(--#{$prefix}hue-primary-6-border-subtle),
+  "hue-primary-7-subtle": var(--#{$prefix}hue-primary-7-border-subtle),
+  "hue-primary-8-subtle": var(--#{$prefix}hue-primary-8-border-subtle)
+) !default;
+
+$utilities-links-underline: map-loop($utilities-colors, rgba-css-var, "$key", "link-underline") !default;

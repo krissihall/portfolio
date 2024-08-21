@@ -1,0 +1,9 @@
+@function px-calc($value, $base-value: $base) {
+    $value: strip-unit($value), strip-unit($base-value) * 1px;
+
+    @if ($value ==0px) {
+        $value: 0;
+    }
+
+    @return $value;
+}

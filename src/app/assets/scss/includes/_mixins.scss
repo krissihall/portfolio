@@ -1,31 +1,5 @@
-@mixin unify-parent($child) {
-    @at-root #{selector.unify(&, $child)} {
-        @content;
-    }
-}
-
-@mixin tag($tag) {
-    $ampersand: & + '';
-    $selectors: simple-selectors(str-replace($ampersand, ' ', ''));
-
-    $main-selector: nth($selectors, -1);
-    $previous-selectors: str-replace($ampersand, $main-selector, '');
-
-    @at-root {
-        #{$previous-selectors}#{$tag}#{$main-selector} {
-            @content;
-        }
-    }
-}
-
-@mixin multiShadow($params...) {
-    box-shadow: $params;
-    -webkit-box-shadow: $params;
-    -moz-box-shadow: $params;
-}
-
-@mixin boxShadow($properties: 0 rem-calc(3) rem-calc(6) 0 rgba($black, 0.16)) {
-    box-shadow: $params;
-    -webkit-box-shadow: $properties;
-    -moz-box-shadow: $properties;
-}
+@import "mixins/box-shadow";
+@import "mixins/multi-shadow";
+@import "mixins/tag";
+@import "mixins/unify-parent";
+@import "mixins/utilities";

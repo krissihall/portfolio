@@ -1,0 +1,9 @@
+@function vw-calc($value, $base-vw: $max-vw) {
+    $value: #{math.div((strip-unit($value) * 100), strip-unit($base-vw))}vw;
+
+    @if ($value == 0vw) {
+        $value: 0;
+    }
+
+    @return $value;
+}

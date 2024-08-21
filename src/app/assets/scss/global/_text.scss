@@ -11,3 +11,29 @@ a {
         text-decoration: underline;
     }
 }
+
+p {
+    line-height: rem-calc(32);
+    margin-bottom: rem-calc(24);
+}
+
+.text-light {
+    font-family: var(--#{$prefix}font-family);
+    font-weight: var(--#{$prefix}light-font);
+}
+
+.text-regular {
+    font-family: var(--#{$prefix}font-family);
+    font-weight: var(--#{$prefix}regular-font);
+}
+
+.text-medium {
+    font-family: var(--#{$prefix}font-family);
+    font-weight: var(--#{$prefix}medium-font);
+}
+
+.text-bold,
+strong {
+    font-family: var(--#{$prefix}font-family);
+    font-weight: var(--#{$prefix}bold-font);
+}

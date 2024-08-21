@@ -1,23 +1,78 @@
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
+import { Open_Sans, Italiana, Great_Vibes } from "next/font/google";
 import "./globals.css";
-import "./assets/scss/main.scss";
-import Header from "./components/header";
-import Footer from "./components/footer";
-
-// const roboto = Roboto({
-//   weight: ['100', '300', '400', '500', '700'],
-//   subsets: ['latin'],
-//   display: 'swap'
-// });
+import "./assets/scss/global.scss";
 
 const openSans = Open_Sans({
-    weight: ['300', '400', '500', '700'],
-    subsets: ['latin']
+  weight: ['300', '400', '500', '700'],
+  subsets: ['latin'],
+  variable: '--kh-font-family',
+});
+
+const header = Italiana({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--kh-header-font",
+});
+
+// const script = Lavishly_Yours({
+//   weight: ["400"],
+//   subsets: ["latin"],
+//   variable: "--kh-script-font",
+// });
+
+// *** Looks Nice
+// const script = Beau_Rivage({
+//   weight: ["400"],
+//   subsets: ["latin"],
+//   variable: "--kh-script-font",
+// });
+// ***
+
+// const script = Carattere({
+//   weight: ["400"],
+//   subsets: ["latin"],
+//   variable: "--kh-script-font",
+// });
+
+// const script = Whisper({
+//   weight: ["400"],
+//   subsets: ["latin"],
+//   variable: "--kh-script-font",
+// });
+
+// const script = Birthstone_Bounce({
+//   weight: ["400"],
+//   subsets: ["latin"],
+//   variable: "--kh-script-font",
+// });
+
+// const script = Bilbo_Swash_Caps({
+//   weight: ["400"],
+//   subsets: ["latin"],
+//   variable: "--kh-script-font",
+// });
+
+// const script = Arizonia({
+//   weight: ["400"],
+//   subsets: ["latin"],
+//   variable: "--kh-script-font",
+// });
+
+// const script = Parisienne({
+//   weight: ["400"],
+//   subsets: ["latin"],
+//   variable: "--kh-script-font",
+// });
+
+const script = Great_Vibes({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--kh-script-font",
 });
 
 export const metadata: Metadata = {
-  title: "Kristinalhall.net",
+  title: "Homepage",
   description: "Portfolio for UI/UX Developer and front-end engineer.",
 };
 
@@ -28,18 +83,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* <body className={roboto.className}>{children}</body> */}
-      <body className={openSans.className}>
-        <div className="application-root h-screen overflow-auto">
-          <div className="flex flex-col flex-1 flex-nowrap min-h-screen min-w-full">
-            <Header />
-
-            <div className="content-container basis-full">
-              {children}
-            </div>
-
-            <Footer />
-          </div>
+      <body className={`${openSans.variable} ${header.variable} ${script.variable} app-body`}>
+        <div className="application-root">
+          {children}
         </div>
       </body>
     </html>

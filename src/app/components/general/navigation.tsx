@@ -1,15 +1,9 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import clsx from 'clsx';
-
-const links = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Works', href: '/works' },
-    { name: "Contact", href: '/contact' }
-];
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
+import links from "@/app/components/data/navigation.json";
 
 export default function Navigation() {
     const pathname = usePathname();
@@ -23,9 +17,9 @@ export default function Navigation() {
                             key={link.name}
                             href={link.href}
                             className={clsx(
-                                'flex h-[30px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3',
+                                "flex h-[30px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3",
                                 {
-                                    'bg-sky-100 text-blue-600': pathname === link.href
+                                    "bg-sky-100 text-blue-600": pathname === link.href
                                 }
                             )}
                         >
