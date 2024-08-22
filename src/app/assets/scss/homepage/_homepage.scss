@@ -19,7 +19,7 @@
         width: 70%;
     }
 
-    .text-tetrad-primary {
+    .page-home {
 
         &:hover,
         &:focus,
@@ -28,30 +28,30 @@
         }
     }
 
-    .text-bg-warning {
+    .info-home {
 
         h1 {
-            color: var(--#{$prefix}warning-emphasis);
+            color: var(--#{$prefix}tetrad-primary-text);
         }
     }
 
-    .text-tetrad-secondary {
+    .page-about {
 
         &:hover,
         &:focus,
         &:active {
-            color: var(--#{$prefix}tetrad-secondary);
+            color: var(--#{$prefix}warning);
         }
     }
 
-    .text-bg-tetrad-secondary {
+    .info-about {
 
         h1 {
-            color: var(--#{$prefix}tetrad-secondary-emphasis);
+            color: var(--#{$prefix}warning);
         }
     }
 
-    .text-tetrad-tertiary {
+    .page-works {
 
         &:hover,
         &:focus,
@@ -60,14 +60,30 @@
         }
     }
 
-    .text-bg-tetrad-tertiary {
+    .info-works {
 
         h1 {
-            color: var(--#{$prefix}tetrad-tertiary-emphasis);
+            color: var(--#{$prefix}success);
         }
     }
 
-    .text-tetrad-minor {
+    .page-skills {
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: var(--#{$prefix}hue-primary-6);
+        }
+    }
+
+    .info-skills {
+
+        h1 {
+            color: var(--#{$prefix}hue-primary-6);
+        }
+    }
+
+    .page-contact {
 
         &:hover,
         &:focus,
@@ -76,10 +92,10 @@
         }
     }
 
-    .text-bg-tetrad-minor {
+    .info-contact {
 
         h1 {
-            color: var(--#{$prefix}tetrad-minor-emphasis);
+            color: var(--#{$prefix}tetrad-minor);
         }
     }
 }

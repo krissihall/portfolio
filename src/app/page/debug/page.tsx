@@ -11,8 +11,11 @@ export default function Debug() {
         <main className="debug-container container ml-auto mr-auto">
             <h1>Debug Page</h1>
             <p>Just listing available styles/etc build into the portfolio site.</p>
-            <h2>Text</h2>
-            <div className="container-fluid border border-primary-drk rounded-2 p-2">
+            <h2 id="text" className="mb-2">
+                Text
+                <a href="#text" className="anchor-link"></a>
+            </h2>
+            <div className="container-fluid border border-primary-drk rounded-2 p-2 mb-2">
                 <h1>h1. This is an header tag</h1>
                 <h2>h2. This is an header tag</h2>
                 <h3>h3. This is an header tag</h3>

@@ -85,6 +85,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${openSans.variable} ${header.variable} ${script.variable} app-body`}>
         <div className="application-root">
+          <a id="top"></a>
           {children}
         </div>
       </body>

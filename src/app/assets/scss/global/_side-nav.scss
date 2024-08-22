@@ -1,0 +1,24 @@
+
+.side-nav-grid {
+    display: grid;
+    grid-template-areas: "sidebar main";
+    grid-template-columns: 1fr 5fr;
+    gap: 1.5rem;
+
+    .side-nav {
+        display: block;
+        grid-area: "sidebar";
+        height: calc(100vh - #{$header-height});
+        overflow-y: auto;
+
+        &.sticky {
+            position: sticky;
+            top: $header-height;
+        }
+    }
+
+    .side-nav-grid-content {
+        grid-area: "main";
+        ;
+    }
+}

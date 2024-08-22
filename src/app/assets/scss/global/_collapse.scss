@@ -1,0 +1,28 @@
+
+.collapse-container {
+
+    .collapse-link {
+        background: var(--#{$prefix}secondary);
+        border-bottom: rem-calc(1) solid var(--#{$prefix}secondary-drk);
+        color: var(--#{$prefix}secondary-text-emphasis);
+        cursor: pointer;
+        display: block;
+        padding: $btn-padding-y $btn-padding-x;
+        transition: background 0.25s ease-in;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background: var(--#{$prefix}secondary-lgt);
+            text-decoration: none;
+        }
+    }
+
+    .collapse-content {
+        $collapse-border: rem-calc(1) solid var(--#{$prefix}secondary-lgt);
+        border-bottom: $collapse-border;
+        border-left: $collapse-border;
+        border-right: $collapse-border;
+        padding: rem-calc(12);
+    }
+}

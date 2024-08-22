@@ -68,6 +68,30 @@ $utilities: map-merge(
             class: border,
             values: $border-widths
         ),
+        "margin-top": (
+            responsive: true,
+            property: margin-top,
+            class: mt,
+            values: map-merge($spacers, (auto: auto))
+        ),
+        "margin-end": (
+            responsive: true,
+            property: margin-right,
+            class: me,
+            values: map-merge($spacers, (auto: auto))
+        ),
+        "margin-bottom": (
+            responsive: true,
+            property: margin-bottom,
+            class: mb,
+            values: map-merge($spacers, (auto: auto))
+        ),
+        "margin-start": (
+            responsive: true,
+            property: margin-left,
+            class: ms,
+            values: map-merge($spacers, (auto: auto))
+        ),
         "rounded": (
             property: border-radius,
             class: rounded,
@@ -82,8 +106,8 @@ $utilities: map-merge(
                 circle: 50%,
                 pill: var(--#{$prefix}border-radius-pill)
             )
-            ),
-            "rounded-top": (
+        ),
+        "rounded-top": (
             property: border-top-left-radius border-top-right-radius,
             class: rounded-top,
             values: (
@@ -97,8 +121,8 @@ $utilities: map-merge(
                 circle: 50%,
                 pill: var(--#{$prefix}border-radius-pill)
             )
-            ),
-            "rounded-end": (
+        ),
+        "rounded-end": (
             property: border-top-right-radius border-bottom-right-radius,
             class: rounded-end,
             values: (
@@ -112,8 +136,8 @@ $utilities: map-merge(
                 circle: 50%,
                 pill: var(--#{$prefix}border-radius-pill)
             )
-            ),
-            "rounded-bottom": (
+        ),
+        "rounded-bottom": (
             property: border-bottom-right-radius border-bottom-left-radius,
             class: rounded-bottom,
             values: (
@@ -127,8 +151,8 @@ $utilities: map-merge(
                 circle: 50%,
                 pill: var(--#{$prefix}border-radius-pill)
             )
-            ),
-            "rounded-start": (
+        ),
+        "rounded-start": (
             property: border-bottom-left-radius border-top-left-radius,
             class: rounded-start,
             values: (
@@ -142,7 +166,7 @@ $utilities: map-merge(
                 circle: 50%,
                 pill: var(--#{$prefix}border-radius-pill)
             )
-            ),
+        ),
         "text-align": (
             responsive: true,
             property: text-align,

@@ -7,6 +7,41 @@ $max-vh:               1080px !default;
 $max-page-width:       1400px !default;
 $prefix:               "kh-" !default;
 $container-padding:    32 !default;
+$header-height:        rem-calc(150) !default;
+
+$line-height-base:     1.5 !default;
+
+// Font Variables
+$font-size-base:       rem-calc($base) !default;
+$font-size-sm:         rem-calc(12) !default;
+$font-size-lg:         rem-calc(20) !default;
+
+$font-weight-lighter:         300 !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-medium:          500 !default;
+$font-weight-semibold:        500 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          700 !default;
+
+$font-weight-base:            $font-weight-normal !default;
+
+// Feature Flags
+$enable-rounded:              true !default;
+$enable-transitions:          true !default;
+$enable-shadows:              true !default;
+$enable-gradients:            false !default;
+
+// Spacing Variables
+$spacer: rem-calc(12) !default;
+$spacers: (
+    0: 0,
+    1: $spacer * .25,
+    2: $spacer * .5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 3,
+) !default;
 
 // Global Colors
 $black:              #000 !default;
@@ -96,7 +131,12 @@ $emphasis:             60%;
 $subtle-bg:            80%;
 $subtle-border:        60%;
 
-@import "variables/colors";
+// Link Variables
+$link-color:                              $primary !default;
+$link-decoration:                         underline !default;
+$link-shade-percentage:                   20% !default;
+$link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
+$link-hover-decoration:                   null !default;
 
 // Body Settings
 $body-color:   $white !default;
@@ -127,3 +167,6 @@ $border-radius-xxl:           2rem !default;
 $min-contrast-ratio:   4.5 !default;
 $color-contrast-dark:  $black !default;
 $color-contrast-light: $white !default;
+
+@import "variables/colors";
+@import "variables/buttons";

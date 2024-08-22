@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
-import links from "@/app/components/data/navigation.json";
+import { NavLink } from "@/app/components/definitions";
+import { links } from "@/app/components/data/navigation";
 
 export default function Navigation() {
     const pathname = usePathname();
@@ -11,7 +12,7 @@ export default function Navigation() {
     return (
         <nav className="navigation flex flex-nowrap items-end gap-2 pt-3 pb-3 pr-3">
             <>
-                {links.map((link) => {
+                {links.map((link: NavLink) => {
                     return (
                         <Link
                             key={link.name}

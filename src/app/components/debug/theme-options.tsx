@@ -1,68 +1,124 @@
-const colors = [
-    { name: "primary", rgb: "255, 37, 119", hex: "#ff2577" },
-    { name: "primary-lgt", rgb: "255, 139, 183", hex: "#ff8bb7" },
-    { name: "primary-drk", rgb: "190, 0, 7", hex: "#be0047" },
-    { name: "secondary", rgb: "37, 255, 173", hex: "#25ffad" },
-    { name: "secondary-lgt", rgb: "139, 255, 211", hex: "#8bffd3" },
-    { name: "secondary-drk", rgb: "0, 190, 119", hex: "#00be77" },
-    { name: "black", rgb: "0, 0, 0", hex: "#000" },
-    { name: "white", rgb: "255, 255, 255", hex: "#fff" },
-    { name: "info", rgb: "28, 175, 255", hex: "#1cafff" },
-    { name: "success", rgb: "0, 235, 136", hex: "#00eb88" },
-    { name: "warning", rgb: "255, 217, 37", hex: "#ffd925" },
-    { name: "danger", rgb: "240, 81, 63", hex: "#f0513f" },
-    { name: "split-primary", rgb: "255, 37, 119", hex: "#ff2577" },
-    { name: "split-secondary", rgb: "255, 217, 37", hex: "#ffd925" },
-    { name: "split-tertiary", rgb: "37, 206, 255", hex: "#25ceff" },
-    { name: "triad-primary", rgb: "255, 37, 119", hex: "#ff2577" },
-    { name: "triad-secondary", rgb: "119, 255, 37", hex: "#77ff25" },
-    { name: "triad-tertiary", rgb: "37, 119, 255", hex: "#2577ff" },
-    { name: "tetrad-primary", rgb: "255, 37, 119", hex: "#ff2577" },
-    { name: "tetrad-secondary", rgb: "228, 255, 37", hex: "#e4ff25" },
-    { name: "tetrad-tertiary", rgb: "37, 255, 173", hex: "#25ffad" },
-    { name: "tetrad-minor", rgb: "64, 37, 255", hex: "#4025ff" },
-    { name: "hue-primary-1", rgb: "192, 255, 37", hex: "#c0ff25" },
-    { name: "hue-primary-2", rgb: "255, 227, 37", hex: "#ffe325" },
-    { name: "hue-primary-3", rgb: "255, 137, 37", hex: "#ff8925" },
-    { name: "hue-primary-4", rgb: "255, 46, 37", hex: "#ff2e25" },
-    { name: "hue-primary", rgb: "255, 37, 119", hex: "#ff2577" },
-    { name: "hue-primary-5", rgb: "255, 37, 210", hex: "#ff25d2" },
-    { name: "hue-primary-6", rgb: "209, 37, 255", hex: "#d125ff" },
-    { name: "hue-primary-7", rgb: "118, 37, 255", hex: "#7625ff" },
-    { name: "hue-primary-8", rgb: "37, 46, 255", hex: "#252eff" }
-]
+import { Color } from "@/app/components/definitions";
+import { theme, subtle, emphasis} from "@/app/components/data/theme.js";
+import { generateID } from "@/app/helpers/generate-id";
+import Collapser from "../general/collapser";
 
 export default function ThemeOptions() {
     return (
         <main className="theme-options-container">
             <section className="css-vars-container container ml-auto mr-auto mb-4">
-                <h2 className="mb-2">CSS Color Theme Vars</h2>
-                <div className="color-options options flex flex-wrap justify-stretch">
-                    <>
-                        {colors.map((color, index) => {
-                            const spanClass = "text-" + color.name;
-                            return (
-                                <div className="color-option option bg-gray-800 p-2 ml-1 mb-1" key={index}>
-                                    <div className="option-text flex flex-row flex-nowrap justify-between">
-                                        <div className="text-medium pr-2">Name:</div> <div className={spanClass}>{color.name}</div>
+                <h2 id="cssColors" className="mb-2">
+                    CSS Colors
+                    <a href="#cssColors" className="anchor-link"></a>
+                </h2>
+                <Collapser name="CSS Color Theme Vars" ID={`collapse-${generateID()}`}>
+                    <div className="color-options options flex flex-wrap justify-stretch mb-2">
+                        <>
+                            {theme.colors.map((color: Color, index: number) => {
+                                const spanClass = "text-" + color.name;
+                                return (
+                                    <div className="color-option option bg-gray-800 p-2 mr-2 mb-2" key={index}>
+                                        <div className="option-text flex flex-row flex-nowrap justify-between">
+                                            <div className="text-medium pr-2">Name:</div> <div className={spanClass}>{color.name}</div>
+                                        </div>
+                                        <div className="option-text flex flex-row flex-nowrap justify-between">
+                                            <div className="text-medium pr-2">Hex:</div> <div className={spanClass}>{color.hex}</div>
+                                        </div>
+                                        <div className="option-text flex flex-row flex-nowrap justify-between">
+                                            <div className="text-medium pr-2">RGB:</div> <div className={spanClass}>{color.rgb}</div>
+                                        </div>
+                                        <div className="option-text flex flex-row flex-nowrap justify-between">
+                                            <div className="text-medium pr-2">Options:</div> <div className={spanClass}>
+                                                <ul className="list-none">
+                                                    {theme.types.map((type: string, index: number) => {
+                                                        return (
+                                                            <li className="text-sm" key={index}>
+                                                                .{type}-{color.name}
+                                                            </li>
+                                                        );
+                                                    })}
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="option-text flex flex-row flex-nowrap justify-between">
-                                        <div className="text-medium pr-2">Hex:</div> <div className={spanClass}>{color.hex}</div>
+                                );
+                            })}
+                        </>
+                    </div>
+                </Collapser>
+                <Collapser name="CSS Color Theme Subtle" ID={`collapse-${generateID()}`}>
+                    <div className="color-options options flex flex-wrap justify-stretch mb-2">
+                        <>
+                            {subtle.colors.map((color: Color, index: number) => {
+                                const spanClass = `text-${color.name}-emphasis`;
+                                return (
+                                    <div className={`color-option option p-2 mr-2 mb-2 text-black border border-2 border-${color.name} bg-${color.name}-subtle`} key={index}>
+                                        <div className="option-text flex flex-row flex-nowrap justify-between">
+                                            <div className="text-medium pr-2">Name:</div> <div className={spanClass}>{color.name}</div>
+                                        </div>
+                                        <div className="option-text flex flex-row flex-nowrap justify-between">
+                                            <div className="text-medium pr-2">Hex:</div> <div className={spanClass}>{color.hex}</div>
+                                        </div>
+                                        <div className="option-text flex flex-row flex-nowrap justify-between">
+                                            <div className="text-medium pr-2">Options:</div> <div className={spanClass}>
+                                                <ul className="list-none">
+                                                    {subtle.types.map((type: string, index: number) => {
+                                                        return (
+                                                            <li className="text-sm" key={index}>
+                                                                .{type}-{color.name}
+                                                            </li>
+                                                        );
+                                                    })}
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="option-text flex flex-row flex-nowrap justify-between">
-                                        <div className="text-medium pr-2">RGB:</div> <div className={spanClass}>{color.rgb}</div>
+                                );
+                            })}
+                        </>
+                    </div>
+                </Collapser>
+                <Collapser name="CSS Color Theme Emphasis" ID={`collapse-${generateID()}`}>
+                    <div className="color-options options flex flex-wrap justify-stretch mb-2">
+                        <>
+                            {emphasis.colors.map((color: Color, index: number) => {
+                                const spanClass = `text-${color.name}-emphasis`;
+                                return (
+                                    <div className={`color-option option bg-white p-2 mr-2 mb-2 text-black border border-2 border-${color.name}`} key={index}>
+                                        <div className="option-text flex flex-row flex-nowrap justify-between">
+                                            <div className="text-medium pr-2">Name:</div> <div className={spanClass}>{color.name}</div>
+                                        </div>
+                                        <div className="option-text flex flex-row flex-nowrap justify-between">
+                                            <div className="text-medium pr-2">Hex:</div> <div className={spanClass}>{color.hex}</div>
+                                        </div>
+                                        <div className="option-text flex flex-row flex-nowrap justify-between">
+                                            <div className="text-medium pr-2">Options:</div> <div className={spanClass}>
+                                                <ul className="list-none">
+                                                    {emphasis.types.map((type: string, index: number) => {
+                                                        return (
+                                                            <li className="text-sm" key={index}>
+                                                                .{type}-{color.name}
+                                                            </li>
+                                                        );
+                                                    })}
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            );
-                        })}
-                    </>
-                </div>
+                                );
+                            })}
+                        </>
+                    </div>
+                </Collapser>
             </section>
             <section className="text-options-container container ml-auto mr-auto mb-4">
-                <h2 className="mb-2">Text Color Options</h2>
+                <h2 id="textColorOptions" className="mb-2">
+                    Text Color Options
+                    <a href="#textColorOptions" className="anchor-link"></a>
+                </h2>
                 <div className="text-options options">
                     <>
-                        {colors.map((color, index) => {
+                        {theme.colors.map((color: Color, index: number) => {
                             const classDef = "text-" + color.name;
                             return (
                                 <div className="d-block" key={index}>
@@ -76,11 +132,14 @@ export default function ThemeOptions() {
             </section>
 
             <section className="bg-options-container container ml-auto mr-auto mb-4">
-                <h2 className="mb-2">Background Color Options</h2>
+                <h2 id="bgColorOptions" className="mb-2">
+                    Background Color Options
+                    <a href="#bgColorOptions" className="anchor-link"></a>
+                </h2>
                 <div className="theme-options options flex flex-wrap mb-4">
                     <>
-                        {colors.map((color, index) => {
-                            const classDef = "bg-option option flex items-center justify-center text-center ml-1 mb-1 w-20 h-20 p-1 text-xs";
+                        {theme.colors.map((color: Color, index: number) => {
+                            const classDef = "bg-option option flex items-center justify-center text-center mr-1 mb-1 w-20 h-20 p-1 text-xs";
                             return (
                                 <div className="d-inline-flex" key={index}>
                                     <div className={`${classDef} text-bg-${color.name}`}>.text-bg-{color.name}</div>
@@ -93,11 +152,14 @@ export default function ThemeOptions() {
             </section>
 
             <section className="bg-borders-container container ml-auto mr-auto mb-2">
-                <h2 className="mb-2">Border Options</h2>
+                <h2 id="borderOptions" className="mb-2">
+                    Border Options
+                    <a href="#borderOptions" className="anchor-link"></a>
+                </h2>
                 <div className="theme-options options flex flex-wrap mb-4">
                     <>
-                        {colors.map((color, index) => {
-                            const classDef = "border-option option flex items-center justify-center text-center ml-2 mb-2 p-2 text-xs border border-1";
+                        {theme.colors.map((color: Color, index: number) => {
+                            const classDef = "border-option option flex items-center justify-center text-center mr-2 mb-2 p-2 text-xs border border-1";
                             return (
                                 <div className="d-inline-flex" key={index}>
                                     <div className={`${classDef} border-${color.name} text-${color.name}`}>.border-{color.name}</div>
@@ -106,6 +168,41 @@ export default function ThemeOptions() {
                             );
                         })}
                     </>
+                </div>
+            </section>
+
+            <section className="bg-buttons-container container ml-auto mr-auto mb-2">
+                <h2 id="buttonOptions" className="mb-2">
+                    Button Options
+                    <a href="#buttonOptions" className="anchor-link"></a>
+                </h2>
+                <div className="theme-options options flex flex-wrap mb-4">
+                    <>
+                        {theme.colors.map((color: Color, index: number) => {
+                            const classDef = "button-option option flex items-center justify-center text-center mr-2 mb-2";
+                            return (
+                                <div className="d-inline-flex" key={index}>
+                                    <div className={classDef}>
+                                        <button className={`btn btn-${color.name}`}>
+                                            .btn-{color.name}
+                                        </button>
+                                    </div>
+                                    <div className={classDef}>
+                                        <button className={`btn btn-outline-${color.name}`}>
+                                            .btn-{color.name}-outline
+                                        </button>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </>
+                </div>
+
+                <h3 className="mb-2">Button Sizes</h3>
+                <div className="d-block button-size-options options">
+                    <button className="btn btn-lg btn-primary ml-2">Large Button</button>
+                    <button className="btn btn-primary ml-2">Regular Button</button>
+                    <button className="btn btn-sm btn-primary ml-2">Small Button</button>
                 </div>
             </section>
         </main>
