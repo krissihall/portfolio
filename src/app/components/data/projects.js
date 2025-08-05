@@ -1,33 +1,33 @@
-const projects = [
+export const projects = {[
     {
-        id: 001,
+        id: 1,
         client: "Bob Evans",
         name: "Mashtini Microsite",
         description: "<p>This was a fun micro-site that was built to celebrate and promote Bob Evan's award for the #1 Best selling refrigerated mashed potatoes and I must agree that they are excellent. This site is built with complete custom JavaScript to make the slideshow function and is completely responsive.</p><p>This was a particularly fun piece to work on because of the beautiful imagery and the challenge it presented. Instead of using pre-hashed jQuery plugins, I chose to create all the JavaScript specific to this site, but to also make it reponsive so the width of each slide would change to reflect the actual size of the browser or device.</p><p>This piece was also built with Pinterest integration as it has such beautiful imagery. Each 'slide' can be accessed by adding a # tag at the end with the slide ID so they are able to be posted up as individual sections that will load the particular slide you have chosen. The lightbox that opens to display the Mashtini recipe is also complete custom and responsive.</p><p>This micro-site is now maintained by a different vendor so content may have changed.</p?",
         type: "inactive"
     }, {
-        id: 002,
+        id: 2,
         client: "Huffy",
         name: "Mickey & Minnie Cruiser Microsite",
         description: "<p>This was a very fun little micro-site that was built to announce the Collectors Edition Mickey & Minnie Cruisers (only 1,000 of each made). It began with a teaser animation that featured 'spotlights' that animated along bezier curves and landed in the shape of Mickey's head and ears along with the date of the bike launch.</p><p>This micro-site also features 'Buy Now' links, which take you to the eCommerce shopping cart where you can order the Mickey and/or Minnie Cruiser directly from the website. It also takes you to the Huffy Facebook Page where they ran a Facebook contest to win one of these exclusive Cruisers.</p><p>It was a very fun little micro-site with several different animation effects, including a transition between <span class=\"highlight\">\"frames\"</span> that looks like an old, black and white film. Some of the simplified animations where handled with animated GIFs (IE: some of the subtle background image animations), while other, more complex, animations where handled with PNG sequences that were animated using JavaScript.</p><p>Pretty much everything in this micro-site has a <span class=\"highlight\">\"Whimsical\"</span> feel that goes along perfectly with the Disney brand. This was a very challenging piece to work on with a short deadline that turned out very beautiful.</p><p>This piece functions well on iPad tablets, but it not really recommended for mobile phone viewing as the screen refresh rates are not quick enough and it may have some performance issues.</p><p>Kyle Zielinsky was a huge help in cross browser testing, fixing, and optimizing the JavaScript so this micro-site ran smoothly and efficiently.</p>",
         type: "inactive"
     }, {
-        id: 003,
+        id: 3,
         client: "Wise Snacks",
         name: "Cheezdoodles Doodle Mountain Microsite",
         description: "<p>This site is a micro-site that promotes Wise Snacks product CheezDoodles in a fun and interactive way. Sound was added at a later time by a different vendor.</p><p>It was built with a combination of effort between me and Kyle Zielinsky. Kyle created a smooth javascript function that smoothly animates sequences of PNG images that turn on and off as you scroll down the page. Bob Rusnak (digital designer), created all of the animations and exported them to PNG sequences that were compressed and animated with javascript.</p><p>There are several different sections that you can interact with that show different facts, products, or give you information on the different members of <span class=\"highlight\">\"The Dudes\"</span>, which are click-controlled using javascript. The navigation follows you down the screen as you scroll down so you can easily navigate.</p><p>Further down the page, I build the Doodle Pad first using HTML5 and then also built it using Flash so it would be compatible with older Internet Explorer versions. I also built the controls that drops CheezDoodles when you hit the 'C' button the on keyboard (a little Easter-egg animation plays if you are at the very bottom of the page).</p><p>Kyle was a huge help with optimizing this site so it was able to play in many browsers without overloading and crashing the browser. The amount of JavaScript on this one-page website was a heavy load on browsers early on, but with his help, it can run easily without overloading the page.</p><p>There are fun little animations and activities throughout this page and it was a huge learning experience for me. This was probably one of the most fun projects I have had the good luck to work on.</p>",
         type: "inactive"
     }, {
-        id: 004,
+        id: 4,
         client: "Cub Cadet",
         name: "Test Drive Experience Microsite",
         description: "<p>This is a fun micro-site that promotes the Cub Cadet tour that goes up the Eastern coast of the US from early spring through the fall. It is the second year this micro-site has been online, last year being called <span class=\"highlight\">\"Test Drive Challenge\"</span>, which was a much more simple version of the Cub Cadet Experience micro-site.</p><p>My role in building this site was the front-end development and making it responsive in all browsers. This site was a bit of a challenge to make responsive because of the navigation bar on the left side of the page that can only be seen in the largest screen resolutions, but I believe the links across the top of the content portion of the site is a very elegant solution that still retains the information and styles in a very easy to use and understand way.</p><p>The back-end and heavy Google Maps integration was handled by Kyle Zielinksy and Sabrina Shaner and Kyle ZIelinksy handled the Photo and Video albums and other sections, both front and back-end.</p>",
         type: "inactive"
     }, {
-        id: 005,
+        id: 5,
         client: "Atria's Restaurant",
         name: "Oktoberfest Microsite",
         description: "<p>This micro-site was a one page promotional piece that was announcing some coupon opportunities for Atria's Restaurant during their Oktoberfest event in Fall 2012. The <span class=\"highlight\">\"steins\"</span> rotate on a custom-coded carousel and reveal the text in English by clicking on the <span class=\"highlight\">\"translate\"</span> button below each <span class=\"highlight\">\"stein\"</span>. This piece was built to be responsive and every piece of it was hand-coded rather than relying on JavaScript or jQuery plugins.</p><p>One of the tricky things about this piece was to make the positioning change as the browser was sized down. I also decided that for the mobile sizes, only one <span class=\"highlight\">\"stein\"</span> should show since otherwise, you would not be able to read the translated text as they would all be too small.</p>",
         type: "inactive"
     }
-];
+]};

@@ -18,12 +18,12 @@ const links = [
         "id": 4,
         "name": "Skills",
         "href": "/page/skills",
-        "class": "hue-primary-6"
+        "class": "tetrad-minor"
     }, {
         "id": 5,
         "name": "Contact",
         "href": "/page/contact",
-        "class": "tetrad-minor"
+        "class": "hue-primary-6"
     }
 ];
 

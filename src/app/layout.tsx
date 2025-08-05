@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Open_Sans, Italiana, Great_Vibes } from "next/font/google";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import AnimatedBg from "./components/general/animated-bg";
 import "./globals.css";
 import "./assets/scss/global.scss";
 
@@ -81,13 +83,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
+      <GoogleAnalytics gaId="G-1Q3B34YJZN" />
+      <GoogleTagManager gtmId="G-1Q3B34YJZN" />
       <body className={`${openSans.variable} ${header.variable} ${script.variable} app-body`}>
         <div className="application-root">
           <a id="top"></a>
           {children}
         </div>
+        <AnimatedBg />
       </body>
     </html>
   );

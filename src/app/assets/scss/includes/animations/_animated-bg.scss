@@ -1,0 +1,75 @@
+@use "sass:math";
+@import "../includes.scss";
+
+/* Animation created by: Nate Wiley
+ * - https://codepen.io/natewiley/pen/PwWxRd
+ */
+$total: 144;
+$time: 6;
+$height: 200;
+$percent: .69444%;
+$dotSize: 0.6;
+
+// body {
+//     background: black;
+//     overflow: hidden;
+// }
+
+.bg-container {
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+
+    .c {
+        position: relative;
+        height: $height * 1px;
+        width: $percent;
+        margin-top: -$height * 1px;
+        animation: drop $time + s infinite ease-in;
+
+        &:after {
+            content: "";
+            position: absolute;
+            width: $dotSize + vw;
+            height: $dotSize + vw;
+            border-radius: 50%;
+            left: 50%;
+            bottom: -1 * math.div($dotSize, 2) * 1vw;
+            margin-left: -1 * math.div($dotSize, 2) * 1vw;
+        }
+    }
+
+    &.paused {
+        .c {
+            animation-play-state: paused;
+        }
+    }
+}
+
+@for $i from 1 through $total {
+    $hue: math.div(300, $total) * $i;
+
+    .c:nth-child(#{$i}){
+        left: ($i - 1) * $percent;
+        background-image: linear-gradient(to bottom, rgba(black, 0), hsla($hue, 100%, 50%, .8));
+        animation-delay: random($total) * math.div($time, $total) * -1s;
+
+        &:after {
+            background: hsla($hue, 100%, 50%, 1);
+        }
+    }
+}
+
+@keyframes drop {
+    80% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate3d(0, 150vh, 0);
+        opacity: 0;
+    }
+}

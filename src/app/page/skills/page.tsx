@@ -1,5 +1,7 @@
 export default function Skills() {
     return (
-        <h1>Skills &amp; Education</h1>
+        <main className="contact-container container ml-auto mr-auto">
+            <h1>Skills &amp; Education</h1>
+        </main>
     );
 };

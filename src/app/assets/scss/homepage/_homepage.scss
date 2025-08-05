@@ -1,3 +1,11 @@
+.home-loader {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}
+
 .homepage {
 
     .info {
@@ -24,6 +32,7 @@
         &:hover,
         &:focus,
         &:active {
+            --#{$prefix}link-animation-bg: var(--#{$prefix}tetrad-primary);
             color: var(--#{$prefix}tetrad-primary);
         }
     }
@@ -40,6 +49,7 @@
         &:hover,
         &:focus,
         &:active {
+            --#{$prefix}link-animation-bg: var(--#{$prefix}warning);
             color: var(--#{$prefix}warning);
         }
     }
@@ -56,6 +66,7 @@
         &:hover,
         &:focus,
         &:active {
+            --#{$prefix}link-animation-bg: var(--#{$prefix}tetrad-tertiary);
             color: var(--#{$prefix}tetrad-tertiary);
         }
     }
@@ -72,14 +83,15 @@
         &:hover,
         &:focus,
         &:active {
-            color: var(--#{$prefix}hue-primary-6);
+            --#{$prefix}link-animation-bg: var(--#{$prefix}tetrad-minor);
+            color: var(--#{$prefix}tetrad-minor);
         }
     }
 
     .info-skills {
 
         h1 {
-            color: var(--#{$prefix}hue-primary-6);
+            color: var(--#{$prefix}tetrad-minor);
         }
     }
 
@@ -88,14 +100,15 @@
         &:hover,
         &:focus,
         &:active {
-            color: var(--#{$prefix}tetrad-minor);
+            --#{$prefix}link-animation-bg: var(--#{$prefix}hue-primary-6);
+            color: var(--#{$prefix}hue-primary-6);
         }
     }
 
     .info-contact {
 
         h1 {
-            color: var(--#{$prefix}tetrad-minor);
+            color: var(--#{$prefix}hue-primary-6);
         }
     }
 }

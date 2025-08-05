@@ -8,6 +8,7 @@ $max-page-width:       1400px !default;
 $prefix:               "kh-" !default;
 $container-padding:    32 !default;
 $header-height:        rem-calc(150) !default;
+$footer-height:        rem-calc(110) !default;
 
 $line-height-base:     1.5 !default;
 
@@ -132,11 +133,15 @@ $subtle-bg:            80%;
 $subtle-border:        60%;
 
 // Link Variables
-$link-color:                              $primary !default;
-$link-decoration:                         underline !default;
-$link-shade-percentage:                   20% !default;
-$link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
-$link-hover-decoration:                   null !default;
+$link-color:               $primary !default;
+$link-decoration:          underline !default;
+$link-shade-percentage:    20% !default;
+$link-hover-color:         shift-color($link-color, $link-shade-percentage) !default;
+$link-hover-decoration:    null !default;
+
+// Link Animation Variables
+$link-animation-stroke:    rem-calc(4);
+$link-animation-bg:        $link-color;
 
 // Body Settings
 $body-color:   $white !default;
@@ -157,11 +162,11 @@ $border-color:             $primary !default;
 $border-color-translucent: rgba($black, .175) !default;
 
 // Border Radius Settings
-$border-radius:               .375rem !default;
-$border-radius-sm:            .25rem !default;
-$border-radius-lg:            .5rem !default;
-$border-radius-xl:            1rem !default;
-$border-radius-xxl:           2rem !default;
+$border-radius:               rem-calc(8) !default;
+$border-radius-sm:            rem-calc(4) !default;
+$border-radius-lg:            rem-calc(12) !default;
+$border-radius-xl:            rem-calc(16) !default;
+$border-radius-xxl:           rem-calc(20) !default;
 
 // Color Contrast Settings
 $min-contrast-ratio:   4.5 !default;
@@ -170,3 +175,4 @@ $color-contrast-light: $white !default;
 
 @import "variables/colors";
 @import "variables/buttons";
+@import "variables/forms";

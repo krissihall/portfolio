@@ -8,10 +8,11 @@
     .side-nav {
         display: block;
         grid-area: "sidebar";
-        height: calc(100vh - #{$header-height});
+        height: 70vh;
         overflow-y: auto;
 
         &.sticky {
+            bottom: $footer-height;
             position: sticky;
             top: $header-height;
         }
@@ -19,6 +20,5 @@
 
     .side-nav-grid-content {
         grid-area: "main";
-        ;
     }
 }

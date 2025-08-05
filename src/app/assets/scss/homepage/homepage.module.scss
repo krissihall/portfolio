@@ -2,9 +2,7 @@
 @use "sass:math";
 @use "sass:color";
 
-@import "../includes/variables";
-@import "../includes/functions";
-@import "../includes/mixins";
+@import "../includes/includes-module";
 @import "variables";
 @import "animations";
 
@@ -14,7 +12,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     height: 100vh;
-    justify-content: space-between;
+    justify-content: flex-start;
     overflow: hidden;
     width: 100vw;
 
@@ -23,10 +21,11 @@
         flex-direction: column;
         flex-grow: 1;
         flex-wrap: nowrap;
+        max-width: $max-content-width;
+        padding-right: rem-calc(64);
     }
 
     .content {
-        max-width: rem-calc(1000);
         padding: rem-calc(24);
     }
 
@@ -38,17 +37,23 @@
         height: 100vh;
         padding: 0 rem-calc(24);
 
-        .link {
+        .navLink {
             align-items: center;
             display: flex;
-            font-family: var(--kh-script-font);
-            font-size: calc(math.div(100vh, $home-link-amount) - 10vh);
             height: math.div(100vh, $home-link-amount);
-            line-height: 1;
             margin: 0 auto;
             overflow: hidden;
+            padding-top: 2vh;
+        }
+
+        .link {
+            align-self: center;
+            font-family: var(--kh-script-font);
+            font-size: calc(math.div(100vh, $home-link-amount) - 5vh);
+            line-height: 1;
             padding-left: rem-calc(8);
             padding-right: rem-calc(16);
+            padding-top: 3vh;
             position: relative;
 
             &:hover,

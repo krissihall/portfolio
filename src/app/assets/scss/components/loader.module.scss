@@ -1,0 +1,60 @@
+@use "sass:selector";
+@use "sass:math";
+@use "sass:color";
+
+@import "../includes/includes-module";
+
+.loader {
+    width: rem-calc(60);
+    aspect-ratio: 1;
+    --c: no-repeat linear-gradient(var(--#{$prefix}primary) 0 0);
+    background:
+        var(--c) 0 rem-calc(38),
+        var(--c) right rem-calc(18) bottom rem-calc(18),
+        var(--c) right rem-calc(18) top rem-calc(18),
+        var(--c) rem-calc(18) rem-calc(18),
+        var(--c) rem-calc(18) 100%,
+        var(--c) 100% 100%,
+        var(--c) 100% 0,
+        var(--c) 0 0;
+    animation: l7 1.5s infinite alternate;
+}
+
+@keyframes l7 {
+    0% {
+        background-size: 0 rem-calc(4), rem-calc(4) 0, 0 rem-calc(4), rem-calc(4) 0, 0 rem-calc(4), rem-calc(4) 0, 0 rem-calc(4), rem-calc(4) 0
+    }
+
+    12.5% {
+        background-size: rem-calc(40) rem-calc(4), rem-calc(4) 0, 0 rem-calc(4), rem-calc(4) 0, 0 rem-calc(4), rem-calc(4) 0, 0 rem-calc(4), rem-calc(4) 0
+    }
+
+    25% {
+        background-size: rem-calc(40) rem-calc(4), rem-calc(4) rem-calc(20), 0 rem-calc(4), rem-calc(4) 0, 0 rem-calc(4), rem-calc(4) 0, 0 rem-calc(4), rem-calc(4) 0
+    }
+
+    37.5% {
+        background-size: rem-calc(40) rem-calc(4), rem-calc(4) rem-calc(20), rem-calc(20) rem-calc(4), rem-calc(4) 0, 0 rem-calc(4), rem-calc(4) 0, 0 rem-calc(4), rem-calc(4) 0
+    }
+
+    50% {
+        background-size: rem-calc(40) rem-calc(4), rem-calc(4) rem-calc(20), rem-calc(20) rem-calc(4), rem-calc(4) rem-calc(40), 0 rem-calc(4), rem-calc(4) 0, 0 rem-calc(4), rem-calc(4) 0
+    }
+
+    62.5% {
+        background-size: rem-calc(40) rem-calc(4), rem-calc(4) rem-calc(20), rem-calc(20) rem-calc(4), rem-calc(4) rem-calc(40), rem-calc(40) rem-calc(4), rem-calc(4) 0, 0 rem-calc(4), rem-calc(4) 0
+    }
+
+    75% {
+        background-size: rem-calc(40) rem-calc(4), rem-calc(4) rem-calc(20), rem-calc(20) rem-calc(4), rem-calc(4) rem-calc(40), rem-calc(40) rem-calc(4), rem-calc(4) 100%, 0 rem-calc(4), rem-calc(4) 0
+    }
+
+    87.5% {
+        background-size: rem-calc(40) rem-calc(4), rem-calc(4) rem-calc(20), rem-calc(20) rem-calc(4), rem-calc(4) rem-calc(40), rem-calc(40) rem-calc(4), rem-calc(4) 100%, 100% rem-calc(4), rem-calc(4) 0
+    }
+
+    95%,
+    100% {
+        background-size: rem-calc(40) rem-calc(4), rem-calc(4) rem-calc(20), rem-calc(20) rem-calc(4), rem-calc(4) rem-calc(40), rem-calc(40) rem-calc(4), rem-calc(4) 100%, 100% rem-calc(4), rem-calc(4) rem-calc(40)
+    }
+}

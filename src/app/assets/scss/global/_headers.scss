@@ -1,33 +1,33 @@
 h1 {
     color: $primary;
     font-family: var(--#{$prefix}script-font);
-    font-size: rem-calc(60);
+    font-size: rem-calc(60) !important;
     font-weight: var(--#{$prefix}regular-font);
 }
 
 h2 {
     color: var(--#{$prefix}secondary);
-    font-size: rem-calc(28);
+    font-size: rem-calc(28) !important;
     font-weight: var(--#{$prefix}medium-font);
 }
 
 h3 {
     color: var(--#{$prefix}primary-drk);
-    font-size: rem-calc(22);
+    font-size: rem-calc(22) !important;
     font-weight: var(--#{$prefix}bold-font);
 }
 
 h4 {
-    font-size: rem-calc(18);
+    font-size: rem-calc(18)!important;
     font-weight: var(--#{$prefix}light-font);
 }
 
 h5 {
     color: var(--#{$prefix}primary-lgt);
-    font-size: rem-calc(16);
+    font-size: rem-calc(16) !important;
 }
 
 h6 {
-    font-size: rem-calc(14);
+    font-size: rem-calc(14)!important;
     font-weight: var(--#{$prefix}medium-font);
 }

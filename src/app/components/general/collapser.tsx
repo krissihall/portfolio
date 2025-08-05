@@ -4,10 +4,11 @@ import { useEffect } from "react";
 interface Props {
     name: string,
     ID: string,
+    customClass?: String,
     children: React.ReactNode;
 }
 
-export default function Collapser({ name, ID, children }: Props) {
+export default function Collapser({ name, ID, customClass, children }: Props) {
     const eleId = `collapse-${ID}`;
     const target = `#${eleId}`;
 
@@ -32,7 +33,7 @@ export default function Collapser({ name, ID, children }: Props) {
             >
                 {name}
             </a>
-            <div id={eleId} className="!visible hidden collapse-content" data-twe-collapse-item>
+            <div id={eleId} className={`!visible hidden collapse-content ${customClass}`} data-twe-collapse-item>
                 {children}
             </div>
         </div>

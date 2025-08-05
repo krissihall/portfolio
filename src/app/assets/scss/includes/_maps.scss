@@ -1,4 +1,5 @@
 $theme-colors-rgb: map-loop($theme-colors, hexToRGB, "$value");
+$grayscale-rgb: map-loop($grayscale, hexToRGB, "$value");
 
 $theme-colors-text: (
     "primary": $primary-text-emphasis,

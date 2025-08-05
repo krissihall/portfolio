@@ -24,6 +24,9 @@
     --#{$prefix}border-radius-xl: #{$border-radius-xl};
     --#{$prefix}border-radius-xxl: #{$border-radius-xxl};
 
+    --#{prefix}link-animation-stroke: #{$link-animation-stroke};
+    --#{prefix}link-animation-bg: #{$link-animation-bg};
+
     @each $color, $value in $theme-colors {
         --#{$prefix}#{$color}: #{$value};
     }
@@ -42,5 +45,13 @@
 
     @each $color, $value in $theme-colors {
         --#{$prefix}#{$color}-border-subtle: #{tint-color($value, $subtle-border)};
+    }
+
+    @each $color, $value in $grayscale {
+        --#{$prefix}#{$color}: #{$value};
+    }
+
+    @each $color, $value in $grayscale-rgb {
+        --#{$prefix}#{$color}-rgb: #{$value};
     }
 }

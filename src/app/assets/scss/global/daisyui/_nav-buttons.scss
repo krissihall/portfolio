@@ -1,0 +1,36 @@
+.navigation {
+    @apply flex;
+    @apply flex-nowrap;
+    @apply items-end;
+    @apply gap-2;
+    @apply pt-3;
+    @apply pb-3;
+    @apply pr-3;
+
+    .nav-link {
+        // flex h-[30px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover: bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3
+        @apply flex;
+        @apply h-[30px];
+        @apply grow;
+        @apply items-center;
+        @apply justify-center;
+        @apply gap-2;
+        @apply rounded-md;
+        @apply bg-gray-50;
+        @apply p-3;
+        @apply text-sm;
+        @apply font-medium;
+        // @apply hover:bg-sky-100;
+        @apply text-blue-800;
+        // @apply hover:text-blue-600;
+        @apply md:flex-none;
+        @apply md:justify-start;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            @apply bg-sky-100;
+            @apply text-blue-600;
+            text-decoration: none;
+        }
+    }
+}

@@ -11,7 +11,7 @@ export default function ThemeOptions() {
                     CSS Colors
                     <a href="#cssColors" className="anchor-link"></a>
                 </h2>
-                <Collapser name="CSS Color Theme Vars" ID={`collapse-${generateID()}`}>
+                <Collapser name="CSS Color Theme Vars" ID={generateID()}>
                     <div className="color-options options flex flex-wrap justify-stretch mb-2">
                         <>
                             {theme.colors.map((color: Color, index: number) => {
@@ -46,7 +46,7 @@ export default function ThemeOptions() {
                         </>
                     </div>
                 </Collapser>
-                <Collapser name="CSS Color Theme Subtle" ID={`collapse-${generateID()}`}>
+                <Collapser name="CSS Color Theme Subtle" ID={generateID()}>
                     <div className="color-options options flex flex-wrap justify-stretch mb-2">
                         <>
                             {subtle.colors.map((color: Color, index: number) => {
@@ -78,7 +78,7 @@ export default function ThemeOptions() {
                         </>
                     </div>
                 </Collapser>
-                <Collapser name="CSS Color Theme Emphasis" ID={`collapse-${generateID()}`}>
+                <Collapser name="CSS Color Theme Emphasis" ID={generateID()}>
                     <div className="color-options options flex flex-wrap justify-stretch mb-2">
                         <>
                             {emphasis.colors.map((color: Color, index: number) => {

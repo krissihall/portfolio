@@ -97,3 +97,48 @@ $hue-primary-5-border-subtle:    tint-color($hue-primary-5, $subtle-border);
 $hue-primary-6-border-subtle:    tint-color($hue-primary-6, $subtle-border);
 $hue-primary-7-border-subtle:    tint-color($hue-primary-7, $subtle-border);
 $hue-primary-8-border-subtle:    tint-color($hue-primary-8, $subtle-border);
+
+// Grayscale Color Vars
+$gray-98:                      #f3f3f3; // 2%
+$gray-95:                      #ededed; // 5%
+$gray-90:                      #e3e3e3; // 10%
+$gray-85:                      #d9d9d9; // 15%
+$gray-80:                      #ccc;    // 20%
+$gray-75:                      #c0c0c0; // 25%
+$gray-70:                      #b0b0b0; // 30%
+$gray-65:                      #898989; // 35%
+$gray-60:                      #999;    // 40%
+$gray-55:                      #7f6f6f; // 45%
+$gray-50:                      #808080; // 50%
+$gray-45:                      #727272; // 55%
+$gray-40:                      #696969; // 60%
+$gray-35:                      #464646; // 65%
+$gray-30:                      #4d4d4d; // 70%
+$gray-25:                      #353535; // 75%
+$gray-20:                      #363636; // 80%
+$gray-15:                      #222;    // 85%
+$gray-10:                      #171717; // 90%
+$gray-5:                       #0f0f0f; // 95%
+
+$grayscale: (
+    "gray-98": $gray-98,
+    "gray-95": $gray-95,
+    "gray-90": $gray-90,
+    "gray-85": $gray-85,
+    "gray-80": $gray-80,
+    "gray-75": $gray-75,
+    "gray-70": $gray-70,
+    "gray-65": $gray-65,
+    "gray-60": $gray-60,
+    "gray-55": $gray-55,
+    "gray-50": $gray-50,
+    "gray-45": $gray-45,
+    "gray-40": $gray-40,
+    "gray-35": $gray-35,
+    "gray-30": $gray-30,
+    "gray-25": $gray-25,
+    "gray-20": $gray-20,
+    "gray-15": $gray-15,
+    "gray-10": $gray-10,
+    "gray-5": $gray-5,
+);

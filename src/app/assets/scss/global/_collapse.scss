@@ -16,6 +16,17 @@
             background: var(--#{$prefix}secondary-lgt);
             text-decoration: none;
         }
+
+        .homepage & {
+            background: var(--#{$prefix}tetrad-minor);
+            border-color: var(--#{$prefix}tetrad-minor-subtle);
+            color: var(--#{$prefix}tetrad-minor-subtle);
+            transition-property: border-color, color, background;
+
+            &[aria-expanded='true'] {
+                border-color: var(--#{$prefix}tetrad-minor);
+            }
+        }
     }
 
     .collapse-content {
@@ -24,5 +35,9 @@
         border-left: $collapse-border;
         border-right: $collapse-border;
         padding: rem-calc(12);
+
+        .homepage & {
+            border-color: var(--#{$prefix}tetrad-minor);
+        }
     }
 }
