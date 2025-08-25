@@ -32,3 +32,9 @@ body {
     display: block;
     width: 100%;
 }
+
+.rounded-box {
+    background: $form-bg;
+    border-radius: $form-padding;
+    padding: rem-calc(24);
+}

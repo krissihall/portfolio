@@ -1,13 +1,4 @@
-$form-bg:      $gray-15;
-$form-padding: $border-radius-lg;
-
 @import "forms/form-label";
 @import "forms/form-input";
 @import "forms/form-textarea";
 @import "forms/form-select";
-
-.form-container {
-    background: $form-bg;
-    border-radius: $form-padding;
-    padding: rem-calc(24);
-}

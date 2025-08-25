@@ -32,7 +32,8 @@
 
     &:focus,
     &:active,
-    &:focus-visible {
+    &:focus-visible,
+    &.has-value {
         // background: $input-hover-bg-color;
         border: none;
         border-radius: $input-hover-border-radius;

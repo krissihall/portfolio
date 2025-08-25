@@ -1,4 +1,35 @@
-
 .form-select {
-    position: inherit;
+    appearance: none;
+    position: relative;
+    z-index: 2;
+
+    @extend .form-input;
+
+    &::placeholder {
+        color: transparent;
+        opacity: 0;
+    }
+
+    ~ .form-label {
+        align-self: self-start !important;
+    }
+
+    option {
+        color: $black;
+    }
+}
+
+.select-container {
+    position: relative;
+
+    .arrow {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        position: absolute;
+        right: rem-calc(16);
+        top: 0;
+        width: rem-calc(16);
+        z-index: 1;
+    }
 }

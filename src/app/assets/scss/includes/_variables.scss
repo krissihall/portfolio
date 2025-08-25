@@ -173,6 +173,10 @@ $min-contrast-ratio:   4.5 !default;
 $color-contrast-dark:  $black !default;
 $color-contrast-light: $white !default;
 
+// Form Settings
+$form-bg:      lighten($black, 10%) !default;
+$form-padding: $border-radius-sm !default;
+
 @import "variables/colors";
 @import "variables/buttons";
 @import "variables/forms";
