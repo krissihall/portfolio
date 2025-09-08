@@ -4,14 +4,14 @@ import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import AnimatedBg from "./components/general/animated-bg";
 import "./globals.css";
 import "./assets/scss/global.scss";
-import { config } from '@fortawesome/fontawesome-svg-core'
-import '@fortawesome/fontawesome-svg-core/styles.css'
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false
 
 const openSans = Open_Sans({
-  weight: ['300', '400', '500', '700'],
-  subsets: ['latin'],
-  variable: '--kh-font-family',
+  weight: ["300", "400", "500", "700"],
+  subsets: ["latin"],
+  variable: "--kh-font-family",
 });
 
 const header = Italiana({

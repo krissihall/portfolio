@@ -21,7 +21,22 @@ const config: Config = {
   },
   plugins: [
     require("tw-elements/plugin.cjs"),
-    require('daisyui')
+    require("daisyui")
   ],
+  daisyui: {
+    // themes: true,
+    themes: [
+      {
+        customDark: {
+          primary: "#ff2577",
+          secondary: "#25ffad",
+        },
+        customLight: {
+          primary: "#ff2577",
+          secondary: "#25ffad",
+        },
+      },
+    ],
+  }
 };
 export default config;

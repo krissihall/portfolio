@@ -175,7 +175,7 @@ $color-contrast-light: $white !default;
 
 // Form Settings
 $form-bg:      lighten($black, 10%) !default;
-$form-padding: $border-radius-sm !default;
+$form-padding: $border-radius-lg !default;
 
 @import "variables/colors";
 @import "variables/buttons";

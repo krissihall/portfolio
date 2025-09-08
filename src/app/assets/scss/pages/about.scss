@@ -1,0 +1,33 @@
+@import '../includes/includes';
+
+.work-container {
+
+    h3 {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 100%;
+
+        .work-dates {
+            color: $secondary;
+            font-size: rem-calc(13);
+            text-transform: uppercase;
+        }
+    }
+}
+
+.icon {
+    fill: $white;
+}
+
+.links {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: rem-calc(24);
+    justify-content: flex-start;
+    margin: rem-calc(20) 0;
+}

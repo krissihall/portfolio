@@ -115,7 +115,7 @@ export default function Home() {
                   <ul className={`list-disc ps-8 text-${current.class}-emphasis`}>
                     <li>Bootstrap &ndash; 10+ years</li>
                     <li>Ember.js &ndash; 5+ years</li> 
-                    <li>Vue.js &ndash; 3+ years</li>
+                    <li>Vue.js &ndash; 4+ years</li>
                     <li>React &ndash; 1 year</li>
                     <li>Angular</li>
                   </ul>

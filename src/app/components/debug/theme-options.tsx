@@ -6,7 +6,7 @@ import Collapser from "../general/collapser";
 export default function ThemeOptions() {
     return (
         <main className="theme-options-container">
-            <section className="css-vars-container container ml-auto mr-auto mb-4">
+            <section className="css-vars-container container ml-auto mr-auto mb-4 rounded-box">
                 <h2 id="cssColors" className="mb-2">
                     CSS Colors
                     <a href="#cssColors" className="anchor-link"></a>
@@ -111,7 +111,8 @@ export default function ThemeOptions() {
                     </div>
                 </Collapser>
             </section>
-            <section className="text-options-container container ml-auto mr-auto mb-4">
+
+            <section className="text-options-container container ml-auto mr-auto mb-4 rounded-box">
                 <h2 id="textColorOptions" className="mb-2">
                     Text Color Options
                     <a href="#textColorOptions" className="anchor-link"></a>
@@ -131,7 +132,7 @@ export default function ThemeOptions() {
                 </div>
             </section>
 
-            <section className="bg-options-container container ml-auto mr-auto mb-4">
+            <section className="bg-options-container container ml-auto mr-auto mb-4 rounded-box">
                 <h2 id="bgColorOptions" className="mb-2">
                     Background Color Options
                     <a href="#bgColorOptions" className="anchor-link"></a>
@@ -151,12 +152,12 @@ export default function ThemeOptions() {
                 </div>
             </section>
 
-            <section className="bg-borders-container container ml-auto mr-auto mb-2">
+            <section className="bg-borders-container container ml-auto mr-auto mb-4 rounded-box">
                 <h2 id="borderOptions" className="mb-2">
                     Border Options
                     <a href="#borderOptions" className="anchor-link"></a>
                 </h2>
-                <div className="theme-options options flex flex-wrap mb-4">
+                <div className="theme-options options flex flex-wrap mb-2">
                     <>
                         {theme.colors.map((color: Color, index: number) => {
                             const classDef = "border-option option flex items-center justify-center text-center mr-2 mb-2 p-2 text-xs border border-1";
@@ -171,7 +172,7 @@ export default function ThemeOptions() {
                 </div>
             </section>
 
-            <section className="bg-buttons-container container ml-auto mr-auto mb-2">
+            <section className="bg-buttons-container container ml-auto mr-auto mb-4 rounded-box">
                 <h2 id="buttonOptions" className="mb-2">
                     Button Options
                     <a href="#buttonOptions" className="anchor-link"></a>

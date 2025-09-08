@@ -34,7 +34,7 @@ body {
 }
 
 .rounded-box {
+    --rounded-box: #{$border-radius};
     background: $form-bg;
-    border-radius: $form-padding;
     padding: rem-calc(24);
 }

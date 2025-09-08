@@ -1,4 +1,4 @@
-export const projects = {[
+export const projects = [
     {
         id: 1,
         client: "Bob Evans",
@@ -30,4 +30,4 @@ export const projects = {[
         description: "<p>This micro-site was a one page promotional piece that was announcing some coupon opportunities for Atria's Restaurant during their Oktoberfest event in Fall 2012. The <span class=\"highlight\">\"steins\"</span> rotate on a custom-coded carousel and reveal the text in English by clicking on the <span class=\"highlight\">\"translate\"</span> button below each <span class=\"highlight\">\"stein\"</span>. This piece was built to be responsive and every piece of it was hand-coded rather than relying on JavaScript or jQuery plugins.</p><p>One of the tricky things about this piece was to make the positioning change as the browser was sized down. I also decided that for the mobile sizes, only one <span class=\"highlight\">\"stein\"</span> should show since otherwise, you would not be able to read the translated text as they would all be too small.</p>",
         type: "inactive"
     }
-]};
+];
