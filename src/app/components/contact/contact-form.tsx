@@ -61,7 +61,7 @@ export default function ContactForm () {
 
     return (
         <div className="contact-form rounded-box">
-            <div className="w-1/2 mb-4">
+            <div className="mb-4">
                 <div className="grid grid-cols-2 gap-3 mb-4">
                     <FormInput name="nameField" label="Name:" required={true} />
                     <FormInput name="emailField" label="Email:" required={true} />

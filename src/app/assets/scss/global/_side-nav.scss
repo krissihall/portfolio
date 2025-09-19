@@ -16,6 +16,17 @@
             position: sticky;
             top: $header-height;
         }
+
+        .nav {
+
+            .nav-item {
+                display: block;
+                
+                &.footer-item {
+                    margin-top: rem-calc(24);
+                }
+            }
+        }
     }
 
     .side-nav-grid-content {

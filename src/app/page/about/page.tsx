@@ -13,39 +13,13 @@ export default function About() {
     return (
         <main className="about-container container max-w-4xl ml-auto mr-auto">
             <h1>About Page</h1>
-            <section className="school-container rounded-box mb-4">
-                <h2>Schooling</h2>
-                <p>
-                    I have been using HTML and CSS since I was 16 years old in high school.
-                    It has always been a hobby of mine and I have greatly enjoyed graphic 
-                    design as well.
-                </p>
-                <h3 className="mt-4">Kent State University</h3>
-                <p>
-                    Attended Kent State University from the fall of 2002 until the spring of 
-                    2005 with an undeclared major. Many of the required courses were taken 
-                    during this time but I hadn&apos;t decided to go into a web development program 
-                    at that time.
-                </p>
-                <h3 className="mt-4">Pittsburgh Technical Institute</h3>
-                <p>
-                    Attended PTI from October 2006 until 2008 in the Multimedia program. I 
-                    received an Associate of Science degree and studied many different types
-                    of media. Some classes were using Flash (ActionScript 3.0), Photoshop and
-                    the Adobe Suite for graphic design, 3DS Max for 3D modeling and animating,
-                    audio and video editing, web design and development, and some additional
-                    design and logo classes from the Graphic Design program. I received a 4.0 
-                    for 5 out of 8 quarters while attending the institute.
-                </p>
-            </section>
-            
             <section className="work-container rounded-box mb-4">
                 <h2>Work History</h2>
                 <p>
                     Below is a list of work history and some highlights of projects that I have worked on.
                 </p>
 
-                <h3 className="mt-4">
+                <h3 className="mt-5">
                     Liviniti
                     <span className="work-dates">October 2024 &ndash; August 2025</span>
                 </h3>
@@ -58,7 +32,7 @@ export default function About() {
                     scalable within a large Vue application.
                 </p>
 
-                <h3 className="mt-4">
+                <h3 className="mt-5">
                     Talis Clinical LLC
                     <span className="work-dates">June 2021 &ndash; October 2024</span>
                 </h3>
@@ -70,7 +44,7 @@ export default function About() {
                     styles consistent and reusable with a critical eye on design and user experience.
                 </p>
 
-                <h3 className="mt-4">
+                <h3 className="mt-5">
                     New Elevation
                     <span className="work-dates">January 2020 &ndash; December 2020</span>
                 </h3>
@@ -80,7 +54,7 @@ export default function About() {
                     of new React components to replace JSP pages.
                 </p>
 
-                <h3 className="mt-4">
+                <h3 className="mt-5">
                     American Eagle Outfitters
                     <span className="work-dates">April 2014 &ndash; December 2019</span>
                 </h3>
@@ -93,7 +67,7 @@ export default function About() {
                     team to ensure accuracy in style implementation.
                 </p>
 
-                <h3 className="mt-4">
+                <h3 className="mt-5">
                     Brunner
                     <span className="work-dates">January 2011 &ndash; March 2014</span>
                 </h3>
@@ -104,26 +78,70 @@ export default function About() {
                 </p>
             </section>
 
+            <section className="school-container rounded-box mb-4">
+                <h2>Schooling</h2>
+                <p>
+                    I have been using HTML and CSS since I was 16 years old in high school.
+                    It has always been a hobby of mine and I have greatly enjoyed graphic 
+                    design as well.
+                </p>
+                <h3 className="mt-5">
+                    Pittsburgh Technical Institute
+                    <span className="work-dates">October 2006 &ndash; October 2008</span>
+                </h3>
+                <p>
+                    Attended PTI from October 2006 until 2008 in the Multimedia program. I 
+                    received an Associate of Science degree and studied many different types
+                    of media. Some classes were using Flash (ActionScript 3.0), Photoshop and
+                    the Adobe Suite for graphic design, 3DS Max for 3D modeling and animating,
+                    audio and video editing, web design and development, and some additional
+                    design and logo classes from the Graphic Design program. I received a 4.0 
+                    for 5 out of 8 quarters while attending the institute.
+                </p>
+                <h3 className="mt-5">
+                    Kent State University
+                    <span className="work-dates">August 2002 &ndash; May 2004</span>
+                </h3>
+                <p>
+                    Attended Kent State University from the fall of 2002 until the spring of 
+                    2005 with an undeclared major. Many of the required courses were taken 
+                    during this time but I hadn&apos;t decided to go into a web development program 
+                    at that time.
+                </p>
+            </section>
+
             <section className="socials-container rounded-box mb-4">
                 <h2>Important Links</h2>
                 <p>Here are some links to provide additional information, resume, and public code examples.</p>
 
                 <div className="links">
                     <div className="link tooltip tooltip-primary" data-tip="LinkedIn Profile">
-                        <a href="https://www.linkedin.com/in/kristina-hall-51802b6b/" target="_blank">
-                            <LinkedIn width="100" height="100" className="link-icon" />
+                        <a
+                            href="https://www.linkedin.com/in/kristina-hall-51802b6b/"
+                            className="social-link"
+                            target="_blank"
+                        >
+                            <LinkedIn width="100" height="100" className="link-icon" hasHover={true} />
                         </a>
                     </div>
                     
                     <div className="link tooltip tooltip-primary" data-tip="Github Profile">
-                        <a href="https://github.com/krissihall" target="_blank">
-                            <Github width="100" height="100" className="link-icon" />
+                        <a
+                            href="https://github.com/krissihall"
+                            className="social-link"
+                            target="_blank"
+                        >
+                            <Github width="100" height="100" className="link-icon" hasHover={true} />
                         </a>
                     </div>
 
                     <div className="link tooltip tooltip-primary" data-tip="Download Resume">
-                        <a href="/Kristina-Hall_2025.pdf" target="_blank">
-                            <FiletypePdf width="100" height="100" className="link-icon" />
+                        <a
+                            href="/Kristina-Hall_2025.pdf"
+                            className="socialLink"
+                            target="_blank"
+                        >
+                            <FiletypePdf width="100" height="100" className="link-icon" hasHover={true} />
                         </a>
                     </div>
                 </div>

@@ -14,19 +14,19 @@ export default function Footer() {
                     <div className="links">
                         <div className="link tooltip tooltip-primary" data-tip="LinkedIn Profile">
                             <a href="https://www.linkedin.com/in/kristina-hall-51802b6b/" target="_blank">
-                                <LinkedIn width="32" height="32" className="link-icon" />
+                                <LinkedIn width="32" height="32" className="link-icon" hasHover={true} />
                             </a>
                         </div>
                         
                         <div className="link tooltip tooltip-primary" data-tip="Github Profile">
                             <a href="https://github.com/krissihall" target="_blank">
-                                <Github width="32" height="32" className="link-icon" />
+                                <Github width="32" height="32" className="link-icon" hasHover={true} />
                             </a>
                         </div>
 
                         <div className="link tooltip tooltip-primary" data-tip="Download Resume">
                             <a href="/Kristina-Hall_2025.pdf" target="_blank">
-                                <FiletypePdf width="32" height="32" className="link-icon" />
+                                <FiletypePdf width="32" height="32" className="link-icon" hasHover={true} />
                             </a>
                         </div>
                     </div>

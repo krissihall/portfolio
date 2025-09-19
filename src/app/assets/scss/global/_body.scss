@@ -11,7 +11,8 @@ body {
 
     .application-root {
         height: 100vh;
-        overflow: auto;
+        overflow-y: overlay;
+        overflow-x: hidden;
         position: relative;
         scroll-behavior: smooth;
         width: 100vw;
@@ -37,4 +38,8 @@ body {
     --rounded-box: #{$border-radius};
     background: $form-bg;
     padding: rem-calc(24);
+}
+
+p {
+    margin-bottom: rem-calc(24) !important;
 }

@@ -2,4 +2,12 @@
 
 footer {
     margin-top: auto;
+    .links {
+        .link {
+            margin-right: rem-calc(12);
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
 }
