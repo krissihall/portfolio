@@ -25,7 +25,7 @@ export default function Footer() {
                         </div>
 
                         <div className="link tooltip tooltip-primary" data-tip="Download Resume">
-                            <a href="/Kristina-Hall_2025.pdf" target="_blank">
+                            <a href="/Kristina-Hall-redesign_2025.pdf" target="_blank">
                                 <FiletypePdf width="32" height="32" className="link-icon" hasHover={true} />
                             </a>
                         </div>

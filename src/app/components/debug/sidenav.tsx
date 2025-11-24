@@ -10,8 +10,8 @@ export default function SideNav() {
     return (
         <div className="side-nav sticky">
             <h2>Navigation</h2>
-            <ul>
-                <li>
+            <ul className="nav">
+                <li className="nav-item">
                     <Link
                         href="/page/debug#text"
                         onClick={() => onClickEvent("debug text anchor")}
@@ -20,7 +20,7 @@ export default function SideNav() {
                         Text
                     </Link>
                 </li>
-                <li>
+                <li className="nav-item">
                     <Link
                         href="/page/debug#cssColors"
                         onClick={() => onClickEvent("debug css color anchor")}
@@ -29,7 +29,7 @@ export default function SideNav() {
                         CSS Colors
                     </Link>
                 </li>
-                <li>
+                <li className="nav-item">
                     <Link
                         href="/page/debug#textColorOptions"
                         onClick={() => onClickEvent("debug text color options anchor")}
@@ -38,7 +38,7 @@ export default function SideNav() {
                         Text Color Options
                     </Link>
                 </li>
-                <li>
+                <li className="nav-item">
                     <Link
                         href="/page/debug#bgColorOptions"
                         onClick={() => onClickEvent("debug bg color options anchor")}
@@ -47,7 +47,7 @@ export default function SideNav() {
                         Background Color Options
                     </Link>
                 </li>
-                <li>
+                <li className="nav-item">
                     <Link
                         href="/page/debug#buttonOptions"
                         onClick={() => onClickEvent("debug button options anchor")}
@@ -56,16 +56,16 @@ export default function SideNav() {
                         Button Options
                     </Link>
                 </li>
+                <li className="nav-item footer-item">
+                    <Link
+                        href="/page/debug#top"
+                        onClick={() => onClickEvent("Back to Top anchor")}
+                        className="nav-link back-to-top"
+                    >
+                        Back to Top
+                    </Link>
+                </li>
             </ul>
-            <div className="side-nav-footer">
-                <Link
-                    href="/page/debug#top"
-                    onClick={() => onClickEvent("Back to Top anchor")}
-                    className="nav-link back-to-top"
-                >
-                    Back to Top
-                </Link>
-            </div>
         </div>
     );
 };

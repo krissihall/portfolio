@@ -11,7 +11,7 @@ export default function Skills() {
         <main className="contact-container container max-w-4xl ml-auto mr-auto">
             <h1>Skills</h1>
             <section className="rounded-box">
-                <p>
+                <p className="mb-6">
                     Below are some of the skills I have aquired over the years and the amount of time I have been working
                     with various technologies.
                 </p>
