@@ -1,5 +1,21 @@
 .work-card-container {
+    flex-wrap: wrap;
+    // gap: rem-calc(12);
+    justify-content: flex-start;
     .card {
-        column-gap: rem-calc(12);
+        overflow: hidden;
+        width: calc(50% - 6px);
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+}
+
+.no-hover {
+    &:hover,
+    &:focus {
+        color: initial;
+        text-decoration: none;
     }
 }

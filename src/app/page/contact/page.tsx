@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 const Page: NextPage = () => {
     return (
-        <main className="contact-container container max-w-4xl ml-auto mr-auto">
+        <main className="contact-container container max-w-4xl ml-auto mr-auto pt-6">
             <h1>Contact</h1>
 
             <ContactForm />

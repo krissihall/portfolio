@@ -6,9 +6,21 @@
         border-bottom: rem-calc(1) solid var(--#{$prefix}secondary-drk);
         color: var(--#{$prefix}secondary-text-emphasis);
         cursor: pointer;
-        display: block;
+        display: flex;
         padding: $btn-padding-y $btn-padding-x;
         transition: background 0.25s ease-in;
+
+        &[aria-expanded] {
+            .arrow {
+                transition: transform 0.5s ease-in-out;
+            }
+        }
+
+        &[aria-expanded=true] {
+            .arrow {
+                transform: rotate(-180deg);
+            }
+        }
 
         &:hover,
         &:focus,

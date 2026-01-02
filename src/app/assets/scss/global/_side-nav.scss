@@ -18,13 +18,32 @@
         }
 
         .nav {
-
+            cursor: pointer;
             .nav-item {
                 display: block;
                 
                 &.footer-item {
                     margin-top: rem-calc(24);
                 }
+            }
+        }
+    }
+
+    .nav-header {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+
+        &[aria-expanded] {
+            .arrow {
+                transition: transform 0.5s ease-in-out;
+            }
+        }
+
+        &[aria-expanded=true] {
+            .arrow {
+                transform: rotate(-180deg);
             }
         }
     }

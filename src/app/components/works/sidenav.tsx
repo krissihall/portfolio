@@ -3,6 +3,8 @@ import { useEffect } from 'react';
 import Link from 'next/link';
 import { sendGTMEvent } from "@next/third-parties/google";
 import { generateID } from '@/app/helpers/generate-id';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faC, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 export default function SideNav() {
     const eleId = `sidenav-${generateID()}`;
@@ -24,22 +26,31 @@ export default function SideNav() {
             <h2>Navigation</h2>
             <ul className="nav">
                 <li className="nav-item">
-                    <span
+                    <a
                         className="nav-header collapse-link"
                         data-twe-collapse-init
                         data-twe-ripple-init
                         data-twe-ripple-color="light"
                         data-twe-target={`#${eleId}`}
-                        aria-expanded="false"
                         aria-controls={eleId}
                     >
-                        Graphic Design
-                    </span>              
+                        <span className="text">Graphic Design</span>
+                        <FontAwesomeIcon icon={faChevronDown} prefix="fas" className="arrow" />
+                    </a>              
                     <ul
                         className="nav !visible hidden collapse-content"
                         id={eleId}
                         data-twe-collapse-item
                     >
+                        <li className="nav-item">
+                            <Link
+                                href="/page/works/brochures"
+                                onClick={() => onClickEvent("Brochures")}
+                                className="nav-link"
+                            >
+                                Brochures
+                            </Link>
+                        </li>
                         <li className="nav-item">
                             <Link
                                 href="/page/works/logos"

@@ -10,27 +10,45 @@
     .nav-link {
         // flex h-[30px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover: bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3
         @apply flex;
-        @apply h-[30px];
+        // @apply h-[30px];
         @apply grow;
         @apply items-center;
         @apply justify-center;
         @apply gap-2;
         @apply rounded-md;
-        @apply bg-gray-50;
-        @apply p-3;
-        @apply text-sm;
+        // @apply bg-gray-50;
+        @apply px-4;
+        @apply py-2;
+        @apply text-xl;
         @apply font-medium;
         // @apply hover:bg-sky-100;
-        @apply text-blue-800;
+        // @apply text-blue-800;
         // @apply hover:text-blue-600;
         @apply md:flex-none;
         @apply md:justify-start;
+        position: relative;
         transition: all 0.3s ease-in-out;
 
+        &:before {
+            background: rgba(0, 0, 0, 0);
+            background: linear-gradient(180deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+            bottom: 0;
+            content: '';
+            display: none;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+        }
+
         &:hover {
-            @apply bg-sky-100;
-            @apply text-blue-600;
+            // @apply bg-sky-100;
+            // @apply text-blue-600;
             text-decoration: none;
+            &:before {
+                display: block;
+            }
         }
     }
 }

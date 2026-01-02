@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function About() {
     return (
-        <main className="about-container container max-w-4xl ml-auto mr-auto">
+        <main className="about-container container max-w-4xl ml-auto mr-auto pt-6">
             <h1>About Page</h1>
             <section className="work-container rounded-box mb-4">
                 <h2>Work History</h2>

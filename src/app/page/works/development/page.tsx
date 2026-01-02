@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function Development() {
     return (
-        <main className="development-container">
+        <main className="development-container pt-6">
             <h1>Development Projects</h1>
         </main>
     );

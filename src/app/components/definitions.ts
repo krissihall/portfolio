@@ -21,6 +21,7 @@ export type NavLink = {
     id: number,
     name: string,
     href: string,
+    newWindow: boolean,
     class: string,
 };
 

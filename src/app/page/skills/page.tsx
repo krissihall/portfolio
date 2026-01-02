@@ -3,12 +3,12 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Skills",
-    description: "This is where I list the skills I have aquired over the years.    `+",
+    description: "This is where I list the skills I have aquired over the years. `+",
 };
 
 export default function Skills() {
     return (
-        <main className="contact-container container max-w-4xl ml-auto mr-auto">
+        <main className="contact-container container max-w-4xl ml-auto mr-auto pt-6">
             <h1>Skills</h1>
             <section className="rounded-box">
                 <p className="mb-6">

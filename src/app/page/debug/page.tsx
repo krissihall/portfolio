@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function Debug() {
     return (
-        <main className="debug-container container ml-auto mr-auto">
+        <main className="debug-container container ml-auto mr-auto pt-6">
             <h1>Debug Page</h1>
             <div className="rounded-box mb-4">
                 <p>Just listing available styles/etc build into the portfolio site.</p>

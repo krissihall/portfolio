@@ -18,6 +18,9 @@ export default function Navigation() {
         <nav className="navigation">
             <>
                 {links.map((link: NavLink) => {
+                    const newTabProps = link.newWindow
+                        ? { target: "_blank", rel: "noopener noreferrer" }
+                        : {};
                     return (
                         <Link
                             key={link.name}
@@ -26,10 +29,12 @@ export default function Navigation() {
                             className={clsx(
                                 "nav-link",
                                 // "flex h-[30px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3",
-                                {
-                                    "bg-sky-100 text-blue-600": pathname === link.href
-                                }
+                                // {
+                                //     "bg-sky-100 text-blue-600": pathname === link.href
+                                // },
+                                `text-bg-${link.class} hover:text-${link.class}-emphasis`,
                             )}
+                            {...newTabProps}
                         >
                             {link.name}
                         </Link>
