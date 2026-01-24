@@ -14,7 +14,7 @@
         &.sticky {
             bottom: $footer-height;
             position: sticky;
-            top: $header-height;
+            top: rem-calc(20);
         }
 
         .nav {

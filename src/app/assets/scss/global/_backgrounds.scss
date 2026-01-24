@@ -4,4 +4,16 @@
         color: color-contrast($value);
         background-color: rgba(var(--#{$prefix}#{$color}-rgb), var(--#{$prefix}bg-opacity, 1));
     }
+    a.text-bg-#{$color} {
+        &:hover,
+        &:active,
+        &:focus {
+            @if color-contrast($value) == "#ffffff" {
+                color: darken(color-contrast($value), 10%);
+            } @else {
+                color: lighten(color-contrast($value), 20%);
+            }
+            // color: color-contrast($value);
+        }
+    }
 }

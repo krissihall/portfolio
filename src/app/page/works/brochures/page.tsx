@@ -15,29 +15,35 @@ export default function Brochures() {
 
             <section className="work-card-container mt-4 d-flex gap-3">
                 <div className="card text-bg-primary-lgt shadow-sm">
-                    <figure className="p-4">
-                        <Image
-                            src="/images/graphic-design/logos/stinky-craft.svg"
-                            alt="Stinky Craft Logo"
-                            className="img-responsive"
-                            width={0}
-                            height={0}
-                            sizes="100vw"
-                            style={{ width: '100%', height: 'auto' }}
-                        />
-                    </figure>
-                    <div className="card-body">
-                        <h3 className="card-title text-primary-drk">Stinky Craft Logo</h3>
-                        <p className="mb-0">
-                            This logo was created for a Minecraft server I hosted for my friends to hang out and play on. Many of the people on the 
-                            server stream on Twitch or Youtube in their free time so I set up a website to help promote them and the server.
-                        </p>
-                        <div className="card-actions justify-end">
-                            <a className="btn btn-primary">
-                                Check It Out!
-                            </a>
+                    <Link
+                        href="/page/works/brochures/comec-z-fold"
+                        className="no-hover"
+                    >
+                        <figure className="p-4">
+                            <Image
+                                src="/images/graphic-design/brochures/comec-z-fold.png"
+                                alt="Comec Z-Fold Brochure"
+                                className="img-responsive"
+                                width={0}
+                                height={0}
+                                sizes="100vw"
+                                style={{ width: '100%', height: 'auto' }}
+                            />
+                        </figure>
+                        <div className="card-body">
+                            <h3 className="card-title text-primary-drk">Comec Z-Fold Brochure</h3>
+                            <p className="mb-0">
+                                This brochure was created for <a href="https://comecus.com" target="_blank">Comec US</a> particularly for use at
+                                <a href="https://www.performanceracing.com/tradeshow" target="_blank">PRI Show 2025</a> in Indianapolis.
+                                It is a brochure with general information about many of the popular machines used for engine rebuilding that are available for purchase.
+                            </p>
+                            <div className="card-actions justify-end">
+                                <button className="btn btn-primary">
+                                    Check It Out!
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </section>
         </main>

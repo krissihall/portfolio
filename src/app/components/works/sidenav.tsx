@@ -71,6 +71,15 @@ export default function SideNav() {
                         Development
                     </Link>
                 </li>
+                <li className="nav-item">
+                    <Link
+                        href="/page/works/photography"
+                        onClick={() => onClickEvent("Photography")}
+                        className="nav-link"
+                    >
+                        Photography
+                    </Link>
+                </li>
                 <li className="nav-item footer-item">
                     <Link
                         href="/page/works#top"

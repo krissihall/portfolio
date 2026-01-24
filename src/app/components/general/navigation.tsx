@@ -1,3 +1,21 @@
+// "use client";
+
+// import NavLink from "@/app/components/general/nav-link";
+// import { links } from "@/app/components/data/navigation";
+
+// export default function Navigation() {
+//     return (
+//         <nav className="navigation">
+//             <>
+//                 {links.map((link) => {
+//                     <NavLink link={link} />
+//                 })}
+//             </>
+//         </nav>
+//     );
+// };
+
+
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -9,12 +27,19 @@ import { links } from "@/app/components/data/navigation";
 export default function Navigation() {
     const pathname = usePathname();
 
+    // Determine if the link is active.
+    // Use startsWith for sub-navigation items (e.g., /blog/post-1 should match /blog).
+    const isActive = (val: NavLink) => {
+        return pathname.startsWith(val.href);
+    };
+
     const onClickEvent = (val: NavLink) => {
         sendGTMEvent({ event: "click", value: val.name });
     };
 
+    const activeClassName = 'active';
+
     return (
-        // <nav className="navigation flex flex-nowrap items-end gap-2 pt-3 pb-3 pr-3">
         <nav className="navigation">
             <>
                 {links.map((link: NavLink) => {
@@ -28,11 +53,8 @@ export default function Navigation() {
                             onClick={() => onClickEvent(link)}
                             className={clsx(
                                 "nav-link",
-                                // "flex h-[30px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3",
-                                // {
-                                //     "bg-sky-100 text-blue-600": pathname === link.href
-                                // },
                                 `text-bg-${link.class} hover:text-${link.class}-emphasis`,
+                                isActive(link) ? `text-${link.class}-emphasis active` : ''
                             )}
                             {...newTabProps}
                         >

@@ -39,11 +39,11 @@ export default function Works() {
                                 <h3 className="card-title text-primary-drk">Brochures</h3>
                                 <p className="mb-0">Here are some brochures and flyers I've made for different events or companies.</p>
                                 <div className="card-actions justify-end">
-                                    <a
+                                    <button
                                         className="btn btn-primary"
                                     >
                                         Check It Out!
-                                    </a>
+                                    </button>
                                 </div>
                         </div>
                     </Link>
@@ -68,11 +68,11 @@ export default function Works() {
                             <h3 className="card-title text-primary-drk">Logos</h3>
                             <p className="mb-0">Check out some of the logos I've worked on.</p>
                             <div className="card-actions justify-end">
-                                <a
+                                <button
                                     className="btn btn-primary"
                                 >
                                     Check It Out!
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </Link>
@@ -97,11 +97,11 @@ export default function Works() {
                             <h3 className="card-title text-primary-drk">Development</h3>
                             <p className="mb-0">Check out some of the websites, applications, or source code of some of the development projects I have worked on.</p>
                             <div className="card-actions justify-end">
-                                <a
+                                <button
                                     className="btn btn-primary"
                                 >
                                     Check It Out!
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </Link>
@@ -126,11 +126,11 @@ export default function Works() {
                                 <h3 className="card-title text-primary-drk">Photography</h3>
                                 <p className="mb-0">Here is where I will feature my photography whether for professional events or single customers.</p>
                                 <div className="card-actions justify-end">
-                                    <a
+                                    <button
                                         className="btn btn-primary"
                                     >
                                         Check It Out!
-                                    </a>
+                                    </button>
                                 </div>
                         </div>
                     </Link>

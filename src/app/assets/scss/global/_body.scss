@@ -11,12 +11,23 @@ body {
 
     .application-root {
         height: 100vh;
-        overflow-y: overlay;
-        overflow-x: hidden;
+        overflow: hidden;
         position: relative;
         scroll-behavior: smooth;
         width: 100vw;
         z-index: 2;
+    }
+
+    .content-container {
+        height: calc(100vh - (#{$header-height} + (#{rem-calc(12) * 2}) ));
+        overflow-y: overlay;
+        overflow-x: hidden;
+        position: inherit;
+        z-index: 2;
+
+        &.slim {
+            height: calc(100vh - (#{$header-slim-height} + (#{rem-calc(12) * 2}) ));
+        }
     }
 }
 

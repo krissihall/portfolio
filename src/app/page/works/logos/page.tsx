@@ -76,9 +76,9 @@ export default function Logos() {
                                 This is a logo created for my Etsy shop called Kraftistry Creations.
                             </p>
                             <div className="card-actions justify-end">
-                                <a className="btn btn-primary">
+                                <button className="btn btn-primary">
                                     Check It Out!
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </Link>
@@ -126,9 +126,9 @@ export default function Logos() {
                                 server stream on Twitch or Youtube in their free time so I set up a website to help promote them and the server.
                             </p>
                             <div className="card-actions justify-end">
-                                <a className="btn btn-primary">
+                                <button className="btn btn-primary">
                                     Check It Out!
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </Link>

@@ -11,11 +11,3 @@
         }
     }
 }
-
-.no-hover {
-    &:hover,
-    &:focus {
-        color: initial;
-        text-decoration: none;
-    }
-}
