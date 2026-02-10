@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Collapser from '../general/collapser';
 import { generateID } from "@/app/helpers/generate-id";
 import { NavLink } from "@/app/components/definitions";
-import { links } from "@/app/components/data/navigation";
+import { links } from "@/app/data/navigation";
 
 export default function SkillsList() {
     const [current, setCurrent] = useState<NavLink>(links[0]);

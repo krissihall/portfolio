@@ -57,7 +57,7 @@
     .info-about {
 
         h1 {
-            color: var(--#{$prefix}warning);
+            color: shade-color($warning, 15%);
         }
     }
 

@@ -30,6 +30,17 @@
     --#{$prefix}btn-disabled-color: #{$disabled-color};
     --#{$prefix}btn-disabled-bg: #{$disabled-background};
     --#{$prefix}btn-disabled-border-color: #{$disabled-border};
+    background-color: var(--#{$prefix}btn-bg) !important;
+    border: solid $btn-border-width --#{$prefix}btn-border-color !important;
+    color: var(--#{$prefix}btn-color) !important;
+    transition: all 0.5s ease-in;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: var(--#{$prefix}btn-hover-bg) !important;
+        border: solid $btn-border-width --#{$prefix}btn-border-hover-color !important;
+    }
 }
 
 @mixin button-outline-variant($color,
@@ -52,6 +63,14 @@
     --#{$prefix}btn-disabled-bg: transparent;
     --#{$prefix}btn-disabled-border-color: #{$color};
     --#{$prefix}gradient: none;
+    border: solid $btn-border-width var(--#{$prefix}btn-border-color) !important;
+    color: var(--#{$prefix}btn-color) !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+        border: solid $btn-border-width var(--#{$prefix}btn-border-hover-color) !important;
+    }
 }
 
 @mixin button-size($padding-y, $padding-x, $font-size, $border-radius) {

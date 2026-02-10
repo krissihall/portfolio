@@ -2,9 +2,11 @@
 import { useState, useEffect } from "react";
 import clsx from "clsx";
 import Image from "next/image";
+import Link from "next/link";
+import { sendGTMEvent } from "@next/third-parties/google";
 import { motion, useAnimationControls } from "framer-motion";
 import { NavLink } from "./components/definitions";
-import { links } from "./components/data/navigation";
+import { links } from "./data/navigation";
 import { generateID } from "./helpers/generate-id";
 import style from "./assets/scss/homepage/homepage.module.scss";
 import Navigation from "./components/home/navigation";
@@ -34,6 +36,15 @@ export default function Home() {
         ease: "easeInOut"
       },
     }
+  };
+
+  const aboutLink = links.find((link) => link.name === 'About');
+
+  const onClickEvent = (val: NavLink | null) => {
+    if (val) {
+      sendGTMEvent({ event: "click", value: val.name });
+    }
+    return;
   };
 
   useEffect(() => {
@@ -99,7 +110,26 @@ export default function Home() {
               </div>
               <div className={clsx(`info info-about`, { "show": current.name === "About" })}>
                 <h1 className="text-center">About</h1>
-                <p className={`text-${current.class}-emphasis`}>This is info on the About page.</p>
+                <p className={`text-${current.class}-emphasis mb-3`}>
+                  I am a Senior front end website developer with over 17 years of professional experience in a variety of technologies.
+                  I am specialized with front end website development and have worked with PHP/HTML, MySQL, Node.js/GIT, Vue.js, React (Next.js), 
+                  Ember.js, and a little bit of Angular. I also have experience with vanilla JavaScript and ES6 and continue to learn new skills.
+                  I have been using CSS since I was in high school and have experience using CSS precompilers such as Sass, LESS, and Stylus.
+                </p>
+                <p className={`text-${current.class}-emphasis mb-3`}>
+                  I also do graphic design freelance work and have done many logos, brochures, and flyers. I also do some graphic design for websites.
+                  I have also done motion graphics for video using After Effects and enjoy photography in my free time.
+                </p>
+                {aboutLink && (
+                <p className="text-right">
+                  <Link
+                    href={aboutLink.href}
+                    className="btn btn-primary"
+                    onClick={() => onClickEvent(aboutLink.name ? aboutLink : null)}>
+                      Read More...
+                  </Link>
+                </p>
+                )}
               </div>
               <div className={clsx(`info info-skills`, { "show": current.name === "Skills" })}>
                 <h1 className="text-center">Skills</h1>
@@ -139,11 +169,15 @@ export default function Home() {
               </div>
               <div className={clsx(`info info-works`, { "show": current.name === "Works" })}>
                 <h1 className="text-center">Works</h1>
-                <p className={`text-${current.class}-emphasis`}>This is info on the Works page.</p>
+                <p className={`text-${current.class}-emphasis`}>
+                  This is info on the Works page.
+                </p>
               </div>
               <div className={clsx(`info info-contact`, { "show": current.name === "Contact" })}>
                 <h1 className="text-center">Contact</h1>
-                <p className={`text-${current.class}-emphasis`}>This is info on the Contact page.</p>
+                <p className={`text-${current.class}-emphasis`}>
+                  This is info on the Contact page.
+                </p>
               </div>
             </div>
           </motion.div>

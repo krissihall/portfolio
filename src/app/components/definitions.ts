@@ -23,6 +23,7 @@ export type NavLink = {
     href: string,
     newWindow: boolean,
     mainNav: boolean,
+    isVisibleOnHome: boolean,
     class: string,
 };
 
@@ -33,4 +34,13 @@ export type SelectOption = {
 
 export type SelectOptions = {
     options: Array<SelectOption>,
+}
+
+export type ContactFormData = {
+    name: string,
+    email: string,
+    message: string,
+    phone: string,
+    subject: string,
+    success: boolean,
 }

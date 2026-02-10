@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
@@ -19,34 +18,36 @@ export default function ComecZFold() {
                 </p>
 
                 <h2>Brochure</h2>
-                <Image
-                    src="/images/graphic-design/brochures/comec-z-fold/side1_final.png"
-                    alt="Comec Z-Fold Side 1 Brochure"
-                    className="img-responsive"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    style={{ width: '100%', height: 'auto' }}
-                />
-                <Image
-                    src="/images/graphic-design/brochures/comec-z-fold/side2_final.png"
-                    alt="Comec Z-Fold Side 2 Brochure"
-                    className="img-responsive"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    style={{ width: '100%', height: 'auto' }}
-                />
+                <div className="brochure-pieces flex flex-row justify-evenly gap-3 mb-4">
+                    <Image
+                        src="/images/graphic-design/brochures/comec-z-fold/side-1.png"
+                        alt="Comec Z-Fold Side 1 Brochure"
+                        className="img-responsive"
+                        width={0}
+                        height={0}
+                        sizes="49vw"
+                        style={{ width: '49%', height: 'auto' }}
+                    />
+                    <Image
+                        src="/images/graphic-design/brochures/comec-z-fold/side-2.png"
+                        alt="Comec Z-Fold Side 2 Brochure"
+                        className="img-responsive"
+                        width={0}
+                        height={0}
+                        sizes="49vw"
+                        style={{ width: '49%', height: 'auto' }}
+                    />
+                </div>
 
                 <h2>PRI Show 2025</h2>
                 <Image
-                    src="/images/graphic-design/brochures/comec-z-fold/side2_final.png"
+                    src="/images/graphic-design/brochures/comec-z-fold/brochure-table.png"
                     alt="Comec Z-Fold Side 2 Brochure"
                     className="img-responsive"
                     width={0}
                     height={0}
-                    sizes="100vw"
-                    style={{ width: '100%', height: 'auto' }}
+                    sizes="50vw"
+                    style={{ width: '50%', height: 'auto' }}
                 />
             </section>
         </main>

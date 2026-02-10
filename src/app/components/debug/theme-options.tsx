@@ -1,5 +1,5 @@
 import { Color } from "@/app/components/definitions";
-import { theme, subtle, emphasis} from "@/app/components/data/theme.js";
+import { theme, subtle, emphasis} from "@/app/data/theme.js";
 import { generateID } from "@/app/helpers/generate-id";
 import Collapser from "../general/collapser";
 

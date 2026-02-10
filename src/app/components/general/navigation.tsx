@@ -1,7 +1,7 @@
 // "use client";
 
 // import NavLink from "@/app/components/general/nav-link";
-// import { links } from "@/app/components/data/navigation";
+// import { links } from "@/app/data/navigation";
 
 // export default function Navigation() {
 //     return (
@@ -22,7 +22,7 @@ import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { sendGTMEvent } from "@next/third-parties/google";
 import { NavLink } from "@/app/components/definitions";
-import { links } from "@/app/components/data/navigation";
+import { links } from "@/app/data/navigation";
 
 export default function Navigation() {
     const pathname = usePathname();

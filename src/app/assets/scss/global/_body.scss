@@ -54,3 +54,8 @@ body {
 p {
     margin-bottom: rem-calc(24);
 }
+
+.hide {
+    display: none;
+    height: 0 !important;
+}

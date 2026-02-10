@@ -75,7 +75,7 @@ export default function Logos() {
                             <p className="mb-0">
                                 This is a logo created for my Etsy shop called Kraftistry Creations.
                             </p>
-                            <div className="card-actions justify-end">
+                            <div className="mb-0 card-actions justify-end">
                                 <button className="btn btn-primary">
                                     Check It Out!
                                 </button>
@@ -96,9 +96,9 @@ export default function Logos() {
                         />
                     </figure>
                     <div className="card-body">
-                        <h3 className="card-title text-primary-drk">Bailey's Steel & Supply Logo</h3>
+                        <h3 className="card-title text-primary-drk">Bailey's Steel &amp; Supply Logo</h3>
                         <p className="mb-0">
-                            This logo was created for Bailey's Steel & Supply, which is a company located outside of Pittsburgh in Pennsylvania.
+                            This logo was created for Bailey's Steel &amp; Supply, which is a company located outside of Pittsburgh in Pennsylvania.
                         </p>
                     </div>
                 </div>
@@ -125,7 +125,7 @@ export default function Logos() {
                                 This logo was created for a Minecraft server I hosted for my friends to hang out and play on. Many of the people on the 
                                 server stream on Twitch or Youtube in their free time so I set up a website to help promote them and the server.
                             </p>
-                            <div className="card-actions justify-end">
+                            <div className="mb-0 card-actions justify-end">
                                 <button className="btn btn-primary">
                                     Check It Out!
                                 </button>
