@@ -138,7 +138,7 @@ export default function About() {
 
                     <div className="link tooltip tooltip-primary" data-tip="Download Resume">
                         <a
-                            href="/Kristina-Hall_2025.pdf"
+                            href="/Kristina-L-Hall-2026.pdf"
                             className="socialLink"
                             target="_blank"
                         >
@@ -152,33 +152,33 @@ export default function About() {
                 <h2>About Website</h2>
                 <p className="mb-4">
                     This website was built using:
-                    <ul className="list-disc ml-4">
-                        <li>
-                            <Link href="https://nextjs.org/" target="_blank">Next.js (React)</Link>
-                        </li>
-                        <li>
-                            <Link href="https://nodejs.org/en" target="_blank">Node.js</Link>
-                        </li>
-                        <li>
-                            <Link href="https://git-scm.com/" target="_blank">GIT</Link>
-                        </li>
-                        <li>
-                            <Link href="https://sass-lang.com/" target="_blank">Sass</Link>
-                        </li>
-                        <li>
-                            <Link href="https://daisyui.com/" target="_blank">Daisy-UI</Link>
-                        </li>
-                        <li>
-                            <Link href="https://tailwindcss.com/" target="_blank">Tailwind</Link>
-                        </li>
-                        <li>
-                            <Link href="https://fontawesome.com/" target="_blank">Fontawesome</Link>
-                        </li>
-                        <li>
-                            <Link href="https://www.typescriptlang.org/" target="_blank">TypeScript</Link>
-                        </li>
-                    </ul>
                 </p>
+                <ul className="list-disc ml-4">
+                    <li>
+                        <Link href="https://nextjs.org/" target="_blank">Next.js (React)</Link>: 14.2.3
+                    </li>
+                    <li>
+                        <Link href="https://nodejs.org/en" target="_blank">Node.js</Link>: 20.12.12
+                    </li>
+                    <li>
+                        <Link href="https://git-scm.com/" target="_blank">GIT</Link>: 2.39.5
+                    </li>
+                    <li>
+                        <Link href="https://sass-lang.com/" target="_blank">Sass</Link>: 1.77.2
+                    </li>
+                    <li>
+                        <Link href="https://daisyui.com/" target="_blank">Daisy-UI</Link>: 4.12.10
+                    </li>
+                    <li>
+                        <Link href="https://tailwindcss.com/" target="_blank">Tailwind</Link>: 3.4.3
+                    </li>
+                    <li>
+                        <Link href="https://fontawesome.com/" target="_blank">Fontawesome</Link>: 7.1.0
+                    </li>
+                    <li>
+                        <Link href="https://www.typescriptlang.org/" target="_blank">TypeScript</Link>: 5.4.5
+                    </li>
+                </ul>
             </section>
         </main>
     );

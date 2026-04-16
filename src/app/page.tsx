@@ -39,6 +39,9 @@ export default function Home() {
   };
 
   const aboutLink = links.find((link) => link.name === 'About');
+  const skillsLink = links.find((link) => link.name === 'Skills');
+  const worksLink = links.find((link) => link.name === 'Works');
+  const contactLink = links.find((link) => link.name === 'Contact');
 
   const onClickEvent = (val: NavLink | null) => {
     if (val) {
@@ -101,11 +104,12 @@ export default function Home() {
                 >
                   <Image
                     src="/images/profile-photo.png"
-                    width="443"
-                    height="443"
                     className="img-responsive"
                     alt="Kristina L. Hall"
-                  />
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{ width: '100%', height: 'auto' }} />
                 </motion.div>
               </div>
               <div className={clsx(`info info-about`, { "show": current.name === "About" })}>
@@ -124,7 +128,7 @@ export default function Home() {
                 <p className="text-right">
                   <Link
                     href={aboutLink.href}
-                    className="btn btn-primary"
+                    className={`btn btn-${current.class}`}
                     onClick={() => onClickEvent(aboutLink.name ? aboutLink : null)}>
                       Read More...
                   </Link>
@@ -165,19 +169,57 @@ export default function Home() {
                     <li>Microsoft/Teams</li>
                   </ul>
                 </Collapser>
-                {/* <p className={`text-${current.class}-emphasis`}>Web standards: HTML, CSS, JavaScript, ES6+. UI frameworks: Ember.js, React, Vue.js, Bootstrap. Styles: Media Queries, LESS, Stylus, SASS. Data retrieval: Rest APIs, JSON, AJAX, Node.js. Unit tests, integration tests. ASP.NET, .NET MVC, Visual Studio (VSCode), PHP. Agile development practices, Confluence, Jira. Source code management: Git, Bitbucket.</p> */}
+                <p className="text-right mb-4 mt-4">
+                  {skillsLink && (
+                  <Link
+                    href={skillsLink.href}
+                    className={`btn btn-${current.class}`}
+                    onClick={() => onClickEvent(skillsLink.name ? skillsLink : null)}>
+                      Read More...
+                  </Link>
+                  )}
+                </p>
               </div>
               <div className={clsx(`info info-works`, { "show": current.name === "Works" })}>
                 <h1 className="text-center">Works</h1>
                 <p className={`text-${current.class}-emphasis`}>
-                  This is info on the Works page.
+                  Below are some examples of some of the work and projects I've worked on during my career.
+                  Each section will contain more information on different types of work I have skills using.
                 </p>
+                <Image
+                  src="/images/works-cover.png"
+                  alt="Works Cover Photo"
+                  className="img-responsive ml-auto mr-auto"
+                  width={0}
+                  height={0}
+                  sizes="60vw"
+                  style={{ width: '60%', height: 'auto' }} />
+                  {worksLink && (
+                  <p className="text-right mt-4">
+                    <Link
+                      href={worksLink.href}
+                      className={`btn btn-${current.class}`}
+                      onClick={() => onClickEvent(worksLink.name ? worksLink : null)}>
+                        Read More...
+                    </Link>
+                  </p>
+                  )}
               </div>
               <div className={clsx(`info info-contact`, { "show": current.name === "Contact" })}>
                 <h1 className="text-center">Contact</h1>
                 <p className={`text-${current.class}-emphasis`}>
-                  This is info on the Contact page.
+                  Follow this link to the contact form if you want to get in touch with me.
                 </p>
+                  {contactLink && (
+                  <p className="text-right mt-4">
+                    <Link
+                      href={contactLink.href}
+                      className={`btn btn-${current.class}`}
+                      onClick={() => onClickEvent(contactLink.name ? contactLink : null)}>
+                        Read More...
+                    </Link>
+                  </p>
+                  )}
               </div>
             </div>
           </motion.div>

@@ -19,14 +19,14 @@ body {
     }
 
     .content-container {
-        height: calc(100vh - (#{$header-height} + (#{rem-calc(12) * 2}) ));
+        height: calc(100vh - (#{$header-height} + (#{rem-calc(12) * 2}) ) - #{$footer-height});
         overflow-y: overlay;
         overflow-x: hidden;
         position: inherit;
         z-index: 2;
 
         &.slim {
-            height: calc(100vh - (#{$header-slim-height} + (#{rem-calc(12) * 2}) ));
+            height: calc(100vh - (#{$header-slim-height} + (#{rem-calc(12) * 2}) ) - #{$footer-height});
         }
     }
 }
