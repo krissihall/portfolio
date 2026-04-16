@@ -11,7 +11,7 @@ export default function Brochures() {
     return (
         <main className="logos-container container max-w-4xl ml-auto mr-auto pt-6">
             <h1>Brochure & Flyer Projects</h1>
-            <p></p>
+            <p>Below are some of the brochures, flyers, and other print projects I have worked on.</p>
 
             <section className="work-card-container mt-4 d-flex gap-3">
                 <div className="card text-bg-primary-lgt shadow-sm">

@@ -1,0 +1,15 @@
+.photography-container {
+    .portrait {
+        width: calc(33.33333333% - 12px);
+    }
+
+    .landscape {
+        width: calc(50% - 12px);
+    }
+
+    &.events {
+        .img-responsive {
+            width: calc(33.33333333% - 12px);
+        }
+    }
+}

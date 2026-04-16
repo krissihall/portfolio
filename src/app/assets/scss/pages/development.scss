@@ -1,0 +1,11 @@
+.development-container {
+    .card {
+        width: calc(50% - 6px);
+    }
+
+    .rounded-box {
+        &.carousel {
+            padding: 0 !important;
+        }
+    }
+}

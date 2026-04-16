@@ -54,4 +54,8 @@
     @each $color, $value in $grayscale-rgb {
         --#{$prefix}#{$color}-rgb: #{$value};
     }
+
+    @each $name, $value in $grid-breakpoints {
+        --#{$prefix}-breakpoint-#{$name}: #{$value};
+    }
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import "@/app/assets/scss/pages/about.scss";
 import LinkedIn from "@/app/components/general/icons/linked-in";
 import Github from "@/app/components/general/icons/github";
@@ -145,6 +146,39 @@ export default function About() {
                         </a>
                     </div>
                 </div>
+            </section>
+
+            <section className="about-website-container rounded-box mb-4">
+                <h2>About Website</h2>
+                <p className="mb-4">
+                    This website was built using:
+                    <ul className="list-disc ml-4">
+                        <li>
+                            <Link href="https://nextjs.org/" target="_blank">Next.js (React)</Link>
+                        </li>
+                        <li>
+                            <Link href="https://nodejs.org/en" target="_blank">Node.js</Link>
+                        </li>
+                        <li>
+                            <Link href="https://git-scm.com/" target="_blank">GIT</Link>
+                        </li>
+                        <li>
+                            <Link href="https://sass-lang.com/" target="_blank">Sass</Link>
+                        </li>
+                        <li>
+                            <Link href="https://daisyui.com/" target="_blank">Daisy-UI</Link>
+                        </li>
+                        <li>
+                            <Link href="https://tailwindcss.com/" target="_blank">Tailwind</Link>
+                        </li>
+                        <li>
+                            <Link href="https://fontawesome.com/" target="_blank">Fontawesome</Link>
+                        </li>
+                        <li>
+                            <Link href="https://www.typescriptlang.org/" target="_blank">TypeScript</Link>
+                        </li>
+                    </ul>
+                </p>
             </section>
         </main>
     );

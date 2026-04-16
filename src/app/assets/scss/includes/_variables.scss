@@ -178,6 +178,22 @@ $color-contrast-light: $white !default;
 $form-bg:      lighten($black, 10%) !default;
 $form-padding: $border-radius-lg !default;
 
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: #{rem-calc(576)},
+  md: #{rem-calc(768)},
+  lg: #{rem-calc(992)},
+  xl: #{rem-calc(1200)},
+  xxl: #{rem-calc(1400)}
+) !default;
+// scss-docs-end grid-breakpoints
+
 @import "variables/colors";
 @import "variables/buttons";
 @import "variables/forms";

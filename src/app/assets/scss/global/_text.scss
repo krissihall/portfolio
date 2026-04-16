@@ -13,6 +13,34 @@ a {
 }
 //.anchor-link:focus,.anchor-link:hover,:hover>.anchor-link,:target>.anchor-link {
 
+main {
+    a {
+        color: $primary;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $primary-drk;
+        }
+    }
+
+    .card {
+        a {
+            color: $black;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $black;
+            }
+        }
+    }
+}
+
+.space {
+    margin-right: rem-calc(4);
+}
+
 .anchor-link {
     opacity: 0;
     padding-left: rem-calc(8);
