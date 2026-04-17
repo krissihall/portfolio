@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST='{"app/components/general/collapser.tsx -> tw-elements":{"id":3415,"files":["static/chunks/415.6c76dfb783058280.js"]},"app/components/works/sidenav.tsx -> tw-elements":{"id":3415,"files":["static/chunks/415.6c76dfb783058280.js"]}}';
+self.__REACT_LOADABLE_MANIFEST="{}"
