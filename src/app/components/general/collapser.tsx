@@ -1,5 +1,6 @@
 "use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { useEffect } from "react";
 
@@ -9,6 +10,8 @@ interface Props {
     customClass?: String,
     children: React.ReactNode;
 }
+
+// const chevDown: IconProp = ['fas', 'chevron-down'];
 
 export default function Collapser({ name, ID, customClass, children }: Props) {
     const eleId = `collapse-${ID}`;
@@ -34,7 +37,7 @@ export default function Collapser({ name, ID, customClass, children }: Props) {
                 aria-controls={eleId}
             >
                 <span className="text">{name}</span>
-                <FontAwesomeIcon icon={faChevronDown} prefix="fas" className="arrow" />
+                <FontAwesomeIcon icon={faChevronDown} className="arrow" />
             </a>
             <div id={eleId} className={`!visible hidden collapse-content ${customClass}`} data-twe-collapse-item>
                 {children}

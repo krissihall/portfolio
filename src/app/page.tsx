@@ -109,7 +109,7 @@ export default function Home() {
                     width={0}
                     height={0}
                     sizes="100vw"
-                    style={{ width: '100%', height: 'auto' }} />
+                    style={{ width: "100%", height: "auto" }} />
                 </motion.div>
               </div>
               <div className={clsx(`info info-about`, { "show": current.name === "About" })}>

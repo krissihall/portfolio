@@ -36,7 +36,7 @@ export default function SideNav() {
                         aria-controls={eleId}
                     >
                         <span className="text">Graphic Design</span>
-                        <FontAwesomeIcon icon={faChevronDown} prefix="fas" className="arrow" />
+                        <FontAwesomeIcon icon={faChevronDown} className="arrow" />
                     </a>              
                     <ul
                         className="nav !visible hidden collapse-content"
@@ -87,7 +87,7 @@ export default function SideNav() {
                         aria-controls={photoId}
                     >
                         Photography
-                        <FontAwesomeIcon icon={faChevronDown} prefix="fas" className="arrow" />
+                        <FontAwesomeIcon icon={faChevronDown} className="arrow" />
                     </a>
                     <ul
                         className="nav !visible hidden collapse-content"
