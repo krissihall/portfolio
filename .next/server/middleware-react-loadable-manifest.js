@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST="{\"app/components/general/collapser.tsx -> tw-elements\":{\"id\":\"app/components/general/collapser.tsx -> tw-elements\",\"files\":[\"static/chunks/_app-pages-browser_node_modules_tw-elements_js_tw-elements_es_min_js.js\"]}}"

@@ -182,18 +182,21 @@ export default function Home() {
               </div>
               <div className={clsx(`info info-works`, { "show": current.name === "Works" })}>
                 <h1 className="text-center">Works</h1>
-                <p className={`text-${current.class}-emphasis`}>
-                  Below are some examples of some of the work and projects I've worked on during my career.
-                  Each section will contain more information on different types of work I have skills using.
-                </p>
-                <Image
-                  src="/images/works-cover.png"
-                  alt="Works Cover Photo"
-                  className="img-responsive ml-auto mr-auto"
-                  width={0}
-                  height={0}
-                  sizes="60vw"
-                  style={{ width: '60%', height: 'auto' }} />
+                <div className="d-block">
+                    <p className={`text-${current.class}-emphasis float-left works-description`}>
+                      Below are some examples of some of the work and projects I've worked on during my career.
+                      Each section will contain more information on different types of work I have skills using.
+                    </p>
+                    <Image
+                      src="/images/works-cover.png"
+                      alt="Works Cover Photo"
+                      className="img-responsive float-right"
+                      width={0}
+                      height={0}
+                      sizes="50vw"
+                      style={{ width: '50%', height: 'auto' }} />
+                      <div className="clearfix"></div>
+                  </div>
                   {worksLink && (
                   <p className="text-right mt-4">
                     <Link

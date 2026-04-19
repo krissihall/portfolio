@@ -59,3 +59,8 @@ p {
     display: none;
     height: 0 !important;
 }
+
+.clearfix {
+    float: none;
+    clear: both;
+}
