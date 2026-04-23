@@ -11,8 +11,6 @@ interface Props {
     children: React.ReactNode;
 }
 
-// const chevDown: IconProp = ['fas', 'chevron-down'];
-
 export default function Collapser({ name, ID, customClass, children }: Props) {
     const eleId = `collapse-${ID}`;
     const target = `#${eleId}`;

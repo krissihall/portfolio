@@ -1,14 +1,14 @@
-"use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Dispatch, SetStateAction } from "react";
-import clsx from "clsx";
-import { motion } from "framer-motion";
-import { sendGTMEvent } from "@next/third-parties/google";
-import { NavLink } from "@/app/components/definitions";
-import { links } from "@/app/data/navigation";
-import style from "@/app/assets/scss/homepage/homepage.module.scss";
-import { dasherize } from "@/app/helpers/dasherize";
+'use client';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { Dispatch, SetStateAction } from 'react';
+import clsx from 'clsx';
+import { motion } from 'framer-motion';
+import { sendGTMEvent } from '@next/third-parties/google';
+import { NavLink } from '@/app/components/definitions';
+import { links } from '@/app/data/navigation';
+import style from '@/app/assets/scss/homepage/homepage.module.scss';
+import { dasherize } from '@/app/helpers/dasherize';
 
 interface Props {
     current: object;
@@ -30,7 +30,7 @@ export default function Navigation(props: Props) {
     };
 
     return (
-        <nav className={style.navigation}>
+        <nav className={`${style.navigation}`}>
             <>
                 {links.map((link: NavLink) => {
                     delayTimer += Number(0.25);
@@ -51,7 +51,7 @@ export default function Navigation(props: Props) {
                                 className={clsx(
                                     `page-${dasherize(link.name)} ${style.link} ${style.linkAnimation}
                                         ${style.overlineLeftUnderlineRight} text-${link.class}
-                                        ${link.isVisibleOnHome ? "" : " hide"}`,
+                                        ${link.isVisibleOnHome ? "" : " hidden"}`,
                                     {
                                         "active": pathname === link.href
                                     }

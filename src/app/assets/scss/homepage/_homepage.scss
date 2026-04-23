@@ -8,6 +8,72 @@
 
 .homepage {
 
+    .logo {
+        height: $header-height-sm;
+        margin-top: rem-calc(12);
+
+        .home-logo {
+            height: $header-height-sm;
+            width: auto;
+
+            @include mq-and-above('md') {
+                height: $header-height;
+                width: auto;
+            }
+        }
+
+        @include mq-and-above('md') {
+            margin-top: 0;
+        }
+
+        img {
+            height: auto;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        @include mq-and-above('md') {
+            height: $header-height;
+        }
+    }
+
+    .mobile-home-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .mobile-nav {
+            align-self: flex-end;
+        }
+    }
+
+    .mobile-nav {
+        position: relative;
+
+        summary {
+            &:marker,
+            &::marker {
+                display: none !important;
+                content: '' !important;
+            }
+        }
+        
+        .dropdown-content {
+            background: tint-color($black, 10%);
+        }
+
+        .nav-items {
+            
+            .nav-item {
+                margin-bottom: rem-calc(4);
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
     .info {
         display: none;
 
@@ -21,10 +87,16 @@
         display: block;
         height: 80%;
         margin: 0 auto;
-        max-height: rem-calc(354);
-        max-width: rem-calc(354);
+        max-height: rem-calc(250);
+        max-width: rem-calc(250);
         overflow: hidden;
-        width: 80%;
+        width: 60%;
+        
+        @include mq-and-above('md') {
+            max-height: rem-calc(354);
+            max-width: rem-calc(354);
+            width: 80%;
+        }
     }
 
     .page-home {
@@ -113,6 +185,10 @@
     }
 
     .works-description {
-        width: 45%;
+        width: 100%;
+
+        @include mq-and-below('md-and-up') {
+            width: 45%;
+        }
     }
 }

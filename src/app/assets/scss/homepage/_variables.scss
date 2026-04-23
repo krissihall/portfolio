@@ -1,5 +1,6 @@
 // Homepage Specific Vars
-$max-content-width:    rem-calc(1000);
-$home-link-amount:     5;
-$line-thickness:       rem-calc(6);
-$fill-color:           $primary;
+$max-content-width:    rem-calc(1000) !default;
+$max-content-width-sm: 100% !default;
+$home-link-amount:     5 !default;
+$line-thickness:       rem-calc(6) !default;
+$fill-color:           $primary !default;

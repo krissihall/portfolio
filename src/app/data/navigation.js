@@ -39,15 +39,15 @@ const links = [
         "mainNav": true,
         "isVisibleOnHome": true,
         "class": "hue-primary-6"
-    }, // {
-    //     "id": 6,
-    //     "name": "KLH Media LLC",
-    //     "href": "https://klhmedia.net",
-    //     "newWindow": true,
-    //     "mainNav": true,
-    //     "isVisibleOnHome": false,
-    //     "class": "hue-primary-7"
-    // }
+    }, {
+        "id": 6,
+        "name": "KLH Media LLC",
+        "href": "https://klhmedia.net",
+        "newWindow": true,
+        "mainNav": true,
+        "isVisibleOnHome": false,
+        "class": "hue-primary-7"
+    }
 ];
 
 export {

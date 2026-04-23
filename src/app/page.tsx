@@ -8,10 +8,12 @@ import { motion, useAnimationControls } from "framer-motion";
 import { NavLink } from "./components/definitions";
 import { links } from "./data/navigation";
 import { generateID } from "./helpers/generate-id";
+import { useBootstrapBreakpoint } from "./hooks/useBootstrapBreakpoint";
 import style from "./assets/scss/homepage/homepage.module.scss";
 import Navigation from "./components/home/navigation";
 import Loader from "./components/general/loader";
 import Collapser from "./components/general/collapser";
+import MobileNavigation from "./components/home/mobile-navigation";
 
 export default function Home() {
   const [current, setCurrent] = useState<NavLink>(links[0]);
@@ -43,6 +45,9 @@ export default function Home() {
   const worksLink = links.find((link) => link.name === 'Works');
   const contactLink = links.find((link) => link.name === 'Contact');
 
+  const bp = useBootstrapBreakpoint();
+  const isMobile = bp === 'xs' || bp === 'sm' ? true : false;
+
   const onClickEvent = (val: NavLink | null) => {
     if (val) {
       sendGTMEvent({ event: "click", value: val.name });
@@ -70,16 +75,23 @@ export default function Home() {
             transition={{ duration: 2, ease: "easeInOut" }}
             exit={{ opacity: 0, x: -1000 }}
           >
-            <div className="logo">
-              <Image
-                src="/images/logo-tagline-white.svg"
-                width="280"
-                height="114"
-                alt="KH logo"
-                priority
-              />
+            <div className={`home-header ${isMobile ? 'mobile-home-header' : ''}`}>
+              <div className="logo">
+                <Image
+                    src="/images/logo-tagline-white.svg"
+                    className="home-logo"
+                    width="280"
+                    height="114"
+                    alt="KH logo"
+                    title="Krisina L. Hall - Front-End Developer"
+                    priority
+                />
+              </div>
+              {isMobile && (
+                <MobileNavigation />
+              )}
             </div>
-            <div className={`${style.content} bg-${current.class}-subtle container mt-6 mb-6 rounded-end-5`}>
+            <div className={`${style.content} bg-${current.class}-subtle container homepage-content-container mt-6 mb-6`}>
               <div className={clsx(`info info-homepage`, { "show": current.name === "Home" })}>
                 <motion.h1
                   initial={{ opacity: 0, y: -30 }}
@@ -226,7 +238,9 @@ export default function Home() {
               </div>
             </div>
           </motion.div>
-          <Navigation current={current} setCurrent={setCurrent} />
+          {!isMobile && (
+            <Navigation current={current} setCurrent={setCurrent} />
+          )}
         </div>
       )}
     </main>

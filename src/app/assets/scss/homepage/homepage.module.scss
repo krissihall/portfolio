@@ -21,12 +21,26 @@
         flex-direction: column;
         flex-grow: 1;
         flex-wrap: nowrap;
-        max-width: $max-content-width;
-        padding-right: rem-calc(64);
+        min-height: 100%;
+        min-width: $max-content-width-sm;
+
+        @include mq-and-above('md') {
+            min-height: auto;
+            min-width: auto;
+            max-width: $max-content-width;
+            padding-right: rem-calc(64);
+        }
     }
 
     .content {
         padding: rem-calc(24);
+        min-width: 100%;
+
+        @include mq-and-above('md') {
+            border-top-right-radius: rem-calc(24);
+            border-bottom-right-radius: rem-calc(24);
+            min-width: auto;
+        }
     }
 
     .navigation {

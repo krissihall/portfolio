@@ -16,7 +16,19 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--kh-font-family)"],
-      }
+      },
+      colors: {
+        primary: "#ff2577",
+        secondary: "#25ffad",
+      },
+      screens: {
+        'xs': '0',
+        'sm': '576px',
+        'md': '768px',
+        'lg': '992px',
+        'xl': '1200px',
+        'xxl': '1400px',
+      },
     },
   },
   plugins: [
@@ -25,18 +37,6 @@ const config: Config = {
   ],
   daisyui: {
     // themes: true,
-    themes: [
-      {
-        customDark: {
-          primary: "#ff2577",
-          secondary: "#25ffad",
-        },
-        customLight: {
-          primary: "#ff2577",
-          secondary: "#25ffad",
-        },
-      },
-    ],
   }
 };
 export default config;

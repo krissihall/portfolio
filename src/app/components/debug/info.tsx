@@ -1,16 +1,19 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Breakpoint } from './break-point';
+import { useBootstrapBreakpoint } from '@/app/hooks/useBootstrapBreakpoint';
+// import { Breakpoint } from './break-point';
 // import Link from 'next/link';
 // import { sendGTMEvent } from "@next/third-parties/google";
 // import { generateID } from '@/app/helpers/generate-id';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faC, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
-export default function SideNav() {
+export default function Info() {
     const [width, setWidth] = useState<number | undefined>(undefined);
+    const bg = useBootstrapBreakpoint();
 
     useEffect(() => {
+        // const breakpoint = useBootstrapBreakpoint();
         // Handler to call on window resize
         const handleResize = () => setWidth(window.innerWidth);
         
@@ -24,7 +27,7 @@ export default function SideNav() {
     return (
         <div id="debugInfo" className="debug-info-box">
             <span className="info-line"><strong>Current Width</strong>: {width ?? 'Loading...'}px</span>
-            <span className="info-line"><strong>Current Breakpoint</strong>: <Breakpoint /></span>
+            <span className="info-line"><strong>Current Breakpoint</strong>: {bg}</span>
         </div>
     );
 };
