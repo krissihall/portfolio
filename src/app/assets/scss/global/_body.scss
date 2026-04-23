@@ -22,8 +22,13 @@ body {
         height: calc(100vh - (#{$header-height} + (#{rem-calc(12) * 2}) ) - #{$footer-height});
         overflow-y: overlay;
         overflow-x: hidden;
+        padding: 0 rem-calc(12);
         position: inherit;
         z-index: 2;
+
+        @include mq-and-above('md') {
+            padding: initial;
+        }
 
         &.slim {
             height: calc(100vh - (#{$header-slim-height} + (#{rem-calc(12) * 2}) ) - #{$footer-height});
@@ -63,4 +68,27 @@ p {
 .clearfix {
     float: none;
     clear: both;
+}
+
+.dropdown-content {
+    background: tint-color($black, 10%);
+}
+
+.nav-items {
+    
+    .nav-item {
+        margin-bottom: rem-calc(4);
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .nav-link {
+            white-space: nowrap;
+        }
+    }
+}
+
+.mobile-main-nav {
+    min-width: rem-calc(250);
 }

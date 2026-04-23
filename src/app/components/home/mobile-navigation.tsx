@@ -22,11 +22,11 @@ export default function MobileNavigation() {
                     <>
                         {links.map((link: NavLink, index) => {
                             return (
-                                <li className="nav-item" key={link.name}>
+                                <li className={`nav-item ${link.isVisibleOnHome ? "" : "hidden"}`} key={link.name}>
                                     <Link
                                         href={link.href}
                                         className={clsx(
-                                            `page-${dasherize(link.name)} btn btn-${link.class} ${link.isVisibleOnHome ? "" : "hidden"} nav-link`,
+                                            `page-${dasherize(link.name)} btn btn-${link.class} nav-link`,
                                             {
                                                 "active": pathname === link.href
                                             }

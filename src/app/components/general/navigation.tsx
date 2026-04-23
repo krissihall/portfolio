@@ -23,6 +23,9 @@ import clsx from "clsx";
 import { sendGTMEvent } from "@next/third-parties/google";
 import { NavLink } from "@/app/components/definitions";
 import { links } from "@/app/data/navigation";
+import { useBootstrapBreakpoint } from '@/app/hooks/useBootstrapBreakpoint';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navigation() {
     const pathname = usePathname();
@@ -38,31 +41,42 @@ export default function Navigation() {
     };
 
     const activeClassName = 'active';
+    const bp = useBootstrapBreakpoint();
+    const isMobile = bp === 'xs' || bp === 'sm' ? true : false;
 
     return (
-        <nav className="navigation">
-            <>
-                {links.map((link: NavLink) => {
-                    const newTabProps = link.newWindow
-                        ? { target: "_blank", rel: "noopener noreferrer" }
-                        : {};
-                    return (
-                        <Link
-                            key={link.name}
-                            href={link.href}
-                            onClick={() => onClickEvent(link)}
-                            className={clsx(
-                                "nav-link",
-                                `text-bg-${link.class} hover:text-${link.class}-emphasis`,
-                                isActive(link) ? `text-${link.class}-emphasis active` : ''
-                            )}
-                            {...newTabProps}
-                        >
-                            {link.name}
-                        </Link>
-                    );
-                })}
-            </>
+        <nav className={`navigation ${isMobile ? 'dropdown dropdown-end' : ''}`}>
+            {isMobile && (
+                <div tabIndex={0} role="button" className="btn btn-primary m-1">
+                    <FontAwesomeIcon icon={faBars} className="main-nav-expander" />
+                </div>
+            )}
+            <ul className={`nav-items ${isMobile ? 'dropdown-content menu mobile-main-nav' : ''}`}>
+                <>
+                    {links.map((link: NavLink) => {
+                        const newTabProps = link.newWindow
+                            ? { target: "_blank", rel: "noopener noreferrer" }
+                            : {};
+                        return (
+                            <li className={`nav-item ${!link.isHidden ? '' : ' hidden'}`} key={link.name}>
+                                <Link
+                                    key={link.name}
+                                    href={link.href}
+                                    onClick={() => onClickEvent(link)}
+                                    className={clsx(
+                                        "nav-link",
+                                        `btn btn-${link.class}`,
+                                        isActive(link) ? `active` : ''
+                                    )}
+                                    {...newTabProps}
+                                >
+                                    {link.name}
+                                </Link>
+                            </li>
+                        );
+                    })}
+                </>
+            </ul>
         </nav>
     );
 };

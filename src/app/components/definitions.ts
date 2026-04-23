@@ -24,6 +24,7 @@ export type NavLink = {
     newWindow: boolean,
     mainNav: boolean,
     isVisibleOnHome: boolean,
+    isHidden: boolean,
     class: string,
 };
 

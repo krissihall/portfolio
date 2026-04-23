@@ -6,6 +6,7 @@ const links = [
         "newWindow": false,
         "mainNav": true,
         "isVisibleOnHome": true,
+        "isHidden": false,
         "class": "tetrad-primary"
     }, {
         "id": 2,
@@ -14,6 +15,7 @@ const links = [
         "newWindow": false,
         "mainNav": true,
         "isVisibleOnHome": true,
+        "isHidden": false,
         "class": "warning"
     }, {
         "id": 3,
@@ -22,6 +24,7 @@ const links = [
         "newWindow": false,
         "mainNav": true,
         "isVisibleOnHome": true,
+        "isHidden": false,
         "class": "tetrad-tertiary"
     }, {
         "id": 4,
@@ -30,6 +33,7 @@ const links = [
         "newWindow": false,
         "mainNav": true,
         "isVisibleOnHome": true,
+        "isHidden": false,
         "class": "tetrad-minor"
     }, {
         "id": 5,
@@ -38,6 +42,7 @@ const links = [
         "newWindow": false,
         "mainNav": true,
         "isVisibleOnHome": true,
+        "isHidden": false,
         "class": "hue-primary-6"
     }, {
         "id": 6,
@@ -46,6 +51,7 @@ const links = [
         "newWindow": true,
         "mainNav": true,
         "isVisibleOnHome": false,
+        "isHidden": true,
         "class": "hue-primary-7"
     }
 ];
