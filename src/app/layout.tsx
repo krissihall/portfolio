@@ -77,7 +77,7 @@ const script = Great_Vibes({
   variable: "--kh-script-font",
 });
 
-const showDebug = true;
+const showDebug = false;
 
 export const metadata: Metadata = {
   title: "Homepage",
