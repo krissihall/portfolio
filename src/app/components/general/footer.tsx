@@ -7,8 +7,8 @@ export default function Footer() {
     const year = date.getFullYear();
 
     return (
-        <footer className="flex basis-0 bg-gray-900">
-            <div className="container ml-auto mr-auto pt-6 pb-6">
+        <footer className="flex bg-gray-900">
+            <div className="container-fluid pt-6 pb-6">
                 <div className="flex items-center justify-between">
                     <p className="copyright">&copy; {year} Kristina L. Hall</p>
                     <div className="links">

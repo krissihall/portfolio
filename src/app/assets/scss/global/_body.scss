@@ -19,7 +19,8 @@ body {
     }
 
     .content-container {
-        height: calc(100vh - (#{$header-height} + (#{rem-calc(12) * 2}) ) - #{$footer-height});
+        flex-grow: 1;
+        height: calc(100vh - (#{$header-slim-height} + (#{rem-calc(12) * 2}) ) - #{$footer-height-sm});
         overflow-y: overlay;
         overflow-x: hidden;
         padding: 0 rem-calc(12);
@@ -27,11 +28,16 @@ body {
         z-index: 2;
 
         @include mq-and-above('md') {
+            height: calc(100vh - (#{$header-height} + (#{rem-calc(12) * 2}) ) - #{$footer-height});
             padding: initial;
         }
 
         &.slim {
-            height: calc(100vh - (#{$header-slim-height} + (#{rem-calc(12) * 2}) ) - #{$footer-height});
+            height: calc(100vh - (#{$header-slim-height} + (#{rem-calc(12) * 2}) ) - #{$footer-height-sm});
+
+            @include mq-and-above('md') {
+                height: calc(100vh - (#{$header-slim-height} + (#{rem-calc(12) * 2}) ) - #{$footer-height});
+            }
         }
     }
 }
