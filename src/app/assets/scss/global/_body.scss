@@ -7,6 +7,8 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    position: fixed;
+    top: 0;
     width: 100vw;
 
     .application-root {
@@ -29,7 +31,6 @@ body {
 
         @include mq-and-above('md') {
             height: calc(100vh - (#{$header-height} + (#{rem-calc(12) * 2}) ) - #{$footer-height});
-            padding: initial;
         }
 
         &.slim {

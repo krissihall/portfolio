@@ -8,7 +8,7 @@ export default function Footer() {
 
     return (
         <footer className="flex bg-gray-900">
-            <div className="container-fluid pt-6 pb-6">
+            <div className="container-fluid">
                 <div className="flex items-center justify-between">
                     <p className="copyright">&copy; {year} Kristina L. Hall</p>
                     <div className="links">

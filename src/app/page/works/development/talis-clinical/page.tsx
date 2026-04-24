@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function TalisClinical() {
     return (
-        <main className="development-container container max-w-4xl ml-auto mr-auto pt-6">
+        <main className="development-container container-fluid pt-6">
             <h1>Talis Clinical LLC/Getinge</h1>
             <p className="mb-4">
                 Talis Clinical LLC is a medical software company based in Streetsboro, Ohio that was acquired by Getinge around a year

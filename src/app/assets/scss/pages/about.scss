@@ -13,8 +13,13 @@
 
         .work-dates {
             color: $secondary;
+            display: block;
             font-size: rem-calc(13);
             text-transform: uppercase;
+
+            @include mq-and-above('md') {
+                display: initial;
+            }
         }
     }
 }

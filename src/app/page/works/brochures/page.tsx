@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Brochures() {
     return (
-        <main className="logos-container container max-w-4xl ml-auto mr-auto pt-6">
+        <main className="brochures-container container max-w-4xl ml-auto mr-auto pt-6">
             <h1>Brochure & Flyer Projects</h1>
             <p>Below are some of the brochures, flyers, and other print projects I have worked on.</p>
 

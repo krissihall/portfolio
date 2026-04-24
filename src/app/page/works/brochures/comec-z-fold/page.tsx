@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from 'next/image';
+import "@/app/assets/scss/pages/graphic-design.scss";
 
 export const metadata: Metadata = {
     title: "Comec Z-Fold Brochure",
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ComecZFold() {
     return (
-        <main className="logos-container container max-w-4xl ml-auto mr-auto pt-6">
+        <main className="brochures-container container max-w-4xl ml-auto mr-auto pt-6">
             <h1>Comec Z-Fold Brochure</h1>
 
             <section className="comec-z-fold-container rounded-box mt-4 d-flex flex-col gap-3">

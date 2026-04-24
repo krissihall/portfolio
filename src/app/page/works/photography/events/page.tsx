@@ -100,8 +100,8 @@ export default function Photography() {
                         src="/images/photography/events/PRI-2025/IMG_5723.png"
                         alt="PRI 2025"
                         className="img-responsive"
-                        width={400}
-                        height={600}
+                        width={600}
+                        height={400}
                         // sizes="32"
                         // style={{ width: '32%', height: 'auto' }}
                     />

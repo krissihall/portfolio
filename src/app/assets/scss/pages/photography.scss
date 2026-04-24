@@ -1,15 +1,26 @@
+@import '../includes/includes';
+
 .photography-container {
     .portrait {
-        width: calc(33.33333333% - 12px);
+        width: calc(50% - 6px);
+        @include mq-and-above('md') {
+            width: calc(33.33333333% - 12px);
+        }
     }
 
     .landscape {
-        width: calc(50% - 12px);
+        width: 100%;
+        @include mq-and-above('md') {
+            width: calc(50% - 12px);
+        }
     }
 
     &.events {
         .img-responsive {
-            width: calc(33.33333333% - 12px);
+            width: calc(50% - 6px);
+            @include mq-and-above('md') {
+                width: calc(33.33333333% - 12px);
+            }
         }
     }
 }

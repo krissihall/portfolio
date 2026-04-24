@@ -26,6 +26,7 @@ import { links } from "@/app/data/navigation";
 import { useBootstrapBreakpoint } from '@/app/hooks/useBootstrapBreakpoint';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { isEmpty } from "@/app/helpers/is-empty";
 
 export default function Navigation() {
     const pathname = usePathname();
@@ -38,6 +39,9 @@ export default function Navigation() {
 
     const onClickEvent = (val: NavLink) => {
         sendGTMEvent({ event: "click", value: val.name });
+        if (document.activeElement instanceof HTMLElement) {
+            document.activeElement.blur();
+        }
     };
 
     const activeClassName = 'active';
@@ -51,14 +55,14 @@ export default function Navigation() {
                     <FontAwesomeIcon icon={faBars} className="main-nav-expander" />
                 </div>
             )}
-            <ul className={`nav-items ${isMobile ? 'dropdown-content menu mobile-main-nav' : ''}`}>
+            <ul className={`nav-items ${isMobile ? 'dropdown-content menu mobile-main-nav' : ''}`} tabIndex={0}>
                 <>
                     {links.map((link: NavLink) => {
                         const newTabProps = link.newWindow
                             ? { target: "_blank", rel: "noopener noreferrer" }
                             : {};
                         return (
-                            <li className={`nav-item ${!link.isHidden ? '' : ' hidden'}`} key={link.name}>
+                            <li className={`nav-item ${!link.isHidden ? '' : 'hidden'}`} key={link.name}>
                                 <Link
                                     key={link.name}
                                     href={link.href}
@@ -66,7 +70,7 @@ export default function Navigation() {
                                     className={clsx(
                                         "nav-link",
                                         `btn btn-${link.class}`,
-                                        isActive(link) ? `active` : ''
+                                        isActive(link) ? activeClassName : ''
                                     )}
                                     {...newTabProps}
                                 >

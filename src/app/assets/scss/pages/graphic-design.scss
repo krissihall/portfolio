@@ -1,16 +1,11 @@
 @import '../includes/includes';
 
-.development-container {
-    .card {
+.brochure-pieces {
+    img {
         width: 100%;
+
         @include mq-and-above('md') {
             width: calc(50% - 6px);
-        }
-    }
-
-    .rounded-box {
-        &.carousel {
-            padding: 0 !important;
         }
     }
 }

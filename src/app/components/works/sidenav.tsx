@@ -5,10 +5,14 @@ import { sendGTMEvent } from "@next/third-parties/google";
 import { generateID } from '@/app/helpers/generate-id';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faC, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { useBootstrapBreakpoint } from '@/app/hooks/useBootstrapBreakpoint';
 
 export default function SideNav() {
     const eleId = `sidenav-${generateID()}`;
     const photoId = `sidenav-${generateID()}`;
+    const bp = useBootstrapBreakpoint();
+    const isMobile = bp === 'xs' || bp === 'sm' ? true : false;
+    const mobileAttrs = isMobile ? { 'data-twe-collapse-item': true } : {};
 
     useEffect(() => {
         const init = async () => {
@@ -23,12 +27,29 @@ export default function SideNav() {
     };
 
     return (
-        <div className="side-nav sticky">
-            <h2>Navigation</h2>
-            <ul className="nav">
+        <div className={`side-nav ${isMobile ? '' : 'sticky'}`}>
+            {isMobile ?
+                <h2 className="mobile side-nav-header">
+                    <span
+                        className="collapse-link"
+                        data-twe-collapse-init
+                        data-twe-ripple-init
+                        data-twe-ripple-color="light"
+                        data-twe-target="#sideNav"
+                        aria-controls="sideNav"
+                    >
+                        Navigation
+                        <FontAwesomeIcon icon={faChevronDown} className="arrow" />
+                    </span>
+                </h2>
+            :
+                <h2>Navigation</h2>
+            }
+            
+            <ul id="sideNav" className={`nav ${isMobile ? '!visible hidden collapse-content mobile' : ''}`} {...mobileAttrs}>
                 <li className="nav-item">
                     <a
-                        className="nav-header collapse-link"
+                        className="nav-header collapse-link top-level"
                         data-twe-collapse-init
                         data-twe-ripple-init
                         data-twe-ripple-color="light"
@@ -63,7 +84,7 @@ export default function SideNav() {
                         </li>
                     </ul>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item top-level">
                     <Link
                         href="/page/works/development"
                         onClick={() => onClickEvent("Development")}
@@ -79,7 +100,7 @@ export default function SideNav() {
                         className="nav-link"
                     > */}
                     <a
-                        className="nav-header collapse-link"
+                        className="nav-header collapse-link top-level"
                         data-twe-collapse-init
                         data-twe-ripple-init
                         data-twe-ripple-color="light"

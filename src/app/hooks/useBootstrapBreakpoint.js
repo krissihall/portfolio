@@ -24,8 +24,8 @@ export function useBootstrapBreakpoint() {
     };
 
     updateBreakpoint();
-    window.addEventListener('resize', updateBreakpoint);
-    return () => window.removeEventListener('resize', updateBreakpoint);
+    window.addEventListener('bs.bp.resize', updateBreakpoint);
+    return () => window.removeEventListener('bs.bp.resize', updateBreakpoint);
   }, []);
 
   return breakpoint;
