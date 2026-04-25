@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import "@/app/assets/scss/pages/development.scss";
 
 export const metadata: Metadata = {
@@ -19,15 +20,17 @@ export default function BrunnerProjects() {
             <section className="rounded-box d-block">
                 <h2>Bob Evans Mashtini Microsite</h2>
                 <div className="float-right w-5/12 pl-4">
-                    <Image
-                        src="/images/development/brunner/mashtini.png"
-                        alt="Mashtini Microsite"
-                        className="img-responsive"
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        style={{ width: "100%", height: "auto" }}
-                    />
+                    <Link href="/images/development/brunner/mashtini.png" target="_blank">
+                        <Image
+                            src="/images/development/brunner/mashtini.png"
+                            alt="Mashtini Microsite"
+                            className="img-responsive"
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{ width: "100%", height: "auto" }}
+                        />
+                    </Link>
                 </div>
                 <p className="mb-4">
                     This was a very fun microsite made for the Bob Evans client to celebrate being voted as the Best Mashed Potatoes
@@ -39,14 +42,17 @@ export default function BrunnerProjects() {
                 <div className="carousel rounded-box gap-3">
                     {Array.from({ length: 10 }, (_, i) => (
                         <div id={`mash${i}`} className="carousel-item w-full" key={i}>
-                            <Image
-                                src={`/images/development/brunner/mashtini/${i + 1}.jpg`}
-                                alt="Mashtini"
-                                className="img-responsive"
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                style={{ width: "100%", height: "auto" }} />
+                            <Link href={`/images/development/brunner/mashtini/${i + 1}.jpg`} target="_blank">
+                                <Image
+                                    src={`/images/development/brunner/mashtini/${i + 1}.jpg`}
+                                    alt="Mashtini"
+                                    className="img-responsive"
+                                    width={0}
+                                    height={0}
+                                    sizes="100vw"
+                                    style={{ width: "100%", height: "auto" }}
+                                />
+                            </Link>
                         </div>
                     ))}
                 </div>
@@ -58,15 +64,17 @@ export default function BrunnerProjects() {
 
                 <h2>Huffy Mickey &amp; Minnie Cruisers Microsite</h2>
                 <div className="float-left w-5/12 pr-4">
-                    <Image
-                        src="/images/development/brunner/mickeyminnie.png"
-                        alt="Mickey & Minnie Cruisers Microsite"
-                        className="img-responsive"
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        style={{ width: "100%", height: "auto" }}
-                    />
+                    <Link href="/images/development/brunner/mickeyminnie.png" target="_blank">
+                        <Image
+                            src="/images/development/brunner/mickeyminnie.png"
+                            alt="Mickey & Minnie Cruisers Microsite"
+                            className="img-responsive"
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{ width: "100%", height: "auto" }}
+                        />
+                    </Link>
                 </div>
                 <p className="mb-4">
                     This microsite was created as a fun, interactive experience for a Limited Time Mickey and Minnie Mouse Cruiser bike
@@ -78,14 +86,17 @@ export default function BrunnerProjects() {
                 <div className="carousel rounded-box gap-3">
                     {Array.from({ length: 11 }, (_, i) => (
                         <div id={`mickey${i}`} className="carousel-item w-full" key={i}>
-                            <Image
-                                src={`/images/development/brunner/mickeyminnie/${i + 1}.jpg`}
-                                alt="Mashtini"
-                                className="img-responsive"
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                style={{ width: "100%", height: "auto" }} />
+                            <Link href={`/images/development/brunner/mickeyminnie/${i + 1}.jpg`} target="_blank">
+                                <Image
+                                    src={`/images/development/brunner/mickeyminnie/${i + 1}.jpg`}
+                                    alt="Mashtini"
+                                    className="img-responsive"
+                                    width={0}
+                                    height={0}
+                                    sizes="100vw"
+                                    style={{ width: "100%", height: "auto" }}
+                                />
+                            </Link>
                         </div>
                     ))}
                 </div>
@@ -97,15 +108,17 @@ export default function BrunnerProjects() {
 
                 <h2>Huffy Hometown Cruiser Google Street View Feature</h2>
                 <div className="float-right w-5/12 pl-4">
-                    <Image
-                        src="/images/development/brunner/hometowncruiser.png"
-                        alt="Hometown Cruiser Microsite"
-                        className="img-responsive"
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        style={{ width: "100%", height: "auto" }}
-                    />
+                    <Link href="/images/development/brunner/hometowncruiser.png" target="_blank">
+                        <Image
+                            src="/images/development/brunner/hometowncruiser.png"
+                            alt="Hometown Cruiser Microsite"
+                            className="img-responsive"
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{ width: "100%", height: "auto" }}
+                        />
+                    </Link>
                 </div>
                 <p className="mb-4">
                     This was a fun microsite created for Huffy Bicycles using Google Streetview where we overlaid bicycle handlebars
@@ -116,14 +129,17 @@ export default function BrunnerProjects() {
                 <div className="carousel rounded-box gap-3">
                     {Array.from({ length: 5 }, (_, i) => (
                         <div id={`cruiser${i}`} className="carousel-item w-full" key={i}>
-                            <Image
-                                src={`/images/development/brunner/hometowncruiser/${i + 1}.jpg`}
-                                alt="Hometown Cruiser"
-                                className="img-responsive"
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                style={{ width: "100%", height: "auto" }} />
+                            <Link href={`/images/development/brunner/hometowncruiser/${i + 1}.jpg`} target="_blank">
+                                <Image
+                                    src={`/images/development/brunner/hometowncruiser/${i + 1}.jpg`}
+                                    alt="Hometown Cruiser"
+                                    className="img-responsive"
+                                    width={0}
+                                    height={0}
+                                    sizes="100vw"
+                                    style={{ width: "100%", height: "auto" }}
+                                />
+                            </Link>
                         </div>
                     ))}
                 </div>
@@ -135,15 +151,17 @@ export default function BrunnerProjects() {
 
                 <h2>Wise Snacks Cheezdoodle Mountain Microsite</h2>
                 <div className="float-left w-5/12 pr-4">
-                    <Image
-                        src="/images/development/brunner/cheezdoodles.png"
-                        alt="Cheezdoodles"
-                        className="img-responsive"
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        style={{ width: "100%", height: "auto" }}
-                    />
+                    <Link href="/images/development/brunner/cheezdoodles.png" target="_blank">
+                        <Image
+                            src="/images/development/brunner/cheezdoodles.png"
+                            alt="Cheezdoodles"
+                            className="img-responsive"
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{ width: "100%", height: "auto" }}
+                        />
+                    </Link>
                 </div>
                 <p className="mb-4">
                     This was a very fun microsite built for Wise Snacks Cheezdoodles and was full of fun animations,
@@ -154,28 +172,33 @@ export default function BrunnerProjects() {
                 </p>
                 <div className="carousel carousel-vertical rounded-box w-full h-96 mb-4">
                     <div className="carousel-item w-full">
-                        <Image
-                            src="/images/development/brunner/cheezdoodles/01.jpg"
-                            alt="Cheezdoodles"
-                            className="img-responsive"
-                            width={0}
-                            height={0}
-                            sizes="100vw"
-                            style={{ width: "100%", height: "auto" }} />
+                        <Link href="/images/development/brunner/cheezdoodles/01.jpg" target="_blank">
+                            <Image
+                                src="/images/development/brunner/cheezdoodles/01.jpg"
+                                alt="Cheezdoodles"
+                                className="img-responsive"
+                                width={0}
+                                height={0}
+                                sizes="100vw"
+                                style={{ width: "100%", height: "auto" }}
+                            />
+                        </Link>
                     </div>
                 </div>
 
                 <h2>Cub Cadet Test Drive Experience Microsite</h2>
                 <div className="float-right w-5/12 pl-4">
-                    <Image
-                        src="/images/development/brunner/cubcadet.png"
-                        alt="Cub Cadet Test Drive Experience Microsite"
-                        className="img-responsive"
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        style={{ width: "100%", height: "auto" }}
-                    />
+                    <Link href="/images/development/brunner/cubcadet.png" target="_blank">
+                        <Image
+                            src="/images/development/brunner/cubcadet.png"
+                            alt="Cub Cadet Test Drive Experience Microsite"
+                            className="img-responsive"
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{ width: "100%", height: "auto" }}
+                        />
+                    </Link>
                 </div>
                 <p className="mb-4">
                     This microsite was created for their traveling Test Drive Experience that traveled the country and
@@ -189,14 +212,17 @@ export default function BrunnerProjects() {
                 <div className="carousel rounded-box gap-3">
                     {Array.from({ length: 11 }, (_, i) => (
                         <div id={`cubcadet${i}`} className="carousel-item w-full" key={i}>
-                            <Image
-                                src={`/images/development/brunner/cubcadet/${i + 1}.jpg`}
-                                alt="Cub Cadet Test Drive Experience Microsite"
-                                className="img-responsive"
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                style={{ width: "100%", height: "auto" }} />
+                            <Link href={`/images/development/brunner/cubcadet/${i + 1}.jpg`} target="_blank">
+                                <Image
+                                    src={`/images/development/brunner/cubcadet/${i + 1}.jpg`}
+                                    alt="Cub Cadet Test Drive Experience Microsite"
+                                    className="img-responsive"
+                                    width={0}
+                                    height={0}
+                                    sizes="100vw"
+                                    style={{ width: "100%", height: "auto" }}
+                                />
+                            </Link>
                         </div>
                     ))}
                 </div>
@@ -208,15 +234,17 @@ export default function BrunnerProjects() {
 
                 <h2>Wise Snacks Website</h2>
                 <div className="float-left w-5/12 pr-4">
-                    <Image
-                        src="/images/development/brunner/wise.png"
-                        alt="Wise Snacks"
-                        className="img-responsive"
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        style={{ width: "100%", height: "auto" }}
-                    />
+                    <Link href="/images/development/brunner/wise.png" target="_blank">
+                        <Image
+                            src="/images/development/brunner/wise.png"
+                            alt="Wise Snacks"
+                            className="img-responsive"
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{ width: "100%", height: "auto" }}
+                        />
+                    </Link>
                 </div>
                 <p className="mb-4">
                     This website was built using the Umbraco Content Management System, which is a asp.NET C# based CMS. It was
@@ -227,14 +255,17 @@ export default function BrunnerProjects() {
                 <div className="carousel rounded-box gap-3">
                     {Array.from({ length: 7 }, (_, i) => (
                         <div id={`wise${i}`} className="carousel-item w-full" key={i}>
-                            <Image
-                                src={`/images/development/brunner/wise/${i + 1}.jpg`}
-                                alt="Wise Snacks"
-                                className="img-responsive"
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                style={{ width: "100%", height: "auto" }} />
+                            <Link href={`/images/development/brunner/wise/${i + 1}.jpg`} target="_blank">
+                                <Image
+                                    src={`/images/development/brunner/wise/${i + 1}.jpg`}
+                                    alt="Wise Snacks"
+                                    className="img-responsive"
+                                    width={0}
+                                    height={0}
+                                    sizes="100vw"
+                                    style={{ width: "100%", height: "auto" }}
+                                />
+                            </Link>
                         </div>
                     ))}
                 </div>
@@ -246,15 +277,17 @@ export default function BrunnerProjects() {
 
                 <h2>Sensodyne International Websites</h2>
                 <div className="float-right w-5/12 pl-4">
-                    <Image
-                        src="/images/development/brunner/sensodyne.png"
-                        alt="Sensodyne"
-                        className="img-responsive"
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        style={{ width: "100%", height: "auto" }}
-                    />
+                    <Link href="/images/development/brunner/sensodyne.png" target="_blank">
+                        <Image
+                            src="/images/development/brunner/sensodyne.png"
+                            alt="Sensodyne"
+                            className="img-responsive"
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{ width: "100%", height: "auto" }}
+                        />
+                    </Link>
                 </div>
                 <p className="mb-4">
                     This website was built using the Umbraco Content Management System, which is based on asp.NET using C#. This
@@ -268,14 +301,17 @@ export default function BrunnerProjects() {
                 <div className="carousel rounded-box gap-3">
                     {Array.from({ length: 7 }, (_, i) => (
                         <div id={`sensodyne${i}`} className="carousel-item w-full" key={i}>
-                            <Image
-                                src={`/images/development/brunner/sensodyne/${i + 1}.jpg`}
-                                alt="Sensodyne"
-                                className="img-responsive"
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                style={{ width: "100%", height: "auto" }} />
+                            <Link href={`/images/development/brunner/sensodyne/${i + 1}.jpg`} target="_blank">
+                                <Image
+                                    src={`/images/development/brunner/sensodyne/${i + 1}.jpg`}
+                                    alt="Sensodyne"
+                                    className="img-responsive"
+                                    width={0}
+                                    height={0}
+                                    sizes="100vw"
+                                    style={{ width: "100%", height: "auto" }}
+                                />
+                            </Link>
                         </div>
                     ))}
                 </div>
@@ -287,15 +323,17 @@ export default function BrunnerProjects() {
 
                 <h2>Luckyleaf Website</h2>
                 <div className="float-left w-5/12 pr-4">
-                    <Image
-                        src="/images/development/brunner/luckyleaf.png"
-                        alt="Luckyleaf"
-                        className="img-responsive"
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        style={{ width: "100%", height: "auto" }}
-                    />
+                    <Link href="/images/development/brunner/luckyleaf.png" target="_blank">
+                        <Image
+                            src="/images/development/brunner/luckyleaf.png"
+                            alt="Luckyleaf"
+                            className="img-responsive"
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{ width: "100%", height: "auto" }}
+                        />
+                    </Link>
                 </div>
                 <p className="mb-4">
                     This website was built using CSS/LESS, HTML, and jQuery and features a recipe database as well as
@@ -307,14 +345,17 @@ export default function BrunnerProjects() {
                 <div className="carousel rounded-box gap-3">
                     {Array.from({ length: 6 }, (_, i) => (
                         <div id={`luckyleaf${i}`} className="carousel-item w-full" key={i}>
-                            <Image
-                                src={`/images/development/brunner/luckyleaf/${i + 1}.jpg`}
-                                alt="Luckyleaf"
-                                className="img-responsive"
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                style={{ width: "100%", height: "auto" }} />
+                            <Link href={`/images/development/brunner/luckyleaf/${i + 1}.jpg`} target="_blank">
+                                <Image
+                                    src={`/images/development/brunner/luckyleaf/${i + 1}.jpg`}
+                                    alt="Luckyleaf"
+                                    className="img-responsive"
+                                    width={0}
+                                    height={0}
+                                    sizes="100vw"
+                                    style={{ width: "100%", height: "auto" }}
+                                />
+                            </Link>
                         </div>
                     ))}
                 </div>
@@ -326,15 +367,17 @@ export default function BrunnerProjects() {
 
                 <h2>Atria's Oktoberfest Microsite</h2>
                 <div className="float-right w-5/12 pl-4">
-                    <Image
-                        src="/images/development/brunner/oktoberfest.png"
-                        alt="Atria's Oktoberfest"
-                        className="img-responsive"
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        style={{ width: "100%", height: "auto" }}
-                    />
+                    <Link href="/images/development/brunner/oktoberfest.png" target="_blank">
+                        <Image
+                            src="/images/development/brunner/oktoberfest.png"
+                            alt="Atria's Oktoberfest"
+                            className="img-responsive"
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{ width: "100%", height: "auto" }}
+                        />
+                    </Link>
                 </div>
                 <p className="mb-4">
                     Atria's is a restaurant and this Oktoberfest microsite was a fun site to celebrate Oktoberfest.
@@ -347,14 +390,17 @@ export default function BrunnerProjects() {
                 <div className="carousel rounded-box gap-3">
                     {Array.from({ length: 6 }, (_, i) => (
                         <div id={`oktoberfest${i}`} className="carousel-item w-full" key={i}>
-                            <Image
-                                src={`/images/development/brunner/oktoberfest/${i + 1}.jpg`}
-                                alt="Atria's Oktoberfest"
-                                className="img-responsive"
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                style={{ width: "100%", height: "auto" }} />
+                            <Link href={`/images/development/brunner/oktoberfest/${i + 1}.jpg`} target="_blank">
+                                <Image
+                                    src={`/images/development/brunner/oktoberfest/${i + 1}.jpg`}
+                                    alt="Atria's Oktoberfest"
+                                    className="img-responsive"
+                                    width={0}
+                                    height={0}
+                                    sizes="100vw"
+                                    style={{ width: "100%", height: "auto" }}
+                                />
+                            </Link>
                         </div>
                     ))}
                 </div>

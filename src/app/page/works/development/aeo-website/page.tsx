@@ -30,15 +30,17 @@ export default function AEOWebsite() {
 
             <div className="rounded-box">
                 <div className="float-right w-5/12 pl-4">
-                    <Image
-                        src="/images/development/aeo/aeo-cart-ss.png"
-                        alt="American Eagle Outfitters Cart Page"
-                        className="img-responsive"
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        style={{ width: "100%", height: "auto" }}
-                    />
+                    <Link href="/images/development/aeo/aeo-cart-ss.png" target="_blank">
+                        <Image
+                            src="/images/development/aeo/aeo-cart-ss.png"
+                            alt="American Eagle Outfitters Cart Page"
+                            className="img-responsive"
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{ width: "100%", height: "auto" }}
+                        />
+                    </Link>
                 </div>
                 <p className="mb-4">
                     During my time at American Eagle Outfitters, I worked with a team in order to rebuild the entire front end website since it
@@ -47,15 +49,17 @@ export default function AEOWebsite() {
                     while I occasionally contributed to the Sails/Backbone.js project, I was mostly envolved in building the Ember-Cli application.
                 </p>
                 <div className="float-left w-5/12 pr-4">
-                    <Image
-                        src="/images/development/aeo/aeo-checkout-ss.png"
-                        alt="American Eagle Outfitters Checkout Page"
-                        className="img-responsive"
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        style={{ width: "100%", height: "auto" }}
-                    />
+                    <Link href="/images/development/aeo/aeo-checkout-ss.png" target="_blank">
+                        <Image
+                            src="/images/development/aeo/aeo-checkout-ss.png"
+                            alt="American Eagle Outfitters Checkout Page"
+                            className="img-responsive"
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{ width: "100%", height: "auto" }}
+                        />
+                    </Link>
                 </div>
                 <p className="mb-4">
                     I also contributed the majority of the work to forking and modifying the
@@ -74,15 +78,17 @@ export default function AEOWebsite() {
                     the modified components.
                 </p>
                 <div className="float-right w-5/12 pl-4">
-                    <Image
-                        src="/images/development/aeo/aeo-loyalty-ss.png"
-                        alt="American Eagle Outfitters Real Rewards Page"
-                        className="img-responsive"
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        style={{ width: "100%", height: "auto" }}
-                    />
+                    <Link href="/images/development/aeo/aeo-loyalty-ss.png" target="_blank">
+                        <Image
+                            src="/images/development/aeo/aeo-loyalty-ss.png"
+                            alt="American Eagle Outfitters Real Rewards Page"
+                            className="img-responsive"
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{ width: "100%", height: "auto" }}
+                        />
+                    </Link>
                 </div>
                 <p className="mb-4">
                     In addition to the customized Bootstrap library, I also built and maintained a separate library of components that were shared between
@@ -103,15 +109,17 @@ export default function AEOWebsite() {
                     both sides of the application without having to manually pull the library in every time to made a change.
                 </p>
                 <div className="float-left w-5/12 pr-4">
-                    <Image
-                        src="/images/development/aeo/aeo-gift-cards-ss.png"
-                        alt="American Eagle Outfitters Gift Cards Page"
-                        className="img-responsive"
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        style={{ width: "100%", height: "auto" }}
-                    />
+                    <Link href="/images/development/aeo/aeo-gift-cards-ss.png" target="_blank">
+                        <Image
+                            src="/images/development/aeo/aeo-gift-cards-ss.png"
+                            alt="American Eagle Outfitters Gift Cards Page"
+                            className="img-responsive"
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{ width: "100%", height: "auto" }}
+                        />
+                    </Link>
                 </div>
                 <p>
                     At the time that I left the company, a newer library for Ember-Cli came out called

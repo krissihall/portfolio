@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
     title: "Talis Clinical LLC/Getinge",
@@ -41,15 +42,17 @@ export default function TalisClinical() {
 
                 <h2>RemoteView Application</h2>
                 <div className="float-right w-5/12 pr-4">
-                    <Image
-                        src="/images/development/talis-clinical/remote-view-mobile03.png"
-                        alt="RemoteView Application"
-                        className="img-responsive"
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        style={{ width: "100%", height: "auto" }}
-                    />
+                    <Link href="/images/development/talis-clinical/remote-view-mobile03.png" target="_blank">
+                        <Image
+                            src="/images/development/talis-clinical/remote-view-mobile03.png"
+                            alt="RemoteView Application"
+                            className="img-responsive"
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{ width: "100%", height: "auto" }}
+                        />
+                    </Link>
                 </div>
                 <p className="mb-4">
                     This is an application used in ORs to track patient data and present vitals at the top of the page on all devices. This application
@@ -61,15 +64,17 @@ export default function TalisClinical() {
 
                 <h2>Anesthesia Portal</h2>
                 <div className="float-left w-5/12 pr-4">
-                    <Image
-                        src="/images/development/talis-clinical/anesthesia-portal01.jpg"
-                        alt="Anesthesia Portal"
-                        className="img-responsive"
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        style={{ width: "100%", height: "auto" }}
-                    />
+                    <Link href="/images/development/talis-clinical/anesthesia-portal01.jpg" target="_blank">
+                        <Image
+                            src="/images/development/talis-clinical/anesthesia-portal01.jpg"
+                            alt="Anesthesia Portal"
+                            className="img-responsive"
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{ width: "100%", height: "auto" }}
+                        />
+                    </Link>
                 </div>
                 <p className="mb-4">
                     This is an application used to document information patients give hospital staff when they are going to be put under Anesthesia
@@ -83,15 +88,17 @@ export default function TalisClinical() {
 
                 <h2>ECMO Application</h2>
                 <div className="float-right w-5/12 pr-4">
-                    <Image
-                        src="/images/development/talis-clinical/ecmo-mobile01.png"
-                        alt="ECMO Application"
-                        className="img-responsive"
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        style={{ width: "100%", height: "auto" }}
-                    />
+                    <Link href="/images/development/talis-clinical/ecmo-mobile01.png" target="_blank">
+                        <Image
+                            src="/images/development/talis-clinical/ecmo-mobile01.png"
+                            alt="ECMO Application"
+                            className="img-responsive"
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{ width: "100%", height: "auto" }}
+                        />
+                    </Link>
                 </div>
                 <p className="mb-4">
                     This application was built to make data tracked by ECMO carts on patients in the ICU easy to monitor by doctors or nurses in charge

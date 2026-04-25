@@ -4,12 +4,16 @@
 .school-container {
 
     h3 {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
+        display: block;
         width: 100%;
+
+        @include mq-and-above('md') {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
 
         .work-dates {
             color: $secondary;
@@ -18,7 +22,7 @@
             text-transform: uppercase;
 
             @include mq-and-above('md') {
-                display: initial;
+                display: inherit;
             }
         }
     }

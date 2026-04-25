@@ -19,15 +19,17 @@ export default function StinkyCraft() {
             <section className="rounded-box d-block">
                 <h2>Stinky Craft Season 6</h2>
                 <div className="float-right w-5/12 pr-4">
-                    <Image
-                        src="/images/development/stinky-craft/homepage.png"
-                        alt="Stinky Craft Homepage"
-                        className="img-responsive"
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        style={{ width: "100%", height: "auto" }}
-                    />
+                    <Link href="/images/development/stinky-craft/homepage.png" target="_blank">
+                        <Image
+                            src="/images/development/stinky-craft/homepage.png"
+                            alt="Stinky Craft Homepage"
+                            className="img-responsive"
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{ width: "100%", height: "auto" }}
+                        />
+                    </Link>
                 </div>
                 <p className="mb-4">
                     This was a multi-season run Minecraft server set up for a small group of friends online. Throughout
