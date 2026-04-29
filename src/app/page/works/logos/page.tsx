@@ -14,6 +14,25 @@ export default function Logos() {
             <h1>Logo Projects</h1>
             <p>Below are some logos I have created for either personal projects or for use by actual companies.</p>
             <section className="work-card-container mt-4 d-flex gap-3">
+                <div className="card text-bg-primary-lgt shadow-sm">
+                    <figure className="p-4">
+                        <Image
+                            src="/images/graphic-design/logos/klh-media-logo.svg"
+                            alt="KLH Media LLC Logo"
+                            className="img-responsive"
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{ width: "100%", height: "auto" }}
+                        />
+                    </figure>
+                    <div className="card-body">
+                        <h3 className="card-title text-primary-drk">KLH Media LLC Portfolio Site Logo</h3>
+                        <p className="mb-0">
+                            This is a logo created for my LLC at the end of 2025.
+                        </p>
+                    </div>
+                </div>
                 <div className="card text-bg-primary-drk shadow-sm">
                     <figure className="p-4">
                         <Image
