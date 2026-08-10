@@ -1,3 +1,0 @@
-@function hexToRGB($value) {
-    @return #{round(red($value))}, #{round(green($value))}, #{round(blue($value))};
-}

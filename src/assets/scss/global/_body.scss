@@ -1,0 +1,105 @@
+@use "../includes/variables" as v;
+@use "../includes/functions" as f;
+@use "../includes/mixins/" as mi;
+
+// Body Styles
+body {
+    font-family: var(--#{v.$prefix}font-family);
+    font-size: f.rem-calc(16);
+    font-weight: var(--#{v.$prefix}regular-font);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+
+    .application-root {
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+        scroll-behavior: smooth;
+        width: 100vw;
+        z-index: 2;
+    }
+
+    .content-container {
+        flex-grow: 1;
+        height: calc(100vh - (#{v.$header-slim-height} + (#{f.rem-calc(12) * 2}) ) - #{v.$footer-height-sm});
+        overflow-y: overlay;
+        overflow-x: hidden;
+        padding: 0 f.rem-calc(12);
+        position: inherit;
+        z-index: 2;
+
+        @include mi.mq-and-above('md') {
+            height: calc(100vh - (#{v.$header-height} + (#{f.rem-calc(12) * 2}) ) - #{v.$footer-height});
+        }
+
+        &.slim {
+            height: calc(100vh - (#{v.$header-slim-height} + (#{f.rem-calc(12) * 2}) ) - #{v.$footer-height-sm});
+
+            @include mi.mq-and-above('md') {
+                height: calc(100vh - (#{v.$header-slim-height} + (#{f.rem-calc(12) * 2}) ) - #{v.$footer-height});
+            }
+        }
+    }
+}
+
+.container-fluid {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--#{v.$prefix}max-page-width);
+    padding-left: var(--#{v.$prefix}padding-left);
+    padding-right: var(--#{v.$prefix}padding-right);
+    width: 100%;
+}
+
+.img-responsive {
+    display: block;
+    width: 100%;
+}
+
+.rounded-box {
+    --rounded-box: #{v.$border-radius};
+    background: v.$form-bg;
+    padding: f.rem-calc(24);
+}
+
+p {
+    margin-bottom: f.rem-calc(24);
+}
+
+.hide {
+    display: none;
+    height: 0 !important;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+.dropdown-content {
+    background: f.tint-color(v.$black, 10%);
+}
+
+.nav-items {
+    
+    .nav-item {
+        margin-bottom: f.rem-calc(4);
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .nav-link {
+            white-space: nowrap;
+        }
+    }
+}
+
+.mobile-main-nav {
+    min-width: f.rem-calc(250);
+}

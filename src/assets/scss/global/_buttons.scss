@@ -1,0 +1,242 @@
+@use "../includes/variables" as v;
+@use "../includes/variables/buttons" as vb;
+@use "../includes/functions" as f;
+@use "../includes/mixins" as mi;
+
+.btn {
+    // scss-docs-start btn-css-vars
+    --#{v.$prefix}btn-padding-x: #{vb.$btn-padding-x};
+    --#{v.$prefix}btn-padding-y: #{vb.$btn-padding-y};
+    --#{v.$prefix}btn-font-family: #{vb.$btn-font-family};
+    --#{v.$prefix}btn-font-weight: #{vb.$btn-font-weight};
+    --#{v.$prefix}btn-line-height: #{vb.$btn-line-height};
+    --#{v.$prefix}btn-color: #{vb.$btn-color};
+    --#{v.$prefix}btn-bg: transparent;
+    --#{v.$prefix}btn-hover-bg: transparent;
+    --#{v.$prefix}btn-border-width: #{vb.$btn-border-width};
+    --#{v.$prefix}btn-border-hover-width: #{vb.$btn-border-hover-width};
+    --#{v.$prefix}btn-border-color: transparent;
+    --#{v.$prefix}btn-border-hover-color: transparent;
+    --#{v.$prefix}btn-border-radius: #{vb.$btn-border-radius};
+    // --#{v.$prefix}btn-box-shadow: #{$btn-box-shadow};
+    --#{v.$prefix}btn-box-shadow: inset 0 0 0 #{vb.$btn-border-width} #{vb.$btn-border-color};
+    --#{v.$prefix}btn-box-shadow-hover: inset 0 0 0 #{vb.$btn-border-hover-width} #{vb.$btn-border-hover-color};
+    --#{v.$prefix}btn-box-shadow-disabled: inset 0 0 0 #{vb.$btn-border-width} #{f.shade-color(vb.$btn-border-color, 20%)};
+    --#{v.$prefix}btn-disabled-opacity: #{vb.$btn-disabled-opacity};
+    --#{v.$prefix}btn-focus-box-shadow: 0 0 0 #{vb.$btn-focus-width} rgba(var(--#{v.$prefix}btn-focus-shadow-rgb), .5);
+
+    display: inline-block;
+    padding: var(--#{v.$prefix}btn-padding-y) var(--#{v.$prefix}btn-padding-x);
+    font-family: var(--#{v.$prefix}btn-font-family);
+    @include f.font-size(var(--#{v.$prefix}btn-font-size));
+    font-weight: var(--#{v.$prefix}btn-font-weight);
+    line-height: var(--#{v.$prefix}btn-line-height);
+    color: var(--#{v.$prefix}btn-color);
+    text-align: center;
+    text-decoration: if(not sass(v.$link-decoration == none): none);
+    text-transform: uppercase;
+    white-space: vb.$btn-white-space;
+    vertical-align: middle;
+    user-select: none;
+    border: none;
+    // border: var(--#{v.$prefix}btn-border-width) solid var(--#{v.$prefix}btn-border-color);
+    @include mi.border-radius(var(--#{v.$prefix}btn-border-radius));
+    @include mi.gradient-bg(var(--#{v.$prefix}btn-bg));
+    @include mi.box-shadow(inset 0 0 0 var(--#{v.$prefix}btn-border-width) var(--#{v.$prefix}btn-border-color));
+    @include mi.transition(vb.$btn-transition);
+
+    &:hover {
+        color: var(--#{v.$prefix}btn-hover-color);
+        text-decoration: none;
+        background-color: var(--#{v.$prefix}btn-hover-bg);
+        // border-color: var(--#{v.$prefix}btn-hover-border-color);
+        @include mi.box-shadow(inset 0 0 0 var(--#{v.$prefix}btn-border-hover-width) var(--#{v.$prefix}btn-border-hover-color));
+    }
+
+    .btn-check+&:hover {
+        // override for the checkbox/radio buttons
+        color: var(--#{v.$prefix}btn-color);
+        background-color: var(--#{v.$prefix}btn-bg);
+        // border-color: var(--#{v.$prefix}btn-border-color);
+        @include mi.box-shadow(inset 0 0 0 var(--#{v.$prefix}btn-border-width) var(--#{v.$prefix}btn-border-color));
+    }
+
+    &:focus-visible {
+        color: var(--#{v.$prefix}btn-hover-color);
+        @include mi.gradient-bg(var(--#{v.$prefix}btn-hover-bg));
+        // border-color: var(--#{v.$prefix}btn-hover-border-color);
+        @include mi.box-shadow(inset 0 0 0 var(--#{v.$prefix}btn-border-hover-width) var(--#{v.$prefix}btn-border-hover-color));
+        outline: 0;
+
+        // Avoid using mixin so we can pass custom focus shadow properly
+        @if v.$enable-shadows {
+            box-shadow: var(inset 0 0 0 var(--#{v.$prefix}btn-border-width) var(--#{v.$prefix}btn-border-color)),
+            var(--#{v.$prefix}btn-focus-box-shadow);
+        }
+
+        @else {
+            // box-shadow: var(--#{v.$prefix}btn-focus-box-shadow);
+            @include mi.box-shadow(inset 0 0 0 var(--#{v.$prefix}btn-border-hover-width) var(--#{v.$prefix}btn-border-hover-color));
+        }
+    }
+
+    .btn-check:focus-visible+& {
+        // border-color: var(--#{v.$prefix}btn-hover-border-color);
+        @include mi.box-shadow(inset 0 0 0 var(--#{v.$prefix}btn-border-hover-width) var(--#{v.$prefix}btn-border-hover-color));
+        outline: 0;
+
+        // Avoid using mixin so we can pass custom focus shadow properly
+        @if v.$enable-shadows {
+            box-shadow: inset 0 0 0 var(--#{v.$prefix}btn-border-width) var(--#{v.$prefix}btn-border-color),
+                        inset 0 0 0 var(--#{v.$prefix}btn-border-hover-width) var(--#{v.$prefix}btn-border-hover-color);
+        }
+
+        @else {
+            // box-shadow: var(--#{v.$prefix}btn-focus-box-shadow);
+            @include mi.box-shadow(inset 0 0 0 var(--#{v.$prefix}btn-border-hover-width) var(--#{v.$prefix}btn-border-hover-color));
+        }
+    }
+
+    .btn-check:checked+&,
+    :not(.btn-check)+&:active,
+    &:first-child:active,
+    &.active,
+    &.show {
+        color: var(--#{v.$prefix}btn-active-color);
+        background-color: var(--#{v.$prefix}btn-active-bg);
+        // Remove CSS gradients if they're enabled
+        // border-color: var(--#{v.$prefix}btn-active-border-color);
+        // @include box-shadow(var(--#{v.$prefix}btn-active-shadow));
+        @include mi.box-shadow(inset 0 0 0 var(--#{v.$prefix}btn-border-hover-width) var(--#{v.$prefix}btn-border-hover-color));
+
+        &:focus-visible {
+            // Avoid using mixin so we can pass custom focus shadow properly
+            @if v.$enable-shadows {
+                // box-shadow: var(--#{v.$prefix}btn-active-shadow),
+                // var(--#{v.$prefix}btn-focus-box-shadow);
+                box-shadow: inset 0 0 0 var(--#{v.$prefix}btn-border-width) var(--#{v.$prefix}btn-border-color),
+                            inset 0 0 0 var(--#{v.$prefix}btn-border-hover-width) var(--#{v.$prefix}btn-border-hover-color);
+                
+            }
+
+            @else {
+                // box-shadow: var(--#{v.$prefix}btn-focus-box-shadow);
+                @include mi.box-shadow(inset 0 0 0 var(--#{v.$prefix}btn-border-hover-width) var(--#{v.$prefix}btn-border-hover-color));
+            }
+        }
+    }
+
+    .btn-check:checked:focus-visible+& {
+        // Avoid using mixin so we can pass custom focus shadow properly
+        @if v.$enable-shadows {
+            // box-shadow: var(--#{v.$prefix}btn-active-shadow),
+            // var(--#{v.$prefix}btn-focus-box-shadow);
+            @include mi.box-shadow(inset 0 0 0 var(--#{v.$prefix}btn-border-hover-width) var(--#{v.$prefix}btn-border-hover-color));
+        }
+
+        @else {
+            // box-shadow: var(--#{v.$prefix}btn-focus-box-shadow);
+            @include mi.box-shadow(inset 0 0 0 var(--#{v.$prefix}btn-border-hover-width) var(--#{v.$prefix}btn-border-hover-color));
+        }
+    }
+
+    &:disabled,
+    &.disabled,
+    fieldset:disabled & {
+        color: var(--#{v.$prefix}btn-disabled-color);
+        pointer-events: none;
+        background-color: var(--#{v.$prefix}btn-disabled-bg);
+        // border-color: var(--#{v.$prefix}btn-disabled-border-color);
+        @include mi.box-shadow(inset 0 0 0 var(--#{v.$prefix}btn-border-width) var(--#{v.$prefix}btn-disabled-border-color));
+        opacity: var(--#{v.$prefix}btn-disabled-opacity);
+        @include mi.box-shadow(none);
+    }
+}
+
+//
+// Alternate buttons
+//
+@each $color, $value in v.$theme-colors {
+    .btn-#{$color} {
+        @if $color =="light" {
+            @include mi.button-variant($value,
+                $value,
+                $hover-background: f.shade-color($value, vb.$btn-hover-bg-shade-amount),
+                $hover-border: f.shade-color($value, vb.$btn-hover-border-shade-amount),
+                $active-background: f.shade-color($value, vb.$btn-active-bg-shade-amount),
+                $active-border: f.shade-color($value, vb.$btn-active-border-shade-amount));
+        }
+
+        @else if $color =="dark" {
+            @include mi.button-variant($value,
+                $value,
+                $hover-background: f.tint-color($value, vb.$btn-hover-bg-tint-amount),
+                $hover-border: f.tint-color($value, vb.$btn-hover-border-tint-amount),
+                $active-background: f.tint-color($value, vb.$btn-active-bg-tint-amount),
+                $active-border: f.tint-color($value, vb.$btn-active-border-tint-amount));
+        }
+
+        @else {
+            @include mi.button-variant($value, $value);
+        }
+    }
+}
+
+@each $color, $value in v.$theme-colors {
+    .btn-outline-#{$color} {
+        @include mi.button-outline-variant($value);
+    }
+}
+
+//
+// Link buttons
+//
+.btn-link {
+    --#{v.$prefix}btn-font-weight: #{v.$font-weight-normal};
+    --#{v.$prefix}btn-color: #{vb.$btn-link-color};
+    --#{v.$prefix}btn-bg: transparent;
+    --#{v.$prefix}btn-border-color: transparent;
+    --#{v.$prefix}btn-hover-color: #{vb.$btn-link-hover-color};
+    --#{v.$prefix}btn-hover-border-color: transparent;
+    --#{v.$prefix}btn-active-color: #{vb.$btn-link-hover-color};
+    --#{v.$prefix}btn-active-border-color: transparent;
+    --#{v.$prefix}btn-disabled-color: #{vb.$btn-link-disabled-color};
+    --#{v.$prefix}btn-disabled-border-color: transparent;
+    --#{v.$prefix}btn-box-shadow: 0 0 0 v.$black; // Can't use `none` as keyword negates all values when used with multiple shadows
+    // --#{v.$prefix}btn-focus-shadow-rgb: #{$btn-link-focus-shadow-rgb};
+
+    text-decoration: v.$link-decoration;
+
+    &:hover,
+    &:focus-visible {
+        text-decoration: v.$link-hover-decoration;
+    }
+
+    &:focus-visible {
+        color: var(--#{v.$prefix}btn-color);
+    }
+
+    &:hover {
+        color: var(--#{v.$prefix}btn-hover-color);
+    }
+}
+
+//
+// Button Sizes
+//
+.btn-lg {
+    @include mi.button-size(vb.$btn-padding-y-lg, vb.$btn-padding-x-lg, vb.$btn-font-size-lg, vb.$btn-border-radius-lg);
+}
+
+.btn-sm {
+    @include mi.button-size(vb.$btn-padding-y-sm, vb.$btn-padding-x-sm, vb.$btn-font-size-sm, vb.$btn-border-radius-sm);
+}
+
+.no-hover {
+    &:hover,
+    &:focus {
+        color: initial;
+        height: 100%;
+        text-decoration: none;
+    }
+}

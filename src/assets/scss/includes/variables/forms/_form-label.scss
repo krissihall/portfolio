@@ -1,0 +1,10 @@
+@use "../../functions" as f;
+@use "../../variables" as v;
+@use "../../variables/colors" as vc;
+
+$form-label-size:          f.rem-calc(16);
+$form-label-color:         vc.$gray-45;
+$form-label-font-weight:   v.$font-weight-medium;
+
+$form-label-active-color:  v.$primary;
+$form-label-active-size:   f.rem-calc(12);

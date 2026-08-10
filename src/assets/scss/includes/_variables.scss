@@ -1,0 +1,208 @@
+@use "functions" as f;
+
+// Global Variables
+$base:                 16 !default;
+$max-vw:               1920px !default;
+$max-vh:               1080px !default;
+$max-page-width:       1400px !default;
+$prefix:               "kh-" !default;
+$container-padding:    32 !default;
+$header-height:        f.rem-calc(150) !default;
+$header-height-sm:     f.rem-calc(75) !default;
+$header-slim-height:   f.rem-calc(50) !default;
+$footer-height:        f.rem-calc(110) !default;
+$footer-height-sm:     f.rem-calc(86) !default;
+
+$slim-logo-height:     f.rem-calc(50) !default;
+$slim-logo-width:      f.rem-calc(63) !default;
+
+$line-height-base:     1.5 !default;
+
+// Font Variables
+$font-size-base:       f.rem-calc($base) !default;
+$font-size-sm:         f.rem-calc(12) !default;
+$font-size-lg:         f.rem-calc(20) !default;
+
+$font-weight-lighter:         300 !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-medium:          500 !default;
+$font-weight-semibold:        500 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          700 !default;
+
+$font-weight-base:            $font-weight-normal !default;
+
+// Feature Flags
+$enable-rounded:              true !default;
+$enable-transitions:          true !default;
+$enable-shadows:              true !default;
+$enable-gradients:            false !default;
+
+// Spacing Variables
+$spacer: f.rem-calc(12) !default;
+$spacers: (
+    0: 0,
+    1: $spacer * .25,
+    2: $spacer * .5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 3,
+) !default;
+
+// Global Colors
+$black:              #000 !default;
+$white:              #fff !default;
+$primary:            #ff2577 !default;
+$primary-lgt:        f.tint-color($primary, 20%) !default;
+$primary-drk:        f.shade-color($primary, 20%) !default;
+$secondary:          #25ffad !default;
+$secondary-lgt:      f.tint-color($secondary, 20%) !default;
+$secondary-drk:      f.shade-color($secondary, 20%) !default;
+
+$info:               f.tint-color(#0075b5, 20%) !default;
+$success:            f.tint-color(#00854d, 20%) !default;
+$warning:            #ffd925 !default;
+$danger:             #f0513f !default;
+
+// Global Fonts
+$light-font:        300;
+$regular-font:      400;
+$medium-font:       500;
+$bold-font:         700;
+
+// Split Complimentary Colors
+$split-primary:      $primary !default;
+$split-secondary:    #ffd925 !default;
+$split-tertiary:     #25ceff !default;
+
+// Triad Colors
+$triad-primary:      $primary !default;
+$triad-secondary:    #77ff25 !default;
+$triad-tertiary:     #2577ff !default;
+
+// Tetrad Colors
+$tetrad-primary:     $primary !default;
+$tetrad-secondary:   #e4ff25 !default;
+$tetrad-tertiary:    #25ffad !default;
+$tetrad-minor:       #4025ff !default;
+
+// Hue Colors
+$hue-primary-1:       #c0ff25 !default;
+$hue-primary-2:       #ffe325 !default;
+$hue-primary-3:       #ff8925 !default;
+$hue-primary-4:       #ff2e25 !default;
+$hue-primary:         $primary !default;
+$hue-primary-5:       #ff25d2 !default;
+$hue-primary-6:       #d125ff !default;
+$hue-primary-7:       #7625ff !default;
+$hue-primary-8:       #252eff !default;
+
+// Theme Colors
+$theme-colors: (
+    "primary": $primary,
+    "primary-lgt": $primary-lgt,
+    "primary-drk": $primary-drk,
+    "secondary": $secondary,
+    "secondary-lgt": $secondary-lgt,
+    "secondary-drk": $secondary-drk,
+    "black": $black,
+    "white": $white,
+    "info": $info,
+    "success": $success,
+    "warning": $warning,
+    "danger": $danger,
+    "split-primary": $split-primary,
+    "split-secondary": $split-secondary,
+    "split-tertiary": $split-tertiary,
+    "triad-primary": $triad-primary,
+    "triad-secondary": $triad-secondary,
+    "triad-tertiary": $triad-tertiary,
+    "tetrad-primary": $tetrad-primary,
+    "tetrad-secondary": $tetrad-secondary,
+    "tetrad-tertiary": $tetrad-tertiary,
+    "tetrad-minor": $tetrad-minor,
+    "hue-primary-1": $hue-primary-1,
+    "hue-primary-2": $hue-primary-2,
+    "hue-primary-3": $hue-primary-3,
+    "hue-primary-4": $hue-primary-4,
+    "hue-primary": $hue-primary,
+    "hue-primary-5": $hue-primary-5,
+    "hue-primary-6": $hue-primary-6,
+    "hue-primary-7": $hue-primary-7,
+    "hue-primary-8": $hue-primary-8
+) !default;
+
+// Color Settings
+$emphasis:             60%;
+$subtle-bg:            80%;
+$subtle-border:        60%;
+
+// Link Variables
+$link-color:               $primary !default;
+$link-decoration:          underline !default;
+$link-shade-percentage:    20% !default;
+$link-hover-color:         f.shift-color($link-color, $link-shade-percentage) !default;
+$link-hover-decoration:    null !default;
+
+// Link Animation Variables
+$link-animation-stroke:    f.rem-calc(4);
+$link-animation-bg:        $link-color;
+
+// Body Settings
+$body-color:   $white !default;
+$body-bg:      f.tint-color($black, 5%) !default;
+$bg-opacity:   1 !default;
+
+// Default Border Settings
+$border-width:             #{f.rem-calc(1)} !default;
+$border-widths: (
+  1: #{f.rem-calc(1)},
+  2: #{f.rem-calc(2)},
+  3: #{f.rem-calc(3)},
+  4: #{f.rem-calc(4)},
+  5: #{f.rem-calc(5)}
+) !default;
+$border-style:             solid !default;
+$border-color:             $primary !default;
+$border-color-translucent: rgba($black, .175) !default;
+
+// Border Radius Settings
+$border-radius:               f.rem-calc(8) !default;
+$border-radius-sm:            f.rem-calc(4) !default;
+$border-radius-lg:            f.rem-calc(12) !default;
+$border-radius-xl:            f.rem-calc(16) !default;
+$border-radius-xxl:           f.rem-calc(20) !default;
+
+// Color Contrast Settings
+$min-contrast-ratio:   4.5 !default;
+$color-contrast-dark:  $black !default;
+$color-contrast-light: $white !default;
+
+// Form Settings
+$form-bg:      f.tint-color($black, 10%) !default;
+$form-padding: $border-radius-lg !default;
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: #{f.rem-calc(576)},
+  md: #{f.rem-calc(768)},
+  lg: #{f.rem-calc(992)},
+  xl: #{f.rem-calc(1200)},
+  xxl: #{f.rem-calc(1400)}
+) !default;
+// scss-docs-end grid-breakpoints
+
+// @use 'vuetify/settings' with (
+//   $grid-breakpoints: $grid-breakpoints,
+// );
+
+// @forward "variables/colors";
+// @forward "variables/buttons";
+// @forward "variables/forms";

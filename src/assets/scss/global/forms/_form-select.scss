@@ -1,0 +1,38 @@
+@use "../../includes/variables" as v;
+@use "../../includes/functions" as f;
+
+.form-select {
+    appearance: none;
+    position: relative;
+    z-index: 2;
+
+    @extend .form-input !optional;
+
+    &::placeholder {
+        color: transparent;
+        opacity: 0;
+    }
+
+    ~ .form-label {
+        align-self: self-start !important;
+    }
+
+    option {
+        color: v.$black;
+    }
+}
+
+.select-container {
+    position: relative;
+
+    .arrow {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        position: absolute;
+        right: f.rem-calc(16);
+        top: 0;
+        width: f.rem-calc(16);
+        z-index: 1;
+    }
+}

@@ -1,0 +1,58 @@
+@use "../includes/variables" as v;
+@use "../includes/variables/buttons" as vb;
+@use "../includes/functions" as f;
+
+.collapse-container {
+
+    .collapse-link {
+        background: var(--#{v.$prefix}secondary);
+        border-bottom: f.rem-calc(1) solid var(--#{v.$prefix}secondary-drk);
+        color: var(--#{v.$prefix}secondary-text-emphasis);
+        cursor: pointer;
+        display: flex;
+        padding: vb.$btn-padding-y vb.$btn-padding-x;
+        transition: background 0.25s ease-in;
+
+        &[aria-expanded] {
+            .arrow {
+                transition: transform 0.5s ease-in-out;
+            }
+        }
+
+        &[aria-expanded=true] {
+            .arrow {
+                transform: rotate(-180deg);
+            }
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            background: var(--#{v.$prefix}secondary-lgt);
+            text-decoration: none;
+        }
+
+        .homepage & {
+            background: var(--#{v.$prefix}tetrad-minor);
+            border-color: var(--#{v.$prefix}tetrad-minor-subtle);
+            color: var(--#{v.$prefix}tetrad-minor-subtle);
+            transition-property: border-color, color, background;
+
+            &[aria-expanded='true'] {
+                border-color: var(--#{v.$prefix}tetrad-minor);
+            }
+        }
+    }
+
+    .collapse-content {
+        $collapse-border: f.rem-calc(1) solid var(--#{v.$prefix}secondary-lgt);
+        border-bottom: $collapse-border;
+        border-left: $collapse-border;
+        border-right: $collapse-border;
+        padding: f.rem-calc(12);
+
+        .homepage & {
+            border-color: var(--#{v.$prefix}tetrad-minor);
+        }
+    }
+}

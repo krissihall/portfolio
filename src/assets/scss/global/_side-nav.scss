@@ -1,0 +1,103 @@
+@use "../includes/variables" as v;
+@use "../includes/functions" as f;
+
+.side-nav-grid {
+    padding: 0;
+
+    &:not(.mobile) {
+        display: grid;
+        grid-template-areas: "sidebar main";
+        grid-template-columns: 1fr 5fr;
+        gap: 1.5rem;
+
+        .side-nav {
+            display: block;
+            grid-area: "sidebar";
+            height: 70vh;
+            overflow-y: auto;
+
+            &.sticky {
+                bottom: v.$footer-height;
+                position: sticky;
+                top: f.rem-calc(20);
+            }
+
+            .nav {
+                cursor: pointer;
+                .nav-item {
+                    display: block;
+                    
+                    &.footer-item {
+                        margin-top: f.rem-calc(24);
+                    }
+                }
+            }
+        }
+
+        .nav-header,
+        .collapse-link {
+            align-items: center;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+
+            &[aria-expanded=true] {
+                transition: transform 0.5s ease-in-out;
+                .arrow {
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+
+        .side-nav-grid-content {
+            grid-area: "main";
+        }
+    }
+
+
+    &.mobile {
+        .side-nav-header {
+            display: flex;
+            justify-content: flex-start;
+            gap: f.rem-calc(12);
+            
+            .collapse-link {
+                transition: transform 0.5s ease-in-out;
+                &[aria-expanded=true] {
+                    .arrow {
+                        transform: rotate(-180deg);
+                    }
+                }
+            }
+        }
+        .nav {
+            padding: 0;
+            width: 100%;
+
+            .nav-header,
+            .nav-link {
+                align-items: center;
+                background: v.$secondary;
+                border-bottom: f.rem-calc(1) solid f.shade-color(v.$secondary, 15%);
+                color: v.$black;
+                display: flex;
+                justify-content: space-between;
+                padding: f.rem-calc(4) f.rem-calc(12);
+                width: 100%;
+            }
+
+            .nav-header,
+            .collapse-link {
+                &[aria-expanded=true] {
+                    transition: transform 0.5s ease-in-out;
+                    .arrow {
+                        transform: rotate(-180deg);
+                    }
+                }
+            }
+            .top-level {
+                font-weight: 700;
+            }
+        }
+    }
+}

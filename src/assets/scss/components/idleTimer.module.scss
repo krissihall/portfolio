@@ -1,0 +1,16 @@
+@use "../includes/variables" as v;
+@use "../includes/functions" as f;
+@forward "../includes/includes-module";
+
+.idleTimer {
+    background: rgba(v.$white, 0.7);
+    bottom: 0;
+    padding: f.rem-calc(24);
+    position: fixed;
+    right: 0;
+    z-index: 10000;
+
+    p {
+        color: v.$black;
+    }
+}

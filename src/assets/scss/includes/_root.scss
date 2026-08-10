@@ -1,0 +1,68 @@
+@use "sass:math";
+
+@use "variables" as v;
+@use "functions" as f;
+@use "variables/colors" as c;
+@use "maps" as m;
+
+:root {
+    // Tailwind Var Overrides
+    --foreground-rgb: #{f.hexToRGB(v.$white)};
+    --background-start-rgb: #{f.hexToRGB(f.tint-color(v.$black, 5%))};
+    --background-end-rgb: #{f.hexToRGB(f.tint-color(v.$black, 10%))};
+
+    --#{v.$prefix}max-page-width: #{f.rem-calc(v.$max-page-width)};
+    --#{v.$prefix}padding-left: #{math.div(f.rem-calc(v.$container-padding), 2)};
+    --#{v.$prefix}padding-right: #{math.div(f.rem-calc(v.$container-padding), 2)};
+    --#{v.$prefix}bg-opacity: #{v.$bg-opacity};
+    --#{v.$prefix}border-width: #{v.$border-width};
+    --#{v.$prefix}border-style: #{v.$border-style};
+    --#{v.$prefix}border-color: #{v.$border-color};
+    --#{v.$prefix}border-color-translucent: #{v.$border-color-translucent};
+
+    --#{v.$prefix}light-font: #{v.$light-font};
+    --#{v.$prefix}regular-font: #{v.$regular-font};
+    --#{v.$prefix}medium-font: #{v.$medium-font};
+    --#{v.$prefix}bold-font: #{v.$bold-font};
+
+    --#{v.$prefix}border-radius-sm: #{v.$border-radius-sm};
+    --#{v.$prefix}border-radius: #{v.$border-radius};
+    --#{v.$prefix}border-radius-lg: #{v.$border-radius-lg};
+    --#{v.$prefix}border-radius-xl: #{v.$border-radius-xl};
+    --#{v.$prefix}border-radius-xxl: #{v.$border-radius-xxl};
+
+    --#{prefix}link-animation-stroke: #{v.$link-animation-stroke};
+    --#{prefix}link-animation-bg: #{v.$link-animation-bg};
+
+    @each $color, $value in v.$theme-colors {
+        --#{v.$prefix}#{$color}: #{$value};
+    }
+
+    @each $color, $value in m.$theme-colors-rgb {
+        --#{v.$prefix}#{$color}-rgb: #{$value};
+    }
+
+    @each $color, $value in v.$theme-colors {
+        --#{v.$prefix}#{$color}-text-emphasis: #{f.shade-color($value, v.$emphasis)};
+    }
+
+    @each $color, $value in v.$theme-colors {
+        --#{v.$prefix}#{$color}-bg-subtle: #{f.tint-color($value, v.$subtle-bg)};
+    }
+
+    @each $color, $value in v.$theme-colors {
+        --#{v.$prefix}#{$color}-border-subtle: #{f.tint-color($value, v.$subtle-border)};
+    }
+
+    @each $color, $value in c.$grayscale {
+        --#{v.$prefix}#{$color}: #{$value};
+    }
+
+    @each $color, $value in m.$grayscale-rgb {
+        --#{v.$prefix}#{$color}-rgb: #{$value};
+    }
+
+    @each $name, $value in v.$grid-breakpoints {
+        --#{v.$prefix}-breakpoint-#{$name}: #{$value};
+    }
+}

@@ -1,0 +1,62 @@
+@use "sass:selector";
+@use "sass:math";
+@use "sass:color";
+
+@forward "../includes/includes-module";
+@use "../includes/variables" as v;
+@use "../includes/functions" as f;
+
+.loader {
+    width: f.rem-calc(60);
+    aspect-ratio: 1;
+    --c: no-repeat linear-gradient(var(--#{v.$prefix}primary) 0 0);
+    background:
+        var(--c) 0 f.rem-calc(38),
+        var(--c) right f.rem-calc(18) bottom f.rem-calc(18),
+        var(--c) right f.rem-calc(18) top f.rem-calc(18),
+        var(--c) f.rem-calc(18) f.rem-calc(18),
+        var(--c) f.rem-calc(18) 100%,
+        var(--c) 100% 100%,
+        var(--c) 100% 0,
+        var(--c) 0 0;
+    animation: l7 1.5s infinite alternate;
+}
+
+@keyframes l7 {
+    0% {
+        background-size: 0 f.rem-calc(4), f.rem-calc(4) 0, 0 f.rem-calc(4), f.rem-calc(4) 0, 0 f.rem-calc(4), f.rem-calc(4) 0, 0 f.rem-calc(4), f.rem-calc(4) 0
+    }
+
+    12.5% {
+        background-size: f.rem-calc(40) f.rem-calc(4), f.rem-calc(4) 0, 0 f.rem-calc(4), f.rem-calc(4) 0, 0 f.rem-calc(4), f.rem-calc(4) 0, 0 f.rem-calc(4), f.rem-calc(4) 0
+    }
+
+    25% {
+        background-size: f.rem-calc(40) f.rem-calc(4), f.rem-calc(4) f.rem-calc(20), 0 f.rem-calc(4), f.rem-calc(4) 0, 0 f.rem-calc(4), f.rem-calc(4) 0, 0 f.rem-calc(4), f.rem-calc(4) 0
+    }
+
+    37.5% {
+        background-size: f.rem-calc(40) f.rem-calc(4), f.rem-calc(4) f.rem-calc(20), f.rem-calc(20) f.rem-calc(4), f.rem-calc(4) 0, 0 f.rem-calc(4), f.rem-calc(4) 0, 0 f.rem-calc(4), f.rem-calc(4) 0
+    }
+
+    50% {
+        background-size: f.rem-calc(40) f.rem-calc(4), f.rem-calc(4) f.rem-calc(20), f.rem-calc(20) f.rem-calc(4), f.rem-calc(4) f.rem-calc(40), 0 f.rem-calc(4), f.rem-calc(4) 0, 0 f.rem-calc(4), f.rem-calc(4) 0
+    }
+
+    62.5% {
+        background-size: f.rem-calc(40) f.rem-calc(4), f.rem-calc(4) f.rem-calc(20), f.rem-calc(20) f.rem-calc(4), f.rem-calc(4) f.rem-calc(40), f.rem-calc(40) f.rem-calc(4), f.rem-calc(4) 0, 0 f.rem-calc(4), f.rem-calc(4) 0
+    }
+
+    75% {
+        background-size: f.rem-calc(40) f.rem-calc(4), f.rem-calc(4) f.rem-calc(20), f.rem-calc(20) f.rem-calc(4), f.rem-calc(4) f.rem-calc(40), f.rem-calc(40) f.rem-calc(4), f.rem-calc(4) 100%, 0 f.rem-calc(4), f.rem-calc(4) 0
+    }
+
+    87.5% {
+        background-size: f.rem-calc(40) f.rem-calc(4), f.rem-calc(4) f.rem-calc(20), f.rem-calc(20) f.rem-calc(4), f.rem-calc(4) f.rem-calc(40), f.rem-calc(40) f.rem-calc(4), f.rem-calc(4) 100%, 100% f.rem-calc(4), f.rem-calc(4) 0
+    }
+
+    95%,
+    100% {
+        background-size: f.rem-calc(40) f.rem-calc(4), f.rem-calc(4) f.rem-calc(20), f.rem-calc(20) f.rem-calc(4), f.rem-calc(4) f.rem-calc(40), f.rem-calc(40) f.rem-calc(4), f.rem-calc(4) 100%, 100% f.rem-calc(4), f.rem-calc(4) f.rem-calc(40)
+    }
+}

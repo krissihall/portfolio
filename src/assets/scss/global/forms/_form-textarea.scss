@@ -1,0 +1,12 @@
+.form-textarea {
+    @extend .form-input !optional;
+
+    &::placeholder {
+        color: transparent;
+        opacity: 0;
+    }
+
+    ~ .form-label {
+        align-self: self-start !important;
+    }
+}

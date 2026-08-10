@@ -1,0 +1,88 @@
+@use "../includes/variables" as v;
+@use "../includes/functions" as f;
+
+a {
+    color: v.$primary;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    transition-property: color;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: v.$primary-drk;
+        text-decoration: underline;
+    }
+}
+//.anchor-link:focus,.anchor-link:hover,:hover>.anchor-link,:target>.anchor-link {
+
+main {
+    a {
+        color: v.$primary;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: v.$primary-drk;
+        }
+    }
+
+    .card {
+        a {
+            color: v.$black;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: v.$black;
+            }
+        }
+    }
+}
+
+.space {
+    margin-right: f.rem-calc(4);
+}
+
+.anchor-link {
+    opacity: 0;
+    padding-left: f.rem-calc(8);
+
+    &:focus,
+    &:hover,
+    h2:hover &,
+    h2:target & {
+        color: v.$primary;
+        opacity: 1;
+    }
+
+    &:after {
+        content: "#";
+    }
+}
+
+p {
+    line-height: f.rem-calc(32);
+    margin-bottom: f.rem-calc(24);
+}
+
+.text-light {
+    font-family: var(--#{v.$prefix}font-family);
+    font-weight: var(--#{v.$prefix}light-font);
+}
+
+.text-regular {
+    font-family: var(--#{v.$prefix}font-family);
+    font-weight: var(--#{v.$prefix}regular-font);
+}
+
+.text-medium {
+    font-family: var(--#{v.$prefix}font-family);
+    font-weight: var(--#{v.$prefix}medium-font);
+}
+
+.text-bold,
+strong {
+    font-family: var(--#{v.$prefix}font-family);
+    font-weight: var(--#{v.$prefix}bold-font);
+}

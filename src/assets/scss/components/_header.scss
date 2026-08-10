@@ -1,0 +1,109 @@
+@use "../includes/variables" as v;
+@use "../includes/functions" as f;
+@use "../includes/mixins" as mi;
+
+header {
+    z-index: 1000;
+    height: v.$header-height-sm;
+    transition: height 0.5s ease-in-out;
+
+    .container {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+
+        @include mi.mq-and-above('md') {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    @include mi.mq-and-above('md') {
+        height: v.$header-height;
+    }
+
+    &:not(.slim) {
+        .logo {
+            height: v.$header-height-sm;
+
+            @include mi.mq-and-above('md') {
+                height: v.$header-height;
+            }
+        }
+    }
+
+    .full-logo {
+        display: none;
+        height: v.$header-height-sm;
+        opacity: 0;
+        transition: opacity 0.5s ease-in;
+        width: auto;
+
+        @include mi.mq-and-above('md') {
+            display: flex;
+            height: v.$header-height;
+            opacity: 1;
+        }
+    }
+
+    .mini-logo {
+        display: flex;
+        min-height: v.$slim-logo-height;
+        opacity: 1;
+        transition: opacity 0.5s ease-out;
+        min-width: v.$slim-logo-width;
+
+        @include mi.mq-and-above('md') {
+            display: none;
+            opacity: 1;
+        }
+    }
+
+    &.slim {
+        height: v.$slim-logo-height + (f.rem-calc(12) * 2) !important;
+
+        .logo {
+            min-height: v.$slim-logo-height;
+        }
+
+        .full-logo {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-out;
+            // 280x114
+        }
+
+        .mini-logo {
+            display: flex;
+            min-height: v.$slim-logo-height;
+            opacity: 1;
+            transition: opacity 0.5s ease-in;
+            min-width: v.$slim-logo-width;
+            // 63x50
+        }
+    }
+
+    .navigation {
+
+        .nav-items {
+            background: rgb(17 24 39 / var(--tw-bg-opacity));
+            display: block;
+
+            @include mi.mq-and-above('md') {
+                background: none;
+                display: flex;
+            }
+
+            .nav-item {
+
+                @include mi.mq-and-above('md') {
+                    margin-right: f.rem-calc(8);
+
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

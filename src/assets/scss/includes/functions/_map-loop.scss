@@ -1,0 +1,44 @@
+@use "sass:list";
+@use "sass:map";
+@use "sass:math";
+@use "sass:meta";
+@use "sass:color";
+
+// @use "../variables" as v;
+$prefix1: "kh-";
+
+@function map-loop($map, $func, $args...) {
+    $_map: ();
+
+    @each $key, $value in $map {
+        // allow to pass the $key and $value of the map as an function argument
+        $_args: ();
+        @each $arg in $args {
+            $_args: list.append($_args, if(sass($arg == "$key"): $key; else: if(sass($arg == "$value"): $value; else: $arg)));
+        }
+
+        $_map: map.merge($_map, ($key: meta.call(meta.get-function($func), $_args...)));
+    }
+
+    @return $_map;
+}
+
+@function h-to-rgb($value) {
+    @return math.round(color.channel($value, 'red', $space: rgb)),
+        math.round(color.channel($value, 'green', $space: rgb)),
+        math.round(color.channel($value, 'blue', $space: rgb));
+}
+
+@function rgba-css($identifier, $target) {
+    @if $identifier == "body" and $target == "bg" {
+        @return rgba(var(--#{$prefix1}#{$identifier}-bg-rgb), var(--#{$prefix1}#{$target}-opacity));
+    }
+
+    @if $identifier == "body" and $target == "text" {
+        @return rgba(var(--#{$prefix1}#{$identifier}-color-rgb), var(--#{$prefix1}#{$target}-opacity));
+    }
+
+    @else {
+        @return rgba(var(--#{$prefix1}#{$identifier}-rgb), var(--#{$prefix1}#{$target}-opacity));
+    }
+}

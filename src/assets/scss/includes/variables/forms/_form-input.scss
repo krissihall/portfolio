@@ -1,0 +1,34 @@
+@use "../../variables" as v;
+@use "../../variables/colors" as vc;
+@use "../../functions" as f;
+
+$input-padding-y: f.rem-calc(8) !default;
+$input-padding-x: f.rem-calc(12) !default;
+
+// $input-bg-color: transparent;
+$input-bg-color: rgba(var(--#{v.$prefix}primary-rgb), 0);
+$input-font-size: f.rem-calc(16);
+$input-border-style: solid;
+$input-border-width: f.rem-calc(1);
+$input-border-color: vc.$gray-60;
+$input-border-radius: v.$border-radius;
+$input-max-height: f.rem-calc(40);
+
+// $input-hover-bg-color: $input-bg-color;
+$input-hover-bg-color: rgba(var(--#{v.$prefix}primary-rgb), 0.2);
+$input-hover-border-style: $input-border-style;
+$input-hover-border-width: f.rem-calc(2);
+$input-hover-border-color: var(--#{v.$prefix}primary);
+$input-hover-border-radius: $input-border-radius;
+
+$input-danger-bg-color: $input-bg-color;
+$input-danger-border-style: $input-border-style;
+$input-danger-border-width: f.rem-calc(2);
+$input-danger-border-color: var(--#{v.$prefix}danger);
+$input-danger-border-radius: $input-border-radius;
+
+$input-success-bg-color: $input-bg-color;
+$input-success-border-style: $input-border-style;
+$input-success-border-width: f.rem-calc(2);
+$input-success-border-color: var(--#{v.$prefix}success);
+$input-danger-border-radius: $input-border-radius;

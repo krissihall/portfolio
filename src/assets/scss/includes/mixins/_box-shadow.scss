@@ -1,0 +1,29 @@
+@use "sass:list";
+
+@use "../variables" as v;
+@use "../functions" as f;
+
+@mixin boxShadow($properties: 0 f.rem-calc(3) f.rem-calc(6) 0 rgba($black, 0.16)) {
+    box-shadow: $params;
+    -webkit-box-shadow: $properties;
+    -moz-box-shadow: $properties;
+}
+
+@mixin box-shadow($shadow...) {
+    @if v.$enable-shadows {
+        $result: ();
+
+        @each $value in $shadow {
+            @if $value != null {
+                $result: list.append($result, $value, "comma");
+            }
+            @if $value == none and list.length($shadow) > 1 {
+                @warn "The keyword 'none' must be used as a single argument.";
+            }
+        }
+
+        @if (list.length($result) > 0) {
+            box-shadow: $result;
+        }
+    }
+}

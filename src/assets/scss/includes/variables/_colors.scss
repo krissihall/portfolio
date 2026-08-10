@@ -1,0 +1,146 @@
+@use "../variables" as *;
+@use "../functions" as *;
+
+// Emphasis Text Color Vars
+$primary-text-emphasis:          shade-color($primary, $emphasis);
+$primary-lgt-text-emphasis:      shade-color($primary-lgt, $emphasis);
+$primary-drk-text-emphasis:      shade-color($primary-drk, $emphasis);
+$secondary-text-emphasis:        shade-color($secondary, $emphasis);
+$secondary-lgt-text-emphasis:    shade-color($secondary-lgt, $emphasis);
+$secondary-drk-text-emphasis:    shade-color($secondary-drk, $emphasis);
+$black-text-emphasis:            shade-color($black, $emphasis);
+$white-text-emphasis:            shade-color($white, $emphasis);
+$info-text-emphasis:             shade-color($info, $emphasis);
+$success-text-emphasis:          shade-color($success, $emphasis);
+$warning-text-emphasis:          shade-color($warning, $emphasis);
+$danger-text-emphasis:           shade-color($danger, $emphasis);
+$split-primary-text-emphasis:    shade-color($split-primary, $emphasis);
+$split-secondary-text-emphasis:  shade-color($split-secondary, $emphasis);
+$split-tertiary-text-emphasis:   shade-color($split-tertiary, $emphasis);
+$triad-primary-text-emphasis:    shade-color($triad-primary, $emphasis);
+$triad-secondary-text-emphasis:  shade-color($triad-secondary, $emphasis);
+$triad-tertiary-text-emphasis:   shade-color($triad-tertiary, $emphasis);
+$tetrad-primary-text-emphasis:   shade-color($tetrad-primary, $emphasis);
+$tetrad-secondary-text-emphasis: shade-color($tetrad-secondary, $emphasis);
+$tetrad-tertiary-text-emphasis:  shade-color($tetrad-tertiary, $emphasis);
+$tetrad-minor-text-emphasis:     shade-color($tetrad-minor, $emphasis);
+$hue-primary-1-text-emphasis:    shade-color($hue-primary-1, $emphasis);
+$hue-primary-2-text-emphasis:    shade-color($hue-primary-2, $emphasis);
+$hue-primary-3-text-emphasis:    shade-color($hue-primary-3, $emphasis);
+$hue-primary-4-text-emphasis:    shade-color($hue-primary-4, $emphasis);
+$hue-primary-text-emphasis:      shade-color($hue-primary, $emphasis);
+$hue-primary-5-text-emphasis:    shade-color($hue-primary-5, $emphasis);
+$hue-primary-6-text-emphasis:    shade-color($hue-primary-6, $emphasis);
+$hue-primary-7-text-emphasis:    shade-color($hue-primary-7, $emphasis);
+$hue-primary-8-text-emphasis:    shade-color($hue-primary-8, $emphasis);
+
+// Subtle Background Color Vars
+$primary-bg-subtle:              tint-color($primary, $subtle-bg);
+$primary-lgt-bg-subtle:          tint-color($primary-lgt, $subtle-bg);
+$primary-drk-bg-subtle:          tint-color($primary-drk, $subtle-bg);
+$secondary-bg-subtle:            tint-color($secondary, $subtle-bg);
+$secondary-lgt-bg-subtle:        tint-color($secondary-lgt, $subtle-bg);
+$secondary-drk-bg-subtle:        tint-color($secondary-drk, $subtle-bg);
+$black-bg-subtle:                tint-color($black, $subtle-bg);
+$white-bg-subtle:                tint-color($white, $subtle-bg);
+$info-bg-subtle:                 tint-color($info, $subtle-bg);
+$success-bg-subtle:              tint-color($success, $subtle-bg);
+$warning-bg-subtle:              tint-color($warning, $subtle-bg);
+$danger-bg-subtle:               tint-color($danger, $subtle-bg);
+$split-primary-bg-subtle:        tint-color($split-primary, $subtle-bg);
+$split-secondary-bg-subtle:      tint-color($split-secondary, $subtle-bg);
+$split-tertiary-bg-subtle:       tint-color($split-tertiary, $subtle-bg);
+$triad-primary-bg-subtle:        tint-color($triad-primary, $subtle-bg);
+$triad-secondary-bg-subtle:      tint-color($triad-secondary, $subtle-bg);
+$triad-tertiary-bg-subtle:       tint-color($triad-tertiary, $subtle-bg);
+$tetrad-primary-bg-subtle:       tint-color($tetrad-primary, $subtle-bg);
+$tetrad-secondary-bg-subtle:     tint-color($tetrad-secondary, $subtle-bg);
+$tetrad-tertiary-bg-subtle:      tint-color($tetrad-tertiary, $subtle-bg);
+$tetrad-minor-bg-subtle:         tint-color($tetrad-minor, $subtle-bg);
+$hue-primary-1-bg-subtle:        tint-color($hue-primary-1, $subtle-bg);
+$hue-primary-2-bg-subtle:        tint-color($hue-primary-2, $subtle-bg);
+$hue-primary-3-bg-subtle:        tint-color($hue-primary-3, $subtle-bg);
+$hue-primary-4-bg-subtle:        tint-color($hue-primary-4, $subtle-bg);
+$hue-primary-bg-subtle:          tint-color($hue-primary, $subtle-bg);
+$hue-primary-5-bg-subtle:        tint-color($hue-primary-5, $subtle-bg);
+$hue-primary-6-bg-subtle:        tint-color($hue-primary-6, $subtle-bg);
+$hue-primary-7-bg-subtle:        tint-color($hue-primary-7, $subtle-bg);
+$hue-primary-8-bg-subtle:        tint-color($hue-primary-8, $subtle-bg);
+
+// Subtle Border Color Vars
+$primary-border-subtle:          tint-color($primary, $subtle-border);
+$primary-lgt-border-subtle:      tint-color($primary-lgt, $subtle-border);
+$primary-drk-border-subtle:      tint-color($primary-drk, $subtle-border);
+$secondary-border-subtle:        tint-color($secondary, $subtle-border);
+$secondary-lgt-border-subtle:    tint-color($secondary-lgt, $subtle-border);
+$secondary-drk-border-subtle:    tint-color($secondary-drk, $subtle-border);
+$black-border-subtle:            tint-color($black, $subtle-border);
+$white-border-subtle:            tint-color($white, $subtle-border);
+$info-border-subtle:             tint-color($info, $subtle-border);
+$success-border-subtle:          tint-color($success, $subtle-border);
+$warning-border-subtle:          tint-color($warning, $subtle-border);
+$danger-border-subtle:           tint-color($danger, $subtle-border);
+$split-primary-border-subtle:    tint-color($split-primary, $subtle-border);
+$split-secondary-border-subtle:  tint-color($split-secondary, $subtle-border);
+$split-tertiary-border-subtle:   tint-color($split-tertiary, $subtle-border);
+$triad-primary-border-subtle:    tint-color($triad-primary, $subtle-border);
+$triad-secondary-border-subtle:  tint-color($triad-secondary, $subtle-border);
+$triad-tertiary-border-subtle:   tint-color($triad-tertiary, $subtle-border);
+$tetrad-primary-border-subtle:   tint-color($tetrad-primary, $subtle-border);
+$tetrad-secondary-border-subtle: tint-color($tetrad-secondary, $subtle-border);
+$tetrad-tertiary-border-subtle:  tint-color($tetrad-tertiary, $subtle-border);
+$tetrad-minor-border-subtle:     tint-color($tetrad-minor, $subtle-border);
+$hue-primary-1-border-subtle:    tint-color($hue-primary-1, $subtle-border);
+$hue-primary-2-border-subtle:    tint-color($hue-primary-2, $subtle-border);
+$hue-primary-3-border-subtle:    tint-color($hue-primary-3, $subtle-border);
+$hue-primary-4-border-subtle:    tint-color($hue-primary-4, $subtle-border);
+$hue-primary-border-subtle:      tint-color($hue-primary, $subtle-border);
+$hue-primary-5-border-subtle:    tint-color($hue-primary-5, $subtle-border);
+$hue-primary-6-border-subtle:    tint-color($hue-primary-6, $subtle-border);
+$hue-primary-7-border-subtle:    tint-color($hue-primary-7, $subtle-border);
+$hue-primary-8-border-subtle:    tint-color($hue-primary-8, $subtle-border);
+
+// Grayscale Color Vars
+$gray-98:                      #f3f3f3; // 2%
+$gray-95:                      #ededed; // 5%
+$gray-90:                      #e3e3e3; // 10%
+$gray-85:                      #d9d9d9; // 15%
+$gray-80:                      #ccc;    // 20%
+$gray-75:                      #c0c0c0; // 25%
+$gray-70:                      #b0b0b0; // 30%
+$gray-65:                      #898989; // 35%
+$gray-60:                      #999;    // 40%
+$gray-55:                      #7f6f6f; // 45%
+$gray-50:                      #808080; // 50%
+$gray-45:                      #727272; // 55%
+$gray-40:                      #696969; // 60%
+$gray-35:                      #464646; // 65%
+$gray-30:                      #4d4d4d; // 70%
+$gray-25:                      #353535; // 75%
+$gray-20:                      #363636; // 80%
+$gray-15:                      #222;    // 85%
+$gray-10:                      #171717; // 90%
+$gray-5:                       #0f0f0f; // 95%
+
+$grayscale: (
+    "gray-98": $gray-98,
+    "gray-95": $gray-95,
+    "gray-90": $gray-90,
+    "gray-85": $gray-85,
+    "gray-80": $gray-80,
+    "gray-75": $gray-75,
+    "gray-70": $gray-70,
+    "gray-65": $gray-65,
+    "gray-60": $gray-60,
+    "gray-55": $gray-55,
+    "gray-50": $gray-50,
+    "gray-45": $gray-45,
+    "gray-40": $gray-40,
+    "gray-35": $gray-35,
+    "gray-30": $gray-30,
+    "gray-25": $gray-25,
+    "gray-20": $gray-20,
+    "gray-15": $gray-15,
+    "gray-10": $gray-10,
+    "gray-5": $gray-5,
+);

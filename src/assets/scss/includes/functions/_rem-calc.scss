@@ -1,0 +1,13 @@
+@use "sass:math";
+@use "../functions/strip-unit" as su;
+$base-val: 16;
+
+@function rem-calc($value, $base-value: $base-val) {
+    $value: math.div(su.strip-unit($value), su.strip-unit($base-value)) * 1rem;
+
+    @if ($value ==0rem) {
+        $value: 0;
+    }
+
+    @return $value;
+}

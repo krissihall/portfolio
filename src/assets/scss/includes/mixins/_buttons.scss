@@ -1,0 +1,88 @@
+@use "sass:color";
+
+@use "../variables" as v;
+@use "../variables/buttons" as vb;
+@use "../functions" as f;
+@use "../functions/color" as col;
+
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+@mixin button-variant($background,
+    $border,
+    $color: col.color-contrast($background),
+    $hover-background: if(sass($color == v.$color-contrast-light): f.shade-color($background, vb.$btn-hover-bg-shade-amount); else: f.tint-color($background, vb.$btn-hover-bg-tint-amount)),
+    $hover-border: if(sass($color == v.$color-contrast-light): f.tint-color($border, (vb.$btn-hover-border-tint-amount * 2)); else: f.shade-color($border, (vb.$btn-hover-border-shade-amount * 2))),
+    $hover-color: col.color-contrast($hover-background),
+    $active-background: if(sass($color == v.$color-contrast-light): f.shade-color($background, vb.$btn-active-bg-shade-amount); else: f.tint-color($background, vb.$btn-active-bg-tint-amount)),
+    $active-border: if(sass($color == v.$color-contrast-light): f.shade-color($border, vb.$btn-active-border-shade-amount); else: f.tint-color($border, vb.$btn-active-border-tint-amount)),
+    $active-color: col.color-contrast($active-background),
+    $disabled-background: $background,
+    $disabled-border: $border,
+    $disabled-color: col.color-contrast($disabled-background)) {
+    --#{v.$prefix}btn-color: #{$color};
+    --#{v.$prefix}btn-bg: #{$background};
+    --#{v.$prefix}btn-border-color: #{if(sass($color == v.$color-contrast-light): f.shade-color($background, (vb.$btn-hover-border-shade-amount * 2)); else: f.tint-color($background, (vb.$btn-hover-border-tint-amount * 2)))};
+    // --#{v.$prefix}btn-border-color: f.tint-color($background, ($btn-hover-border-tint-amount * 2));
+    // --#{v.$prefix}btn-border-color: f.shade-color($background, ($btn-hover-border-shade-amount * 2));
+    --#{v.$prefix}btn-border-hover-color: #{$hover-border};
+    --#{v.$prefix}btn-hover-color: #{$hover-color};
+    --#{v.$prefix}btn-hover-bg: #{$hover-background};
+    --#{v.$prefix}btn-focus-shadow-rgb: #{to-rgb(color.mix($color, $border, 15%))};
+    --#{v.$prefix}btn-active-color: #{$active-color};
+    --#{v.$prefix}btn-active-bg: #{$active-background};
+    --#{v.$prefix}btn-active-border-color: #{$active-border};
+    --#{v.$prefix}btn-active-shadow: #{vb.$btn-active-box-shadow};
+    --#{v.$prefix}btn-disabled-color: #{$disabled-color};
+    --#{v.$prefix}btn-disabled-bg: #{$disabled-background};
+    --#{v.$prefix}btn-disabled-border-color: #{$disabled-border};
+    background-color: var(--#{v.$prefix}btn-bg) !important;
+    border: solid vb.$btn-border-width --#{v.$prefix}btn-border-color !important;
+    color: var(--#{v.$prefix}btn-color) !important;
+    transition: all 0.5s ease-in;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: var(--#{v.$prefix}btn-hover-bg) !important;
+        border: solid vb.$btn-border-width --#{v.$prefix}btn-border-hover-color !important;
+    }
+}
+
+@mixin button-outline-variant($color,
+    $color-hover: col.color-contrast($color),
+    $hover-background: if(sass($color == v.$color-contrast-light): f.shade-color($color, vb.$btn-hover-bg-shade-amount); else: f.tint-color($color, vb.$btn-hover-bg-tint-amount)),
+    $hover-border: if(sass($color == v.$color-contrast-light): f.tint-color($color, (vb.$btn-hover-border-tint-amount * 2)); else: f.shade-color($color, (vb.$btn-hover-border-shade-amount * 2))), $active-background: if(sass($color == v.$color-contrast-light): f.shade-color($color, vb.$btn-active-bg-shade-amount); else: f.tint-color($color, vb.$btn-active-bg-tint-amount)),
+    $active-border: if(sass($color == v.$color-contrast-light): f.shade-color($color, vb.$btn-active-border-shade-amount); else: f.tint-color($color, vb.$btn-active-border-tint-amount)),
+    $active-color: col.color-contrast($active-background)) {
+    --#{v.$prefix}btn-color: #{$color};
+    --#{v.$prefix}btn-border-color: #{$color};
+    --#{v.$prefix}btn-border-hover-color: #{$hover-border};
+    --#{v.$prefix}btn-hover-color: #{$color-hover};
+    --#{v.$prefix}btn-hover-bg: #{$hover-background};
+    --#{v.$prefix}btn-focus-shadow-rgb: #{to-rgb($color)};
+    --#{v.$prefix}btn-active-color: #{$active-color};
+    --#{v.$prefix}btn-active-bg: #{$active-background};
+    --#{v.$prefix}btn-active-border-color: #{$active-border};
+    --#{v.$prefix}btn-active-shadow: #{vb.$btn-active-box-shadow};
+    --#{v.$prefix}btn-disabled-color: #{$color};
+    --#{v.$prefix}btn-disabled-bg: transparent;
+    --#{v.$prefix}btn-disabled-border-color: #{$color};
+    --#{v.$prefix}gradient: none;
+    border: solid vb.$btn-border-width var(--#{v.$prefix}btn-border-color) !important;
+    color: var(--#{v.$prefix}btn-color) !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+        border: solid vb.$btn-border-width var(--#{v.$prefix}btn-border-hover-color) !important;
+    }
+}
+
+@mixin button-size($padding-y, $padding-x, $font-size, $border-radius) {
+    --#{v.$prefix}btn-padding-y: #{$padding-y};
+    --#{v.$prefix}btn-padding-x: #{$padding-x};
+    --#{v.$prefix}btn-font-size: #{$font-size};
+    --#{v.$prefix}btn-border-radius: #{$border-radius};
+}

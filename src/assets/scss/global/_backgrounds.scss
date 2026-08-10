@@ -1,0 +1,22 @@
+@use "../includes/variables" as v;
+@use "../includes/functions" as f;
+@use "../includes/functions/color" as col;
+
+@each $color, $value in v.$theme-colors {
+    .text-bg-#{$color} {
+        color: col.color-contrast($value);
+        background-color: rgba(var(--#{v.$prefix}#{$color}-rgb), var(--#{v.$prefix}bg-opacity, 1));
+    }
+    a.text-bg-#{$color} {
+        &:hover,
+        &:active,
+        &:focus {
+            @if col.color-contrast($value) == "#ffffff" {
+                color: f.shade-color(col.color-contrast($value), 10%);
+            } @else {
+                color: f.tint-color(col.color-contrast($value), 20%);
+            }
+            // color: color-contrast($value);
+        }
+    }
+}

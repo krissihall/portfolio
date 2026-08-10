@@ -1,0 +1,61 @@
+@use "../includes/variables" as v;
+@use "../includes/functions" as f;
+@use "../includes/mixins" as mi;
+
+h1 {
+    color: v.$primary;
+    font-family: var(--#{v.$prefix}script-font);
+    font-size: f.rem-calc(40) !important;
+    font-weight: var(--#{v.$prefix}regular-font);
+
+    @include mi.mq-and-above('md') {
+        font-size: f.rem-calc(60) !important;
+    }
+}
+
+h2 {
+    color: var(--#{v.$prefix}secondary);
+    font-size: f.rem-calc(22) !important;
+    font-weight: var(--#{v.$prefix}medium-font);
+
+    @include mi.mq-and-above('md') {
+        font-size: f.rem-calc(28) !important;
+    }
+}
+
+h3 {
+    color: var(--#{v.$prefix}primary-lgt);
+    font-size: f.rem-calc(18) !important;
+    font-weight: var(--#{v.$prefix}bold-font);
+
+    @include mi.mq-and-above('md') {
+        font-size: f.rem-calc(22) !important;
+    }
+}
+
+h4 {
+    font-size: f.rem-calc(16)!important;
+    font-weight: var(--#{v.$prefix}light-font);
+
+    @include mi.mq-and-above('md') {
+        font-size: f.rem-calc(18) !important;
+    }
+}
+
+h5 {
+    color: var(--#{v.$prefix}primary-lgt);
+    font-size: f.rem-calc(14) !important;
+
+    @include mi.mq-and-above('md') {
+        font-size: f.rem-calc(16) !important;
+    }
+}
+
+h6 {
+    font-size: f.rem-calc(12)!important;
+    font-weight: var(--#{v.$prefix}medium-font);
+
+    @include mi.mq-and-above('md') {
+        font-size: f.rem-calc(14) !important;
+    }
+}

@@ -1,0 +1,9 @@
+@use "../variables" as v;
+
+@mixin gradient-bg($color: null) {
+    background-color: $color;
+
+    @if v.$enable-gradients {
+        background-image: var(--#{v.$prefix}gradient);
+    }
+}

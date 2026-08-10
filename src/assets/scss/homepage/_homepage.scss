@@ -1,0 +1,177 @@
+@use "../includes/variables" as v;
+@use "../includes/functions" as f;
+@use "../includes/mixins" as mi;
+
+.home-loader {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}
+
+.homepage {
+
+    .logo {
+        height: v.$header-height-sm;
+        margin-top: f.rem-calc(12);
+
+        .home-logo {
+            height: v.$header-height-sm;
+            margin-left: f.rem-calc(12);
+            width: auto;
+
+            @include mi.mq-and-above('md') {
+                height: v.$header-height;
+                width: auto;
+            }
+        }
+
+        @include mi.mq-and-above('md') {
+            margin-top: 0;
+        }
+
+        img {
+            height: auto;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        @include mi.mq-and-above('md') {
+            height: v.$header-height;
+        }
+    }
+
+    .mobile-home-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .mobile-nav {
+            align-self: flex-end;
+            margin-right: f.rem-calc(8);
+        }
+    }
+
+    .mobile-nav {
+        position: relative;
+    }
+
+    .info {
+        display: none;
+
+        &.show {
+            display: block;
+        }
+    }
+
+    .profile-photo {
+        border-radius: f.rem-calc(500);
+        display: block;
+        height: 80%;
+        margin: 0 auto;
+        max-height: f.rem-calc(250);
+        max-width: f.rem-calc(250);
+        overflow: hidden;
+        width: 60%;
+        
+        @include mi.mq-and-above('md') {
+            max-height: f.rem-calc(354);
+            max-width: f.rem-calc(354);
+            width: 80%;
+        }
+    }
+
+    .page-home {
+
+        &:hover,
+        &:focus,
+        &:active {
+            --#{v.$prefix}link-animation-bg: var(--#{v.$prefix}tetrad-primary);
+            color: var(--#{v.$prefix}tetrad-primary);
+        }
+    }
+
+    .info-home {
+
+        h1 {
+            color: var(--#{v.$prefix}tetrad-primary-text);
+        }
+    }
+
+    .page-about {
+
+        &:hover,
+        &:focus,
+        &:active {
+            --#{v.$prefix}link-animation-bg: var(--#{v.$prefix}warning);
+            color: var(--#{v.$prefix}warning);
+        }
+    }
+
+    .info-about {
+
+        h1 {
+            color: f.shade-color(v.$warning, 15%);
+        }
+    }
+
+    .page-works {
+
+        &:hover,
+        &:focus,
+        &:active {
+            --#{v.$prefix}link-animation-bg: var(--#{v.$prefix}tetrad-tertiary);
+            color: var(--#{v.$prefix}tetrad-tertiary);
+        }
+    }
+
+    .info-works {
+
+        h1 {
+            color: var(--#{v.$prefix}success);
+        }
+    }
+
+    .page-skills {
+
+        &:hover,
+        &:focus,
+        &:active {
+            --#{v.$prefix}link-animation-bg: var(--#{v.$prefix}tetrad-minor);
+            color: var(--#{v.$prefix}tetrad-minor);
+        }
+    }
+
+    .info-skills {
+
+        h1 {
+            color: var(--#{v.$prefix}tetrad-minor);
+        }
+    }
+
+    .page-contact {
+
+        &:hover,
+        &:focus,
+        &:active {
+            --#{v.$prefix}link-animation-bg: var(--#{v.$prefix}hue-primary-6);
+            color: var(--#{v.$prefix}hue-primary-6);
+        }
+    }
+
+    .info-contact {
+
+        h1 {
+            color: var(--#{v.$prefix}hue-primary-6);
+        }
+    }
+
+    .works-description {
+        width: 100%;
+
+        @include mi.mq-and-above('md') {
+            width: 45%;
+        }
+    }
+}

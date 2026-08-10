@@ -1,0 +1,14 @@
+@use "../includes/functions" as f;
+
+// Footer Styles
+footer {
+    margin-top: auto;
+    .links {
+        .link {
+            margin-right: f.rem-calc(12);
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+}
