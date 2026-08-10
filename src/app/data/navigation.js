@@ -11,7 +11,7 @@ const links = [
     }, {
         "id": 2,
         "name": "About",
-        "href": "/page/about",
+        "href": "/about",
         "newWindow": false,
         "mainNav": true,
         "isVisibleOnHome": true,
@@ -20,7 +20,7 @@ const links = [
     }, {
         "id": 3,
         "name": "Works",
-        "href": "/page/works",
+        "href": "/works",
         "newWindow": false,
         "mainNav": true,
         "isVisibleOnHome": true,
@@ -29,7 +29,7 @@ const links = [
     }, {
         "id": 4,
         "name": "Skills",
-        "href": "/page/skills",
+        "href": "/skills",
         "newWindow": false,
         "mainNav": true,
         "isVisibleOnHome": true,
@@ -38,7 +38,7 @@ const links = [
     }, {
         "id": 5,
         "name": "Contact",
-        "href": "/page/contact",
+        "href": "/contact",
         "newWindow": false,
         "mainNav": true,
         "isVisibleOnHome": true,

@@ -1,0 +1,57 @@
+'use client';
+
+import React, { useState, useEffect, useRef } from 'react'
+import Header from '@/app/components/general/header';
+import Footer from '@/app/components/general/footer';
+// import useShrinkOnScroll from '@/app/hooks/useShrinkOnScroll';
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+    // const { containerRef, isShrunk } = useShrinkOnScroll({
+    //     root: (typeof window !== 'undefined') ? document.getElementById('scrollContainer') : null,
+    //     threshold: 0.01,
+    // });
+
+    const [isShrunk, setIsShrunk] = useState(false);
+    const scrollRef = useRef<HTMLDivElement>(null);
+    const scrollThreshold = 50; // Pixels to scroll before shrinking
+
+    useEffect(() => {
+        const handleScroll = () => {
+        // Access the scroll position of the specific div using the ref
+        if (scrollRef.current) {
+            const scrollTop = scrollRef.current.scrollTop;
+            
+            if (scrollTop > scrollThreshold) {
+                setIsShrunk(true);
+            } else {
+                setIsShrunk(false);
+            }
+        }
+        };
+
+        const currentScrollRef = scrollRef.current;
+        if (currentScrollRef) {
+            // Add event listener to the specific div
+            currentScrollRef.addEventListener('scroll', handleScroll);
+        }
+
+        // Cleanup the event listener when the component unmounts
+        return () => {
+            if (currentScrollRef) {
+                currentScrollRef.removeEventListener('scroll', handleScroll);
+            }
+            };
+    }, []); // Empty dependency array ensures listener is added/removed once
+
+    return (
+        <div className="flex flex-col flex-1 flex-nowrap min-h-screen min-w-full">
+            <Header isShrunk={isShrunk} />
+
+            <div id="scrollContainer" ref={scrollRef} className={`content-container ${isShrunk ? 'slim' : ''}`}>
+                {children}
+            </div>
+
+            <Footer />
+        </div>
+    );
+};

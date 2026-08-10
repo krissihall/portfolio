@@ -3,8 +3,8 @@ import { Open_Sans, Italiana, Great_Vibes } from "next/font/google";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import AnimatedBg from "./components/general/animated-bg";
 import DebugInfo from "./components/debug/info";
-import "./globals.css";
-import "./assets/scss/global.scss";
+import "@/app/globals.css";
+import "@/app/assets/scss/global.scss";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false
