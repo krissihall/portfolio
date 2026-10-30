@@ -53,24 +53,35 @@ export default function Logos() {
                     </div>
                 </div>
                 <div className="card text-bg-primary-lgt shadow-sm">
-                    <figure className="p-4">
-                        <Image
-                            src="/images/graphic-design/logos/eye-see-you.svg"
-                            alt="Eye See You Logo"
-                            className="img-responsive"
-                            width={0}
-                            height={0}
-                            sizes="100vw"
-                            style={{ width: "100%", height: "auto" }}
-                        />
-                    </figure>
-                    <div className="card-body">
-                        <h3 className="card-title text-primary-drk">Eye See You Logo</h3>
-                        <p className="mb-0">
-                            This logo was created for a passion project for my photography hobby. I have done Senior photos for a few
-                            family members and baby photos for a few as well.
-                        </p>
-                    </div>
+                    <Link
+                        href="https://eyeseeyou.us"
+                        target="_blank"
+                        className="no-hover"
+                    >
+                        <figure className="p-4">
+                            <Image
+                                src="/images/graphic-design/logos/eye-see-you.svg"
+                                alt="Eye See You Logo"
+                                className="img-responsive"
+                                width={0}
+                                height={0}
+                                sizes="100vw"
+                                style={{ width: "100%", height: "auto" }}
+                            />
+                        </figure>
+                        <div className="card-body">
+                            <h3 className="card-title text-primary-drk">Eye See You Logo</h3>
+                            <p className="mb-0">
+                                This logo was created for a passion project for my photography hobby. I have done Senior photos for a few
+                                family members and baby photos for a few as well.
+                            </p>
+                            <div className="mb-0 card-actions justify-end">
+                                <button className="btn btn-primary">
+                                    Check It Out!
+                                </button>
+                            </div>
+                        </div>
+                    </Link>
                 </div>
                 <div className="card text-bg-primary-lgt shadow-sm">
                     <Link
