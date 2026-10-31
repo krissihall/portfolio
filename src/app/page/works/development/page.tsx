@@ -109,6 +109,38 @@ export default function Development() {
                 </div>
                 <div className="card text-bg-primary-lgt shadow-sm">
                     <Link
+                        href="/page/works/development/stinky-craft"
+                        className="no-hover"
+                    >
+                        <figure className="p-4">
+                            {/* <Image
+                                src="/images/graphic-design/brochures/comec-z-fold.png"
+                                alt="Comec Z-Fold Brochure"
+                                className="img-responsive"
+                                width={0}
+                                height={0}
+                                sizes="100vw"
+                                style={{ width: "100%", height: "auto" }}
+                            /> */}
+                        </figure>
+                        <div className="card-body">
+                            <h3 className="card-title text-primary-drk">Stinky Craft</h3>
+                            <p className="mb-0">
+                                This was a fun, personal project created for a Minecraft server I hosted for a group of online friends.
+                                Many of the people playing on the server were also streamers on Twitch so there is integration with
+                                the Twitch API to alert when users were streaming. There was also a live map that would show an overhead
+                                view of the entire Minecraft world so visitors could check out how it looked from the website.
+                            </p>
+                            <div className="card-actions justify-end">
+                                <button className="btn btn-primary">
+                                    Check It Out!
+                                </button>
+                            </div>
+                        </div>
+                    </Link>
+                </div>
+                <div className="card text-bg-primary-lgt shadow-sm">
+                    <Link
                         href="/page/works/development/aeo-website"
                         className="no-hover"
                     >
