@@ -77,7 +77,7 @@ export default function Development() {
                 </div>
                 <div className="card text-bg-primary-lgt shadow-sm">
                     <Link
-                        href="/page/works/development/stinky-craft"
+                        href="/page/works/development/eyeseeyou"
                         className="no-hover"
                     >
                         <figure className="p-4">
@@ -92,12 +92,12 @@ export default function Development() {
                             /> */}
                         </figure>
                         <div className="card-body">
-                            <h3 className="card-title text-primary-drk">Stinky Craft</h3>
+                            <h3 className="card-title text-primary-drk">Eye See You Photography</h3>
                             <p className="mb-0">
-                                This was a fun, personal project created for a Minecraft server I hosted for a group of online friends.
-                                Many of the people playing on the server were also streamers on Twitch so there is integration with
-                                the Twitch API to alert when users were streaming. There was also a live map that would show an overhead
-                                view of the entire Minecraft world so visitors could check out how it looked from the website.
+                                I am a self-taught photographer that enjoys taking beautiful photos. I have been working 
+                                with Photoshop and other editing software for over 20 years and enjoy bringing the beauty 
+                                out in every photograph. I have done photos for Seniors, babies, &amp; events. I enjoy 
+                                photography and have a few different cameras that I use while taking photos.
                             </p>
                             <div className="card-actions justify-end">
                                 <button className="btn btn-primary">
